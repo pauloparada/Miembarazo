@@ -645,7 +645,7 @@ a {
   height: 51px;
   padding: 12px;
   border-radius: 2px;
-  background-color: #4fd2c2;
+  background-color: #734898;
   color: white;
   font-size: 12px;
   line-height: 26px;
@@ -654,7 +654,7 @@ a {
   text-decoration: none;
 }
 .action-button:active {
-  background-color: #3ab5a7;
+  background-color: #734898;
 }
 .action-button.grey {
   background-color: #333;
