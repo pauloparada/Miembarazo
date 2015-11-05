@@ -358,7 +358,7 @@ a {
   position: absolute;
   float: left;
   margin-left: 36%;
-  margin-top: 15px;
+  margin-top: 12%;
 }
 .boton1:hover{
   width: 98px;
@@ -367,15 +367,15 @@ a {
   position: absolute;
   float: left;
   margin-left: 36%;
-  margin-top: 15px;
+  margin-top: 12%;
 }
 .boton2{
   width: 98px;
   height: 133px;
   background-image: url('../images/boton2-1.png');
   position: absolute;
-  margin-left: 4%;
-  margin-top: 78px;
+  margin-left: 9%;
+  margin-top: 29%;
   /* Rotate div */
     -ms-transform: rotate(315deg); /* IE 9 */
     -webkit-transform: rotate(315deg); /* Chrome, Safari, Opera */
@@ -386,8 +386,8 @@ a {
   height: 133px;
   background-image: url('../images/boton2-2.png');
   position: absolute;
-  margin-left: 4%;
-  margin-top: 78px;
+  margin-left: 9%;
+  margin-top: 29%;
   /* Rotate div */
     -ms-transform: rotate(315deg); /* IE 9 */
     -webkit-transform: rotate(315deg); /* Chrome, Safari, Opera */
@@ -398,8 +398,8 @@ a {
   height: 133px;
   background-image: url('../images/boton3-1.png');
   position: absolute;
-  margin-left: 68%;
-  margin-top: 78px;
+  margin-left: 64%;
+  margin-top: 29%;
   /* Rotate div */
     -ms-transform: rotate(45deg); /* IE 9 */
     -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
@@ -410,8 +410,8 @@ a {
   height: 133px;
   background-image: url('../images/boton3-2.png');
   position: absolute;
-  margin-left: 68%;
-  margin-top: 78px;
+  margin-left: 64%;
+  margin-top: 29%;
   /* Rotate div */
     -ms-transform: rotate(45deg); /* IE 9 */
     -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
@@ -422,8 +422,8 @@ a {
   height: 133px;
   background-image: url('../images/boton4-1.png');
   position: absolute;
-  margin-left: 5%;
-  margin-top: 240px;
+  margin-left: 9%;
+  margin-top: 66%;
   /* Rotate div */
     -ms-transform: rotate(225deg); /* IE 9 */
     -webkit-transform: rotate(225deg); /* Chrome, Safari, Opera */
@@ -434,8 +434,8 @@ a {
   height: 133px;
   background-image: url('../images/boton4-2.png');
   position: absolute;
-  margin-left: 5%;
-  margin-top: 240px;
+  margin-left: 9%;
+  margin-top: 66%;
   /* Rotate div */
     -ms-transform: rotate(225deg); /* IE 9 */
     -webkit-transform: rotate(225deg); /* Chrome, Safari, Opera */
@@ -446,8 +446,8 @@ a {
   height: 133px;
   background-image: url('../images/boton5-1.png');
   position: absolute;
-  margin-left: 36%;
-  margin-top: 288px;
+  margin-left: 37%;
+  margin-top: 79%;
   /* Rotate div */
     -ms-transform: rotate(180deg); /* IE 9 */
     -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
@@ -458,8 +458,8 @@ a {
   height: 133px;
   background-image: url('../images/boton5-2.png');
   position: absolute;
-  margin-left: 36%;
-  margin-top: 288px;
+  margin-left: 37%;
+  margin-top: 79%;
   /* Rotate div */
     -ms-transform: rotate(180deg); /* IE 9 */
     -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
@@ -471,8 +471,8 @@ a {
   background-image: url('../images/boton6-1.png');
   position: absolute;
   float: left;
-  margin-left: 68%;
-  margin-top: 240px;
+  margin-left: 66%;
+  margin-top: 65%;
   /* Rotate div */
     -ms-transform: rotate(125deg); /* IE 9 */
     -webkit-transform: rotate(125deg); /* Chrome, Safari, Opera */
@@ -483,8 +483,8 @@ a {
   height: 133px;
   background-image: url('../images/boton6-2.png');
   position: absolute;
-  margin-left: 68%;
-  margin-top: 240px;
+  margin-left: 66%;
+  margin-top: 65%;
   /* Rotate div */
     -ms-transform: rotate(125deg); /* IE 9 */
     -webkit-transform: rotate(125deg); /* Chrome, Safari, Opera */
@@ -492,29 +492,68 @@ a {
 }
 
 .boton-calculadora1{
-  width: 140px;
-  height: 140px;
-  background-image: url('../images/boton-pesoideal.png');
+  width: 102px;
+  height: 120px;
+  background-image: url('../images/boton-peso-ideal2.png');
   position: relative;
   float: left;
-  margin-left: 40px;
+  margin-left: 25%;
+  margin-top: 10%;
 }
 .boton-calculadora2{
-  width: 140px;
-  height: 140px;
-  background-image: url('../images/boton-ovulacion.png');
+  width: 102px;
+  height: 120px;
+  background-image: url('../images/boton-ovulacion2.png');
   position: relative;
   float: left;
-  margin-top: 100px;
+  margin-top: 40%;
 }
 .boton-calculadora3{
-  width: 168px;
-  height: 140px;
-  background-image: url('../images/boton-fechadeparto.png');
+  width: 102px;
+  height: 124px;
+  background-image: url('../images/boton-fechadeparto2.png');
   position: relative;
   float: left;
-  margin-left: 40px;
+  margin-left: 25%;
+  margin-top: 60%;
 }
+.boton-misfotos{
+  width: 102px;
+  height: 120px;
+  background-image: url('../images/boton-misfotos.png');
+  position: relative;
+  float: left;
+  margin-left: 15%;
+  margin-top: 40%;
+}
+.boton-fotosbebe{
+  width: 102px;
+  height: 130px;
+  background-image: url('../images/boton-fotosbebe.png');
+  position: absolute;
+  float: left;
+  margin-left: 55%;
+  margin-top: 40%;
+}
+.boton-misnotas{
+  width: 102px;
+  height: 120px;
+  background-image: url('../images/boton-misnotas.png');
+  position: relative;
+  float: left;
+  margin-left: 15%;
+  margin-top: 40%;
+}
+.boton-documentos{
+  width: 102px;
+  height: 120px;
+  background-image: url('../images/boton-documentos.png');
+  position: absolute;
+  float: left;
+  margin-left: 55%;
+  margin-top: 40%;
+}
+
 .logoredcord{
   width: 129px;
   height: 60px;
@@ -523,22 +562,22 @@ a {
 }
 
 .boton-trimestre1{
-  width: 110px;
-  height: 33px;
+  width: 90px;
+  height: 28px;
   background-image: url('../images/boton-trimestre1.png');
   position: relative;
   float: left;
 }
 .boton-trimestre2{
-  width: 110px;
-  height: 33px;
+  width: 90px;
+  height: 28px;
   background-image: url('../images/boton-trimestre2.png');
   position: relative;
   float: left;
 }
 .boton-trimestre3{
-  width: 110px;
-  height: 33px;
+  width: 90px;
+  height: 28px;
   background-image: url('../images/boton-trimestre3.png');
   position: relative;
   float: left;
@@ -1177,13 +1216,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1dbff', end
 .message-title {
   display: inline-block;
   padding-top: 3px;
-  color:#4f4e4e;
+  color:#818181;
   padding-bottom: 5px;
   font-size: 24px;
-  font-family: 'CenturyGothic-Bold';
-  src: url('CenturyGothic-Bold.woff') format('woff'),
-       url('CenturyGothic-Bold.ttf') format('truetype'),
-       url('CenturyGothic-Bold.svg#CenturyGothic-Bold') format('svg');
+  font-family: 'helvetica';
   font-weight: normal;
   font-style: normal;
 }
@@ -1224,10 +1260,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1dbff', end
 }
 .message-text {
   padding-bottom: 3px;
-  color: #4f4e4e;
-  font-size: 13px;
+  color: #818181;
+  font-size: 12px;
   line-height: 1.6em;
   text-decoration: none;
+  font-family: helvetica;
 }
 .message-text2 {
   padding-bottom: 3px;
