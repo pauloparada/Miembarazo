@@ -188,7 +188,7 @@ a {
   height: 50px;
   background-color:#40a1d6;
   position: absolute;
-  margin-top: 460px;
+  margin-top: 120%;
 }
 .menu-footermapa{
   width: 100%;
@@ -296,6 +296,9 @@ a {
 .nav-menu-header {
   height: 137px;
 
+}
+.menu-botones{
+  margin-top:-50;
 }
 .nav-menu-link {
   display: block;
