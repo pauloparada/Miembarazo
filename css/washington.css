@@ -86,17 +86,22 @@ a {
 }
 .perfil{
   float:left; 
-  padding-left: 40px; 
+  padding-left: 50px; 
+  padding-top: 6px;
+}
+.home{
+  float:left; 
+  padding-left: 30px; 
   padding-top: 6px;
 }
 .mapa{
   float:left; 
-  padding-left: 70px; 
+  padding-left: 50px; 
   padding-top: 6px;
 }
 .chat{
   float:left; 
-  padding-left: 70px; 
+  padding-left: 40px; 
   padding-top: 6px;
 }
 
