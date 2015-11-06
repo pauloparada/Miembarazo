@@ -550,7 +550,7 @@ a {
   position: relative;
   float: left;
   margin-left: 15%;
-  margin-top: 40%;
+  margin-top: 10%;
 }
 .boton-documentos{
   width: 102px;
@@ -559,7 +559,7 @@ a {
   position: absolute;
   float: left;
   margin-left: 55%;
-  margin-top: 40%;
+  margin-top: 10%;
 }
 
 .logoredcord{
