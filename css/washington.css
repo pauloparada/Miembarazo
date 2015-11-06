@@ -356,8 +356,8 @@ a {
   float: left;
   z-index: 6;
   position: fixed;
-  padding-top: 20px;
-  padding-left: 15px;
+  padding-top: 29px;
+  padding-left: 19px;
 }
 .boton1{
   width: 98px;
@@ -1299,7 +1299,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1dbff', end
   float: right;
   border-top-left-radius: 12px;
   border-top-right-radius: 0px;
-  background-color: #4fd2c2;
+  background-color: #874FD2;
   color: white;
 }
 .arrow-globe {
@@ -1315,7 +1315,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1dbff', end
   top: 0px;
   right: 9px;
   border-right: 0px none transparent;
-  border-left: 12px solid #4fd2c2;
+  border-left: 12px solid #A04FD2;
 }
 .chat-time {
   display: block;
@@ -1364,7 +1364,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1dbff', end
   padding: 9px 0px 9px 7px;
   float: right;
   background-color: transparent;
-  color: #4fd2c2;
+  color: #A04FD2;
   font-size: 12px;
 }
 .slider-element-test {
