@@ -1,0 +1,931 @@
+<!doctype html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- For third-generation iPad with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicons/apple-touch-icon-144x144-precomposed.png">
+	<!-- For iPhone with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicons/apple-touch-icon-114x114-precomposed.png">
+	<!-- For first- and second-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicons/apple-touch-icon-72x72-precomposed.png">
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/favicons/apple-touch-icon-precomposed.png">
+	<link rel="icon" href="images/favicons/favicon.ico" type="image/x-icon" />
+    <title>Cristovisión | Programación</title>
+		<meta name="description" content="Cristovisión, el Canal de la Iglesia católica en Colombia, muestra la presencia viva y unida de la Iglesia que se universaliza en Jesucristo, es el canal que expresa la diversidad cultural y la grandeza de la Iglesia Católica Colombiana. Esta propuesta de televisión está plasmada en su concepto, en su eslogan para ver el mundo con los ojos de Jesús." />
+	<meta name="keywords" content="cristo, Cristovision, Canal,Catolico, Iglesia, Catolica, Colombia, Jesus, Television" />
+	<meta name="author" content="Cristovision" />
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link href="css/reset.css" type="text/css" rel="stylesheet" />
+	<link href="css/dp_calendar.css" type="text/css" rel="stylesheet" />
+	<link href="css/demo.css" type="text/css" rel="stylesheet" />
+	<link href="themes/base/jquery.ui.all.css" type="text/css" rel="stylesheet" />
+	<!--[if IE 7]>
+		<link rel="stylesheet" href="css/font-awesome-ie7.min.css">
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type='text/javascript' src='js/jquery-1.5.2.min.js'></script> 
+	<script type="text/javascript" src="ui/jquery.ui.core.js"></script> 
+	<script type="text/javascript" src="ui/jquery.ui.position.js"></script>
+	<script type="text/javascript" src="ui/jquery.ui.datepicker.js"></script> 
+	<script type="text/javascript" src="js/date.js"></script>
+	<script type="text/javascript" src="js/jquery.dp_calendar.min.js"></script>
+	<script type="text/javascript" src="js/jquery.dp_calendar-es.js"></script>
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Oswald:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+<body style="background-image: url(images/patterns/6.png);">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "../../../connect.facebook.net/en_US/all.js#xfbml=1&appId=550488624989926";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+$(document).ready(function(){    
+	var events_array = new Array(
+		
+		{
+			startDate: new Date(2014,00, 07, 06, 05),
+			endDate: new Date(2014,00, 07, 06, 30),
+			title: "Coronilla de la Divina Misericordia",
+			description: "Descripción del programa",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 06, 30),
+			endDate: new Date(2014,00, 07, 07, 00),
+			title: "Llena tu Día de Dios",
+			description: "Descripción del programa",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 07, 00),
+			endDate: new Date(2014,00, 07, 07, 30),
+			title: "Ponte al Día",
+			description: "Descripción del programa",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 07, 30),
+			endDate: new Date(2014,00, 07, 08, 30),
+			title: "Taller de Oracion, Cuando vayas a Orar",
+			description: "Descripción del programa",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 08, 30),
+			endDate: new Date(2014,00, 07, 09, 00),
+			title: "Sagrada Eucaristia",
+			description: "Descripción del programa",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 09, 30),
+			endDate: new Date(2014,00, 07, 12, 00),
+			title: "Entre Amigos",
+			description: "Descripción del programa",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 12, 00),
+			endDate: new Date(2014,00, 07, 12, 05),
+			title: "Angelus",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 12, 05),
+			endDate: new Date(2014,00, 07, 13, 00),
+			title: "Sagrada Eucaristía",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 13, 00),
+			endDate: new Date(2014,00, 07, 13, 30),
+			title: "Nuestro pan de cada Día",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 13, 30),
+			endDate: new Date(2014,00, 07, 14, 00),
+			title: "Si Quiero",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 14, 00),
+			endDate: new Date(2014,00, 07, 15, 00),
+			title: "Punto, Cadeneta y Cruz",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 15, 05),
+			endDate: new Date(2014,00, 07, 15, 30),
+			title: "Coronilla de la Dvini Misericordia",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 15, 30),
+			endDate: new Date(2014,00, 07, 16, 00),
+			title: "Nuestro pan de Cada Día",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 16, 00),
+			endDate: new Date(2014,00, 07, 17, 00),
+			title: "Serie SIPCA - Tercera Temporada",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 17, 00),
+			endDate: new Date(2014,00, 07, 17, 30),
+			title: "La mano de Dios, La mano del hombre",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 17, 30),
+			endDate: new Date(2014,00, 07, 18, 00),
+			title: "Santo Rosario",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 18, 30),
+			endDate: new Date(2014,00, 07, 19, 00),
+			title: "Caminante",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 19, 00),
+			endDate: new Date(2014,00, 07, 19, 05),
+			title: "Mensaje Minuto de Dios",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 19, 05),
+			endDate: new Date(2014,00, 07, 20, 00),
+			title: "Sagrada Eucaristía",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 20, 00),
+			endDate: new Date(2014,00, 07, 20, 30),
+			title: "Yo Creo",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 20, 30),
+			endDate: new Date(2014,00, 07, 21, 00),
+			title: "Jovenes del Cenaculo",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 21, 00),
+			endDate: new Date(2014,00, 07, 21, 30),
+			title: "Una ventana a la Fe",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 21, 30),
+			endDate: new Date(2014,00, 07, 22, 00),
+			title: "Predicación Triduo - Dia 3",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 22, 00),
+			endDate: new Date(2014,00, 07, 22, 05),
+			title: "Bendición Solemne",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 22, 05),
+			endDate: new Date(2014,00, 08, 01, 30),
+			title: "Entre Amigos",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 1, 30),
+			endDate: new Date(2014,00, 08, 2, 00),
+			title: "Historias y testimonios - Sipca TV",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 2, 00),
+			endDate: new Date(2014,00, 08, 3, 00),
+			title: "Punto, Cadeneta y Cruz",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 3, 00),
+			endDate: new Date(2014,00, 08, 3, 30),
+			title: "Si Quiero",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 3, 35),
+			endDate: new Date(2014,00, 08, 4, 30),
+			title: "Cantando y orando con el padre Aicardo",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 4, 30),
+			endDate: new Date(2014,00, 08, 5, 00),
+			title: "Predicación Tri duo - Dia 3",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 5, 05),
+			endDate: new Date(2014,00, 08, 5, 30),
+			title: "Santo Rosario",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 5, 30),
+			endDate: new Date(2014,00, 08, 6, 00),
+			title: "Nuestro Pan",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		}
+	);	
+	
+	$("#calendar").dp_calendar({
+		events_array: events_array,
+		format_ampm: true
+	
+	}); 
+	
+	$.fn.dp_calendar.setDate(date)
+	$.fn.dp_calendar.setDay(14)
+	$.fn.dp_calendar.setMonth(1)
+	$.fn.dp_calendar.setYear(2014)
+});  
+</script>
+
+<!-- ooooooooooooooooooooooooooooooooooooooooooooo
+IKLAN 
+oooooooooooooooooooooooooooooooooooooooooooooooo-->
+<div class="iklon">
+	<div class="container_12">
+		<div class="grid_12 text-center">
+			<a href="#">
+				<img src="images/assets/barracontacto.png" alt="barracontacto" />
+			</a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="howow">
+		<div class="wow">
+			<div class="wow_inner">
+				<a href="#" class="closeit"><i class="icon-remove icon-2x"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+<div class="parentcontainer" style="background-image: url(images/patterns/6.png);">
+	<div id="mobile-header">
+		<div id="container_12" >
+			<div class="grid_4" style="height:75px !important;">
+				<a id="simple-menu" href="#sidr" class="sidrmenu"><i class="icon-list-ul"></i></a>
+			</div>
+			<div class="grid_4 text-center" style="height:75px !important;">
+				<img src="images/assets/logomobile.png"/>
+			</div>
+			<div class="grid_4 text-right">
+				<a id="righttrigger" href="#rightmenu" class="sidrmenu"><i class="icon-search"></i></a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div id="sidr">
+		<h2>Menu de Paginas</h2>
+		<ul>
+			<li><a href="index.html">Home</a>
+				<!--<ul>
+					<li><a href="home1.html">Homepage 1</a></li>
+					<li><a href="home2.html">Homepage 2</a></li>
+					<li><a href="home3.html">Homepage 3</a></li>
+					<li><a href="home4.html">Homepage 4</a></li>
+					<li><a href="home5.html">Homepage 5</a></li>
+					<li><a href="home6.html">Homepage 6</a></li>
+					<li><a href="home7.html">Homepage 7</a></li>
+				</ul>-->
+			</li>
+			<li><a href="quienessomos.html">Quienes Somos</a>
+				<!--<ul>
+					<li><a href="#">2 Columns Sidebar</a>
+						<ul>
+							<li><a href="single.html">Right Sidebar</a></li>
+							<li><a href="single-left-sidebar.html">Left Sidebar</a></li>
+						</ul>
+					</li>
+					<li><a href="page.html">3 Columns</a>
+						<ul>
+							<li><a href="single-threecol.html">3 Columns right Sidebar</a></li>
+							<li><a href="single-threecol-left.html">3 Columns left Sidebar</a></li>
+							<li><a href="single-threecol-center.html">3 Columns Center Content</a></li>
+						</ul>
+					</li>
+					<li><a href="single-full.html">Full Width</a></li>
+				</ul>-->
+			</li>
+			<li><a href="programacion.html">Programación</a>
+				<!--<ul>
+					<li><a href="page.html">2 Columns Sidebar</a>
+						<ul>
+							<li><a href="page.html">Right Sidebar</a></li>
+							<li><a href="page-left-sidebar.html">Left Sidebar</a></li>
+						</ul>
+					</li>
+					<li><a href="page-fullwidth.html">Full Width</a></li>
+				</ul>-->
+			</li>
+			<li><a href="reddeamigos.html">Red de Amigos</a>
+				<ul>
+					<li><a href="queesreddeamigos.html">Que nes la Red de Amigos</a></li>
+					<li><a href="donaciones.html">Donaciones</a></li>
+					<li><a href="eventos.html">Eventos</a></li>
+					<li><a href="cep.html">CEP</a></li>
+					<li><a href="intenciones.html">Intenciones</a></li>
+
+				</ul>
+			</li>
+			<li><a href="5anos.html">Cumplimos 5 Años</a></li>
+			<li><a href="cobertura.html">Cobertura y Señal</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+		</ul>
+
+		
+	</div>
+	
+	<div id="rightmenu">
+		<h1>Buscar</h1>
+		<form>
+			<input type="text" placeholder="Buscar...">
+		</form>
+	</div>
+	
+	<!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+		HEADER 
+	oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+	<header id="mainheader" class="mobile-hide">
+		<div class="container container_12">
+			<!--<div class="headerimage"></div>-->
+			<!-- Logo -->
+			<div class="grid_3 logo" style="margin-left:150px; margin-top:30px;">
+				<a href="#"><img src="images/logo3.png" class="mobile-hide" alt="Cristovision"/></a>
+			</div>
+			<div class="grid_9 text-right" style="margin-top: -30px; margin-left:200px;">
+				<form class="headersearch" name="some_name" action="http://demo.envalabs.com/html/britanews/{form action link}" method="post">
+					<input type="text" name="search" class="srcfield" onfocus="if(this.value=='Search'){this.value=''};" onblur="if(this.value==''){this.value='Search'};" value="Buscar"/>
+					<div class="hdrbtn scnclr" id="search"><i class="icon-search"></i></div>
+					<div class="clearfix"></div>
+				</form>
+				<div class="topmenu">
+					<div class="hdrbtn scnclr"><i class="icon-globe"></i>
+						<ul class="fadeout">
+							<li><a href="https://www.facebook.com/CristovisionCanal"><i class="icon-facebook"></i> Facebook</a></li>
+							<li><a href="https://twitter.com/CRISTOVISION"><i class="icon-linkedin"></i> Twitter</a></li>
+							<li><a href="http://www.instagram.com/canalcristovision"><i class="icon-instagram"></i> Instagram</a></li>
+							<!--<li><a href="#"><i class="icon-google-plus"></i> Google+</a></li>-->
+							<li><a href="http://www.youtube.com/CristovisionCanal/"><i class="icon-youtube"></i> Youtube</a></li>
+						</ul>
+					</div>
+					<div class="hdrbtn scnclr"><i class="icon-th-list"></i>
+						<ul class="fadeout">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="quienessomos.html">Quienes Somos</a></li>
+							<li><a href="programacion.html">Programación</a></li>
+							<li><a href="reddeamigos.html">Red de Amigos</a></li>
+							<li><a href="cobertura.html">Cobertura y Señal</a></li>
+							<li><a href="contacto.html">Contacto</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		
+		<!-- Menu -->
+		<div class="container container_12">
+			<div class="grid_12">
+				<nav>
+					<div>
+						<ul class="mainmenu">
+							<li><a href="index.html" class="icon-home active"></a>
+								<!--<ul>
+									<li><a href="home1.html">Homepage 1</a></li>
+									<li><a href="home2.html">Homepage 2</a></li>
+									<li><a href="home3.html">Homepage 3</a></li>
+									<li><a href="home4.html">Homepage 4</a></li>
+									<li><a href="home5.html">Homepage 5</a></li>
+									<li><a href="home6.html">Homepage 6</a></li>
+									<li><a href="home7.html">Homepage 7</a></li>
+								</ul>
+							</li>-->
+							<!--<li><a href="#" class=""><i class="icon-list-ul"></i></a>
+								<ul>
+									<li><a href="archives-loop.html">Design</a></li>
+									<li><a href="archives-loop.html">Sport</a></li>
+									<li><a href="archives-loop.html">Politics</a></li>
+									<li><a href="archives-loop.html">Economy</a></li>
+									<li><a href="archives-loop.html">Technology</a></li>
+									<li><a href="archives-loop.html">Automotive</a></li>
+								</ul>
+							</li>-->
+							<li><a href="quienessomos.html">Quienes Somos</a>
+								<!--<ul>
+									<li><a href="#">2 Columns Sidebar</a>
+										<ul>
+											<li><a href="single.html">Right Sidebar</a></li>
+											<li><a href="single-left-sidebar.html">Left Sidebar</a></li>
+										</ul>
+									</li>
+									<li><a href="page.html">3 Columns</a>
+										<ul>
+											<li><a href="single-threecol.html">3 Columns right Sidebar</a></li>
+											<li><a href="single-threecol-left.html">3 Columns left Sidebar</a></li>
+											<li><a href="single-threecol-center.html">3 Columns Center Content</a></li>
+										</ul>
+									</li>
+									<li><a href="single-full.html">Full Width</a></li>
+								</ul>-->
+							</li>
+							<li><a href="programacion.html">Programación</a>
+								<!--<ul>
+									<li><a href="page.html">2 Columns Sidebar</a>
+										<ul>
+											<li><a href="page.html">Right Sidebar</a></li>
+											<li><a href="page-left-sidebar.html">Left Sidebar</a></li>
+										</ul>
+									</li>
+									<li><a href="page-fullwidth.html">Full Width</a></li>
+								</ul>-->
+							</li>
+							<li><a href="reddeamigos.html">Red de Amigos</a>
+								<ul>
+									<li><a href="queesreddeamigos.html">Que es la Red de Amigos</a></li>
+									<li><a href="donaciones.html">Donaciones</a></li>
+									<li><a href="eventos.html">Eventos</a></li>
+									<li><a href="cep.html">CEP</a></li>
+									<li><a href="intenciones.html">Intenciones</a></li>
+								</ul>
+							</li>
+							<li><a href="5anos.html">Cumplimos 5 Años</a></li>
+							<li><a href="cobertura.html">Cobertura y Señal</a></li>
+							<li><a href="contacto.html">Contacto</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</header>
+	<div class="clearfix"></div>
+	
+	
+	<!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+		Content/Teaser
+	oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+	<section id="maincontent">
+		<!-- BREADCRUMBS -->
+		<div class="container_12">
+			<div class="grid_6">
+				<ul class="breadcrumbs inline-list">
+					<li><a href="index.html">Home</a></li>
+					<li>Programación</li>
+				</ul>
+			</div>
+
+
+			<div class="grid_6 text-right">
+				<div id="Date" class="mobile-hide"></div>
+			</div>
+			<div class="clearfix"></div>
+
+			<div class="container_12 mobile-hide">
+		<div class="grid_1">
+		<h4 class="fword">Programación Hoy</h4>
+		</div>
+		<div class="grid_8">
+			<div class="newsticker">
+				<ul class="slides">
+					<li><h2><a href="#">Coronilla de la Divina Misericordia</a> | 6:05 AM</h2></li>
+					<li><h2><a href="#">Llena tu Día de Dios</a> | 6:30 AM</h2></li>
+					<li><h2><a href="#">Ponte al Día</a> | 7:00 AM</h2></li>
+					<li><h2><a href="#">Taller de Oración Cuando Vayas a Orar</a> | 7:30 AM</h2></li>
+					<li><h2><a href="#">Sagrada Eucaristia</a> | 8:30 AM</h2></li>
+					<li><h2><a href="#">Entre Amigos</a> | 9:00 AM</h2></li>
+					<li><h2><a href="#">Angelus</a> | 12:00 PM</h2></li>
+					<li><h2><a href="#">Sagrada Eucaristía</a> | 12:05 PM</h2></li>
+					<li><h2><a href="#">Nuestro Pan de cada Día</a> | 12:30 PM</h2></li>
+					<li><h2><a href="#">Especiales CTV</a> | 1:00 PM</h2></li>
+					<li><h2><a href="#">Punto, Cadeneta y Cruz</a> | 2:00 PM</h2></li>
+					<li><h2><a href="#">Coronilla de la Divina Misericordia</a> | 3:00 PM</h2></li>
+					<li><h2><a href="#">Franja Comercial</a> | 4:00 PM</h2></li>
+					<li><h2><a href="#">Pongale Fe</a> | 4:30 PM</h2></li>
+					<li><h2><a href="#">Libertad, Pecado y Gracia</a> | 5:00 PM</h2></li>
+					<li><h2><a href="#">Santo Rosario</a> | 5:30 PM</h2></li>
+					<li><h2><a href="#">Caminante</a> | 6:30 PM</h2></li>
+					<li><h2><a href="#">Mensaje Minuto de Dios</a> | 7:00 PM</h2></li>
+					<li><h2><a href="#">Sagrada Eucaristía</a> | 7:05 PM</h2></li>
+					<li><h2><a href="#">Yo Creo</a> | 8:00 PM</h2></li>
+					<li><h2><a href="#">Jóvenes del Cenaculo</a> | 8:30 PM</h2></li>
+					<li><h2><a href="#">Nuestro Pan de Cada Día</a> | 9:00 PM</h2></li>
+					<li><h2><a href="#">Bendición Solemne</a> | 10:00 PM</h2></li>
+					<li><h2><a href="#">Taller de Oración Cuando vayas a Orar</a> | 10:05 PM</h2></li>
+					<li><h2><a href="#">Entre Amigos</a> | 11:00 PM</h2></li>
+
+				</ul>
+			</div>
+		</div>
+		<div class="grid_3 text-right">
+			<div id="Date" class="mobile-hide"></div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="clearfix"></div>
+		</div>
+		
+		<!-- CONTENT/ARTIKEL -->
+		<div class="container_12">
+			<div class="grid_12">
+				<!-- LOOP HERE... PUT THE QUERY HERE -->
+				<article class="singlepost">
+					<header>
+						<!-- THUMB -->
+						<div class="singlePosThumb">
+							<img src="images/imagenes/programacion.png" alt="image"/>
+							<div class="content-title">
+								<!--<h1 class="page-title">30 Useful and Hilarious Lorem Ipsum Generators. Is Lorem Ipsum Useful?</h1>-->
+							</div>
+							<div class="bub-right"></div>
+							<div class="bub-left"></div>
+						</div>
+						<div class="clearfix"></div>
+						<!-- META -->
+						<div class="singleMeta">
+							<div class="grid_2 alpha omega">
+								
+							</div>
+							<!--<div class="grid_4 ">
+								<i class="icon-user"></i> by <a href="#">Mang Dadang</a> <br/>
+								<i class="icon-time"></i> 3 Days Ago <br/>
+								<i class="icon-bookmark-empty"></i> <a href="#">Web Design</a><br/>
+								<i class="icon-comments"></i> <a href="#">57 Comments</a>
+							</div>-->
+							<div class="grid_6 share">
+								<!-- Facebook Like -->
+								<div>
+									<div class="fb-like" data-href="http://twitter.com/" data-width="59" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="box_count" data-action="like" data-show-faces="false" data-send="false"></div>
+								</div>
+								
+								
+								<!-- Tweet -->
+								<div><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://facebook.com" data-text="Evangeliza con Nosotros" data-via="twitter" data-count="vertical">Tweet</a>
+								<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+								
+								
+								<!-- Google+ -->
+								<div>
+									<div class="g-plusone" data-size="tall"></div>
+								</div>
+								<!-- Pinterest -->
+								<div>
+									<a href="http://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwww.flickr.com%2Fphotos%2Fkentbrew%2F6851755809%2F&amp;media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&amp;description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="above"><img src="../../../assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+								</div>
+								
+							</div>
+						</div>
+					</header>
+					
+					<div class="clearfix"></div>
+					<div class="devide"></div>
+					
+					<div class="content-entry">
+						
+
+						<h1>PROGRAMACION</h1>
+						
+						<p>Cuadro con programacion semanal</p>
+						<div id="content">
+    	
+						<div id="calendar"></div>
+       
+   						 </div>
+ 						<!--<img src="http://www.cristovision.tv/archivosftp/senal/fondosenal.png">-->
+
+						
+					</div>
+					
+					<div class="clearfix"></div>
+					<div class="content-entry reviews">
+						<!--<h3 class="fword">CIUDADES Y MUNICIPIOS</h3>-->
+
+						<div class="clearfix"></div><div class="devide totalrating"></div><div class="clearfix"></div>
+						
+					
+						</div>
+					</div>
+					
+					
+					<div class="clearfix"></div>
+					<div class="devide"></div>
+					<footer>
+						
+						
+					</footer>
+					
+					
+					<!-- RELATED -->
+					<div class="content-entry related">
+						
+						
+						
+						
+						
+					</div>
+				</article>
+				<!-- END/CLOSE THE QUERY HERE -->
+				<div class="clearfix"></div>
+				
+				
+				<!-- Start Comment -->
+				
+					
+					
+				</div>
+				
+				
+			</div>
+			
+			
+			<div class="clearfix"></div>
+		</div>
+		
+		
+	<div class="clearfix"></div>
+	</section>
+	
+<div class="clearfix"></div>
+<!-- oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
+	Footer
+oooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+
+<footer id="mainfooter">
+	<div class="container footer container_12 threecolumns">
+	<div class="fooline"></div> <!-- Extra line for footer -->
+
+		<div class="grid_4">
+			<div class="foowid">
+
+				<div class="foowid">
+				<h3 class="fword fwidtit">DONACIONES</h3>
+				<a href="donaciones.html"><img src="images/imagenes/donacion.png" alt="donaciones" class="pushright"/></a>
+				<p>Tu aporte hace posible que continuemos con nuestra labor de evangelizacion. Ayudanos a que mas personas puedan ver el mundo con los ojos de Jesus.</p>
+				<ul class="contact-list">
+					<li><i class="icon-envelope"></i> donaciones@cristovision.org</li>
+					<li><i class="icon-phone"></i> (571)744-2407 </li>
+					<li><i class="icon-map-marker"></i> Calle 18 No. 97 -61, Bogotá - Colombia</li>
+				</ul>
+			</div>
+
+				<div class="foowid">
+				<h3 class="fword fwidtit">NOVEDADES</h3>
+				<img src="images/assets/pauta.gif" alt="pauta" class="pushright"/>
+				
+				<ul class="contact-list">
+		
+				</ul>
+			</div>
+
+				<h3 class="fword fwidtit">LOS MÁS VISTOS</h3>
+				<div class="featuredslides">
+					<ul class="slides">
+						<li>
+							<img src="images/assets/masvistos1.png" alt="image"/>
+							<div class="capcontain">
+								<div class="slidetitle">
+									<div class="slidedate">25 de Noviembre, 2013</div>
+									<div class="clear"></div>
+									<h2>Misa del Señor de los Milagros</h2>
+								</div>
+							</div>
+						</li>
+						<li>
+							<img src="images/assets/masvistos2.png" alt="image"/>
+							<div class="capcontain">
+								<div class="slidetitle">
+									<div class="slidedate">2 de Diciembre, 2013</div>
+									<div class="clear"></div>
+									<h2>Nuestro Pan de Cada Día</h2>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+
+	
+
+		</div>
+		<div class="grid_4">
+			<div class="foowid">
+				<h3 class="fword fwidtit">PUBLICACIONES RECIENTES</h3>
+				<article class="recposts">
+					<div class="grid_6 text-right">	
+						<div class="posthumb">
+							<a href="#"><img src="images/assets/publicaciones1.png" alt="image"/></a>
+						</div>
+					</div>
+					<div class="grid_6">
+						<small>Diciembre 10, 2013</small>
+						<h2><a href="#">Lineas Locales Cristovisión</a></h2>
+					</div>
+				</article>
+				<article class="recposts">
+					<div class="grid_6 text-right">	
+						<div class="posthumb">
+							<a href="#"><img src="images/assets/publicaciones2.png" alt="image"/></a>
+						</div>
+					</div>
+					<div class="grid_6">
+						<small>Noviembre 28, 2013</small>
+						<h2><a href="#">Noticias de la Iglesia</a></h2>
+					</div>
+				</article>
+				<article class="recposts">
+					<div class="grid_6 text-right">	
+						<div class="posthumb">
+							<a href="#"><img src="images/assets/publicaciones3.png" alt="image"/></a>
+						</div>
+					</div>
+					<div class="grid_6">
+						<small>Noviembre 16, 2013</small>
+						<h2><a href="#">Encuentro de Vicarios</a></h2>
+					</div>
+				</article>
+				
+				
+				<div class="clearfix"></div>
+			</div>
+			
+			<!-- Video Of The Week -->
+			<div class="foowid">
+				<h3 class="fword fwidtit">VIDEO DE LA SEMANA</h3>
+				<div class="videothumb posthumb">
+					<img src="images/assets/video5anos.png" alt="Cristovision 5 Años"/>
+					<a href="http://www.youtube.com/watch?v=d9HxdejgDm4" class="vidplay" title="Cristovision 5 años" rel="prettyPhoto">
+						<i class="icon-play-circle icon-3x"></i>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			
+			
+		</div>
+		<div class="grid_4 omega">
+
+			<!-- TWITTER -->
+			<div class="widgetbox blue">
+						<h4><i class="icon-twitter"></i> Ultimos Tweets</h4>
+						<!--<ul>
+							<li>@someuser Haha, do you like it Bro?</li>
+							<li>Hi, Brito magazine news is out now in envalabs</li>
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>No, I don’t RT @emma Do you want to hang out with my friends?</li>
+						</ul>-->
+						<a class="twitter-timeline" href="https://twitter.com/CRISTOVISION" data-widget-id="410835616973070336">Tweets por @CRISTOVISION</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+					</div>
+
+			<!-- FLICKR -->
+			<div class="foowid">
+				<h3 class="fword fwidtit">MOMENTOS CRISTOVISIÓN</h3>
+				<ul>
+					<div id="flickr" class="flickr"></div>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+			
+			<!-- Review -->
+			<div class="foowid">
+				<h3 class="fword fwidtit">FACEBOOK</h3>
+				<article class="recposts">
+				<div class="fb-like-box fb_iframe_widget" data-header="true" data-href="http://www.facebook.com/pages/Canal-Cristovisi%C3%B3n/162393170464208" data-show-faces="true" data-stream="true" data-width="300" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;header=true&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FCanal-Cristovisi%25C3%25B3n%2F162393170464208&amp;locale=es_LA&amp;sdk=joey&amp;show_faces=true&amp;stream=true&amp;width=300"><span style="vertical-align: bottom; width: 350px; height: 571px;"><iframe name="f397038a44" width="300px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like_box Facebook Social Plugin" src="http://www.facebook.com/plugins/like_box.php?app_id=&amp;channel=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D28%23cb%3Df96ab2b6c%26domain%3Dwww.cristovision.tv%26origin%3Dhttp%253A%252F%252Fwww.cristovision.tv%252Ff27cc7eb0%26relation%3Dparent.parent&amp;header=true&amp;href=http%3A%2F%2Fwww.facebook.com%2Fpages%2FCanal-Cristovisi%25C3%25B3n%2F162393170464208&amp;locale=es_LA&amp;sdk=joey&amp;show_faces=true&amp;stream=true&amp;width=350" class="" style="border: none; visibility: visible; width: 350px; height: 571px;"></iframe></span></div>	
+				</article>
+				
+				
+			</div>
+		</div>
+	<div class="clearfix"></div>
+	</div>
+<div class="clearfix"></div>
+	
+	<!-- ooooooooooooooo 
+	COPYRIGHT 
+	ooooooooooooooooooo-->
+	<div class="copyright container container_12">	
+		<div class="grid_6">	
+			Cristovisión &copy; 2013 - Todos los Derechos Reservados
+		</div>
+		<div class="grid_6">
+			<ul class="text-right inline-list">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Politicas de Privacidad</a></li>
+				<li><a href="#">Terminos y condiciones</a></li>
+				<li><a href="#">Contactenos</a></li>
+				
+			</ul>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	
+	
+<div class="clearfix"></div>
+</footer>
+
+<div class="clearfix"></div>	
+</div>
+<a href="#" class="scrollup"><i class="icon-chevron-up"></i></a>
+
+
+<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="js/plugin.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+<!-- SWITCH -->
+<link id="switchyuk" rel="stylesheet" type="text/css" href="css/schemes/blue.css" />
+<div class="ganti">
+	
+</div>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/themeswitch.js"></script>
+
+<!-- END Switcher Scripts -->
+
+</body>
+</html>

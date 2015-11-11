@@ -1,196 +1,215 @@
-<!DOCTYPE html>
+<!DOCTYPE html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--Declare page as mobile friendly --> 
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
+<!-- Declare page as iDevice WebApp friendly -->
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!-- iDevice WebApp Splash Screen, Regular Icon, iPhone, iPad, iPod Retina Icons -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/splash/splash-icon.png"> 
+<!-- iPhone 3, 3Gs -->
+<link rel="apple-touch-startup-image" href="images/splash/splash-screen.png" 			media="screen and (max-device-width: 320px)" /> 
+<!-- iPhone 4 -->
+<link rel="apple-touch-startup-image" href="images/splash/splash-screen@2x.png" 		media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" /> 
+<!-- iPhone 5 -->
+<link rel="apple-touch-startup-image" sizes="640x1096" href="images/splash/splash-screen@3x.png" />
 
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Messages</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/framework.css">
-  <link rel="stylesheet" type="text/css" href="css/washington.css">
-  <script src="js/webfont.js"></script>
-  <script>
-    WebFont.load({
-      google: {
-        families: ["Montserrat:400,700"]
-      }
-    });
-  </script>
-  <script type="text/javascript" src="js/modernizr.js"></script>
-  <link rel="shortcut icon" type="image/x-icon" href="images/logoStandford32.ico">
-  <link rel="apple-touch-icon" href="images/logoStandford32.ico">
+<!-- Page Title -->
+<title>Cristovision | El canal de la Iglesia Católica</title>
 
-  <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+<!-- Stylesheet Load -->
+<link href="styles/style.css"				rel="stylesheet" type="text/css">
+<link href="styles/framework-style.css" 	rel="stylesheet" type="text/css">
+<link href="styles/framework.css" 			rel="stylesheet" type="text/css">
+<link href="styles/bxslider.css"			rel="stylesheet" type="text/css">
+<link href="styles/swipebox.css"			rel="stylesheet" type="text/css">
+<link href="styles/icons.css"				rel="stylesheet" type="text/css">
+<link href="styles/retina.css" 				rel="stylesheet" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
+
+
+<!--Page Scripts Load -->
+<script src="scripts/jquery.min.js"		type="text/javascript"></script>	
+<script src="scripts/hammer.js"			type="text/javascript"></script>	
+<script src="scripts/jquery-ui-min.js"  type="text/javascript"></script>
+<script src="scripts/subscribe.js"		type="text/javascript"></script>
+<script src="scripts/contact.js"		type="text/javascript"></script>
+<script src="scripts/jquery.swipebox.js" type="text/javascript"></script>
+<script src="scripts/bxslider.js"		type="text/javascript"></script>
+<script src="scripts/colorbox.js"		type="text/javascript"></script>
+<script src="scripts/retina.js"			type="text/javascript"></script>
+<script src="scripts/custom.js"			type="text/javascript"></script>
+<script src="scripts/framework.js"		type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+    // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+    // device APIs are available
+    //
+
+    
+    function openBrowser2(){
+        window.open('https://www.facebook.com/CanalCristovisionTV', '_system', 'location=yes');
+    }
+    function openBrowser3(){
+        window.open('https://twitter.com/CRISTOVISION', '_system', 'location=yes');
+    }
+    
+
+    </script>
+
 </head>
-<body>
-  <section class="w-section mobile-wrapper">
+<body style="background-image:url('images/background/background.png');">
 
-    <div class="page-content" id="main-stack">
-    <div class="botonregistro"><a href="registro.html"><img src="images/boton-registro-small.png" ></a></div>
-      <div class="w-nav navbar" data-collapse="all" data-animation="over-right" data-duration="400" data-contain="1" data-easing="ease-out-quint" data-no-scroll="1">
-        <div class="w-container">
-          <nav class="w-nav-menu nav-menu" role="navigation">
-            <div class="nav-menu-header">
-              <div class="logo"><img src="images/logo.png"></div>
-              <div class="slogan"></div>
-            </div>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="index.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-home-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Inicio</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="login.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-download-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Login</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="signup.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-cloud-upload-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Inscribase</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="calendario.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-list-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">calendario</div>
-              
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="videos.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-albums-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Videos</div>
-              <div class="nav-menu-text-right">8</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="chat.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-chatboxes-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Chat</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="articulos.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-keypad-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Articulos</div>
-              <div class="nav-menu-text-right">12</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="registro.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-paper-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Registro</div>
-              <div class="nav-menu-text-right">14</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="perfil.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-compose-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">perfil</div>
-              <div class="nav-menu-text-right">14</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="clases.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-person-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Clases</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="mapa.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-location-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Cerca de Mi</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="admin.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-gear-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Admin</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link last" href="terminos.html" data-load="1">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-bookmarks-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Terminos y Condiciones</div>
-            </a>
-            <div class="separator-bottom"></div>
-            <div class="separator-bottom"></div>
-            <div class="separator-bottom"></div>
-          </nav>
-          <div class="wrapper-mask" data-ix="menu-mask"></div>
-          <div class="navbar-title"><img src="images/logo-miembarazo-small.png"></div>
-          <div class="w-nav-button navbar-button left" id="menu-button" data-ix="hide-navbar-icons">
-            <div class="navbar-button-icon home-icon">
-              <div class="bar-home-icon"></div>
-              <div class="bar-home-icon"></div>
-              <div class="bar-home-icon"></div>
-            </div>
-          </div>
-          
+<div id="preloader">
+	<div id="status">
+    	<p class="center-text">
+			Cargando el contenido...
+            <em>La carga del contenido depende de su velocidad de conexion!</em>
+        </p>
+    </div>
+</div>
+
+<div class="header">
+    <a class="logo-home" href="index.html"><img src="images/logob.png" alt="img" width="40"></a>
+    <div class="header-text">
+        <strong>CRISTOVISIÓN</strong>
+        <em>El canal de la Iglesia Católica</em>
+    </div>
+</div>
+<div class="header-clear"></div>
+
+<div class="bxslider-wrapper">
+    <div class="bxslider">
+        <div>
+            <img src="images/slider/0.jpg" alt="img"/>
+            <blockquote class="slider-caption">
+                <!--<p class="slider-title">
+                    PARA VER EL MUNDO<br>CON LOS OJOS DE JESÚS
+                </p>-->
+            </blockquote>
         </div>
-      </div>
-      <div class="body">
-          
-        <ul class="list list-messages">
-          <li class="list-message" data-ix="list-item">
-            <a class="w-clearfix w-inline-block" href="semanaasemana.html" data-load="1">
-              <div class="boton-semana">
-                <div class="image-message"><img src="images/boton-semana-semana.png">
-                </div>
-              </div>
-              <div class="mensaje-user">
-                <div class="message-title">¡Hola Maria Perez!</div>
-                <div class="message-text">Estas en el Trimestre XX Semana X - Tip: Recuerda tomar Acido Fólico</div>
-              </div>
-            </a>
-          </li>
-
-          <div class="menu-botones" style="margin-top:-50px;">
-            <a href="calendario.html"><div class="boton1"></div></a>
-            <a href="cursos.html"><div class="boton2"></div></a>
-            <a href="videos.html"><div class="boton3"></div></a>
-            <!--<div class="content-square"></div>-->
-            <a href="albumfotos.html"><div class="boton4"></div></a>
-            <a href="articulos.html"><div class="boton5"></div></a>
-            <a href="calculadoras.html"><div class="boton6"></div></a>
-
-          </div>
-
-          <div class="menu-footerhome">
-            <div class="home">
-               <a href="home.html"><img src="images/boton-home2.png"></a>
-             </div>
-
-             <div class="perfil">
-               <a href="perfil.html"><img src="images/boton-perfil.png"></a>
-             </div>
-             <div class="mapa">
-               <a href="mapa.html"><img src="images/boton-location.png"></a>
-             </div>
-             <div class="chat">
-               <a href="chat.html"><img src="images/boton-chat.png"></a>
-             </div>
-          </div>
-
-        </ul>
-        
-      </div>
-      
+        <div>
+            <img src="images/slider/1.jpg" alt="img"/>
+            <blockquote class="slider-caption">
+                <!--<p class="slider-title">
+                    PARA VER EL MUNDO<br>CON LOS OJOS DE JESÚS
+                </p>-->
+            </blockquote>
+        </div>
+        <div>
+            <img src="images/slider/3.jpg" alt="img"/>
+            <blockquote class="slider-caption">
+                <!--<p class="slider-title">
+                    PARA VER EL MUNDO<br>CON LOS OJOS DE JESÚS
+                </p>-->
+            </blockquote>
+        </div>
     </div>
-    <div class="page-content loading-mask" id="new-stack">
-      <div class="loading-icon">
-        <div class="navbar-button-icon icon ion-load-d"></div>
-      </div>
+</div>
+
+<div class="content">
+
+	<div class="container no-bottom">
+        <div class="heading half-bottom">
+            <div class="heading-left">
+                <em>unas breves palabras</em>
+                <h3>SOBRE NOSOTROS</h3>
+            </div>
+            <div class="heading-right">
+                <span class="icon icon-user1"><img style="height:20px; width:20px; left:16%; top:16%;" src="images/user.png"></span>
+            </div>
+        </div>
+        <p class="paragraph">
+            La Fundación CRISTOVISIÓN fue creada en Colombia en el año 2003, como una entidad sin ánimo de lucro que se dedica a la creación, realización y producción de productos comunicativos con un énfasis evangelizador; promoviendo de este modo el bienestar social y el fortalecimiento de la espiritualidad de los creyentes.
+        </p>
     </div>
-    <div class="shadow-layer"></div>
-  </section>
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/framework.js"></script>
-  <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
+    <div class="decoration"></div>
+    
+    <div class="container no-bottom">
+        <div class="heading half-bottom">
+            <div class="heading-left">
+                <em>programacion regular</em>
+                <h3>NUESTROS PROGRAMAS</h3>
+            </div>
+            <div class="heading-right">
+                <span class="icon icon-cog2"><img style="height:20px; width:20px; left:16%; top:16%;" src="images/cog2.png"></span>
+            </div>
+        </div>
+    	<div class="thumbs">
+        	<div class="thumb">
+            	<img src="images/slider/0s.jpg" alt="img">
+                <!--<p class="left-thumb-text">ESPECIALES CTV</p>-->
+            </div>
+        	<div class="thumb">
+            	<img src="images/slider/1s.jpg" alt="img">
+                <!--<p class="right-thumb-text">BUSCANDO RESPUESTAS</p>-->
+            </div>
+        	<div class="thumb">
+            	<img src="images/slider/2s.jpg" alt="img">
+                <!--<p class="left-thumb-text">LINEA DIRECTA</p>-->
+            </div>
+        	<div class="thumb">
+            	<img src="images/slider/3s.jpg" alt="img">
+                <!--<p class="right-thumb-text">RAP-C</p>-->
+            </div> 
+        	<div class="thumb">
+            	<img src="images/slider/4s.jpg" alt="img">
+                <!--<p class="left-thumb-text">SAGRADA EUCARISTIA</p>-->
+            </div>
+        	<div class="thumb">
+            	<img src="images/slider/6s.jpg" alt="img">
+                <!--<p class="right-thumb-text">ENTRE AMIGOS</p>-->
+            </div>   
+        </div>
+    </div>
+
+	<div class="decoration"></div>
+</div>
+
+<div class="footer">
+
+    <div class="small-navigation-icons">
+      <button onclick='openBrowser2("https://www.facebook.com/CanalCristovisionTV");' class="small-nav-icon facebook-nav"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/facebook.png"></button>
+        <!--<a href="https://www.facebook.com/CanalCristovisionTV" class="small-nav-icon facebook-nav"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/facebook.png"></a>-->
+        <a href="#" class="small-nav-icon go-up up-nav"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/bendedup.png"></a>
+        <button onclick='openBrowser3("https://twitter.com/CRISTOVISION");' class="small-nav-icon twitter-nav"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/twitter.png"></button>
+        <!--<a href="https://twitter.com/CRISTOVISION" class="small-nav-icon twitter-nav"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/twitter.png"></a>-->
+        <div class="clear"></div>
+    </div>
+
+    <p class="copyright">CRISTOVISION 2014. TODOS LOS DERECHOS RESERVADOS</p>
+</div>
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
