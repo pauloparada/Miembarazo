@@ -94,6 +94,8 @@ body{
     line-height: 1.6em;
     text-decoration: none;
     font-family: helvetica;
+    margin-top: -5px;
+	margin-bottom: 5px;
 }
 
 .home-nav{
