@@ -1481,7 +1481,7 @@ textarea.w-select {
   top: 100%;
   left: 0;
   right: 0;
-  background: #999;
+  background: #FFF;
   text-align: center;
   overflow: visible;
   min-width: 200px;
@@ -1519,6 +1519,7 @@ textarea.w-select {
   left: auto;
   z-index: 1;
   top: 0;
+  margin-right: -20px;
 }
 .w-nav-button {
   position: relative;
