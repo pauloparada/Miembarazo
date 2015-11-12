@@ -60,20 +60,20 @@ body{
 	width:270px;
 	margin-left:auto;
 	margin-right:auto;	
-	margin-top: -90px;
+	margin-top: -110px;
 	overflow: visible !important;
 	z-index:999;
 }
 
 .user-info{
-	margin-top: 37px;
+	margin-top: 47px;
 }
 
 .nombre-usuario{
 	display: inline-block;
     padding-top: 3px;
     color: #5D5656;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
     font-size: 24px;
     font-family: 'helvetica';
     font-weight: normal;
@@ -199,6 +199,7 @@ body{
     .card {
       width: 184px;
       text-align: center;
+      margin-top:-10px;
     }
     .card h2 {
       margin: 0 0 7px 0;
