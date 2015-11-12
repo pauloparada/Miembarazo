@@ -176,7 +176,7 @@ body{
 
 .small-navigation-icons{
 	margin-top:11	0px;
-	width:200px;
+	width:250px;
 	margin-left:auto;
 	margin-right:auto;	
 }
@@ -270,7 +270,7 @@ body{
 	height:40px;
 	border-radius:40px;
 	/*margin-left:10px;*/
-	margin-right:10px;
+	margin-right:20px;
 	float:left;
 }
 
@@ -458,8 +458,23 @@ body{
 	margin-top:10px;
 }
 
+.peso-ideal{
+	margin-top: 90px;
+    margin-left: 30px;
+    position: absolute;
+}
 
+.ovulacion{
+    margin-left: 130px;
+    margin-top: 220px;
+    position: absolute;
+}
 
+.fechadeparto{
+    margin-left: 30px;
+    margin-top: 350px;
+    position: absolute;
+}
 
 
 
