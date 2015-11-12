@@ -1433,6 +1433,7 @@ textarea.w-select {
   position: relative;
   z-index: 1000;
   background-color: transparent;
+  margin-top: -20px;
 }
 .w-nav:before,
 .w-nav:after {
