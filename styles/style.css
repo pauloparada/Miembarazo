@@ -181,6 +181,7 @@ body{
 	margin-right:auto;	
 	left: 10%;
     position: fixed;
+    z-index: 9999;
 }
 
 .senalenvivo{
