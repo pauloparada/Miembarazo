@@ -64,6 +64,14 @@ body{
 	overflow: visible !important;
 	z-index:999;
 }
+.navigation-icons2{
+	width:100%;
+	margin-left:auto;
+	margin-right:auto;	
+	margin-top: -110px;
+	overflow: visible !important;
+	z-index:999;
+}
 
 .user-info{
 	
