@@ -585,7 +585,7 @@ a {
   float: left;
 }
 .banner{
-  width: 160px;
+  width: 140px;
   height: 60px;
   float: left;
   background-image: url('../images/banner.png');
@@ -1192,7 +1192,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1dbff', end
 }
 .square-map {
   height: 330px;
-  margin-top: -8px;
+  margin-top: 80px;
 }
 .hero-map {
   height: 280px;

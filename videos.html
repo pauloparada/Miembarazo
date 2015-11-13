@@ -52,7 +52,7 @@
 
 
 <!-- Page Title -->
-<title>Mi Embarazo App</title>
+<title>Mi Embarazo - </title>
 
 <!-- Stylesheet Load -->
 <link href="styles/style.css"				rel="stylesheet" type="text/css">
@@ -237,65 +237,65 @@
         
     </div>
 
-<div class="navigation-icons" style="overflow: visible !important; margin-top:5px;">
-    <div class="carrousel">
-        <div class="wrap">
-    <div id="showcase" class="noselect">
-      <div class="card">
-        <a href="calendario.html"><img src="images/calendario.png"></a>
-      </div>
-      <div class="card">
-        <div>
-        	<a href="calculadoras.html"><img src="images/calculadoras.png"></a>
+      <center><div>
+            <select class="minimal">
+              <option value="volvo">Parto</option>
+              <option value="saab">Embarazo</option>
+              <option value="mercedes">Parto humanizado</option>
+              <option value="audi">Posparto</option>
+              <option value="audi">Lactancia</option>
+              <option value="audi">Ejercicios durante el Embarazo</option>
+            </select>
+          </div></center>
+
+    <div class="navigation-icons" style="overflow: visible !important;height:520px;">   
+
+        <div class="video-container" style="margin-top: 40%;height: 500px; overflow-x:scroll">
+
+        
+              <center><div class="videobox">
+                <div class="separator-fields"></div>
+                  <h2 class="title-new">Posparto: Cuidados del bebé</h2>
+                  <div class="separator-fields"></div>
+                    <iframe width="270" height="200" src="https://www.youtube.com/embed/m6Zj-jbuaNY" frameborder="0" allowfullscreen></iframe>
+                  <div class="separator-fields"></div>
+              </div></center>
+
+              <center><div class="videobox">
+                <div class="separator-fields"></div>
+                  <h2 class="title-new">Papel de la matrona en el parto humanizado</h2>
+                  <div class="separator-fields"></div>
+                    <iframe width="270" height="200" src="https://www.youtube.com/embed/-mpCXQ6PaDU" frameborder="0" allowfullscreen></iframe>
+                  <div class="separator-fields"></div>
+              </div></center>
+
+              <center><div class="videobox">
+                <div class="separator-fields"></div>
+                  <h2 class="title-new">Posparto: Volviendo a la rutina</h2>
+                  <div class="separator-fields"></div>
+                    <iframe width="270" height="200" src="https://www.youtube.com/embed/mgHTxpO4I90" frameborder="0" allowfullscreen></iframe>
+                  <div class="separator-fields"></div>
+              </div></center>
+
+              <center><div class="videobox">
+                <div class="separator-fields"></div>
+                  <h2 class="title-new">Impacto emocional del parto y su medicalización</h2>
+                  <div class="separator-fields"></div>
+                    <iframe width="270" height="200" src="https://www.youtube.com/embed/TLvAdz87cls" frameborder="0" allowfullscreen></iframe>
+                  <div class="separator-fields"></div>
+              </div></center>
         </div>
-      </div>
-      <div class="card">
-        <a href="cursos.html"><img src="images/cursos.png"></a> 
-      </div>
-      <div class="card">
-        <a href="articulos.html"><img src="images/articulos.png"></a>
-        
-      </div>
-      <div class="card">
-        <a href="albumfotos.html"><img src="images/albumfotos.png"></a>
-        
-      </div>
-      <div class="card">
-        <a href="videos.html"><img src="images/videos.png"></a>
-        
-      </div>
-      <div class="card">
-        <a href="#"><img src="images/pauta1.png"></a>
-      </div>
-      <div class="card">
-        <a href="#"><img src="images/pauta2.png"></a>
-      </div>
+          
     </div>
-    </div>
-</div>
-    
-    <div class="navigation-icons" style="overflow: visible !important;">
-            <button class="nav noselect left">
-            &lt;
-            </button>
-            <button class="nav noselect right">
-            &gt;
-            </button>
-    </div>
-    	<center><div class="user-info">
-            <img src="images/user-circle.png">
-            <div class="nombre-usuario">Hola Maria Perez</div>
-            <div class="semana-usuario">Estas en el Trimestre X Semana X</div>
-            <div class="tip-usuario">Recuerda tomar acido fólico</div>
-        </div></center>
+    	
 
     
     
     <div class="small-navigation-icons">
-        <a href="index.html" class="small-nav-icon button-nav1"><img style="height:24px; width:24px; left: 19%; top: 19%;"src="images/icons/nav-button1.png"></a>
+      <a href="index.html" class="small-nav-icon button-nav1"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/icons/nav-button1.png"></a>
     	<a href="registro.html" class="small-nav-icon button-nav2"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/icons/nav-button2.png"></a>
-       <a href="mapa.html" class="small-nav-icon button-nav3"><img style="height:24px; width:24px; left: 19%; top: 19%;"src="images/icons/nav-button3.png"></a>
-        <a href="chat.html" class="small-nav-icon button-nav4"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/icons/nav-button4.png"></a>
+      <a href="ubicacion.html" class="small-nav-icon button-nav3"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/icons/nav-button3.png"></a>
+      <a href="chat.html" class="small-nav-icon button-nav4"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/icons/nav-button4.png"></a>
         <div class="clear"></div>
     </div>
     
@@ -313,9 +313,8 @@
       var showcase = $("#showcase")
 
       showcase.Cloud9Carousel( {
-      	xRadius: 100,
         yOrigin: 42,
-        yRadius: -20,
+        yRadius: 40,
         itemClass: "card",
         buttonLeft: $(".nav.left"),
         buttonRight: $(".nav.right"),

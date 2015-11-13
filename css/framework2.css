@@ -877,11 +877,11 @@ textarea.w-select {
   }
 }
 .w-widget {
-  position: relative;
+  position: absolute;
 }
 .w-widget-map {
   width: 100%;
-  height: 400px;
+  height: 350px;
 }
 .w-widget-map label {
   width: auto;
