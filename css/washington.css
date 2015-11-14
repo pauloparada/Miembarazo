@@ -233,7 +233,12 @@ a {
 }
 .list {
   padding-left: 0px;
-  background-color: #FFF;
+  background-color: transparent;
+  list-style-type: none;
+}
+.list2 {
+  padding-left: 0px;
+  background-color: transparent;
   list-style-type: none;
 }
 .list.list-messages {
@@ -250,7 +255,15 @@ a {
   height: 60px;
   border-bottom: 1px solid #e7e7e9;
   border-left: 3px solid transparent;
-  background-color: white;
+  background-color: transparent;
+}
+.list-item2 {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 60px;
+  border-bottom: 1px solid #e7e7e9;
+  border-left: 3px solid transparent;
+  background-color: transparent;
 }
 .list-item:active {
   background-color: #f7f7f7;
