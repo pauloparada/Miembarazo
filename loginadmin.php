@@ -1,3 +1,13 @@
+<?php   
+session_start();
+require('admin/conexionadministrador.php');
+$conexion = conectarse();
+if($_SESSION['logueado']){
+  header('Location: admin/admin.php');
+}
+else {
+?>
+
 <!DOCTYPE html><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!--Declare page as mobile friendly --> 
@@ -52,7 +62,7 @@
 
 
 <!-- Page Title -->
-<title>Mi Embarazo App</title>
+<title>Mi Embarazo - Login Administrador</title>
 
 <!-- Stylesheet Load -->
 <link href="styles/style.css"				rel="stylesheet" type="text/css">
@@ -82,30 +92,6 @@
 <script src="scripts/custom.js"			type="text/javascript"></script>
 <script src="scripts/framework.js"		type="text/javascript"></script>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-        
-    <script type="text/javascript" charset="utf-8">
-    // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-    // device APIs are available
-    //
-
-    function openBrowser(){
-        window.open('http://www.cristovision.tv/queesreddeamigos.html', '_blank', 'location=yes');
-    }
-    function openBrowser2(){
-        window.open('https://www.facebook.com/CanalCristovisionTV', '_blank', 'location=yes');
-    }
-    function openBrowser3(){
-        window.open('https://twitter.com/CRISTOVISION', '_blank', 'location=yes');
-    }
-    function openinAppBrowser(){
-        window.open('"http://apache.org" title="http://apache.org">http://apache.org', '_blank', 'location=yes');
-    }
-
-    </script>
-
-
 
 </head>
 <body>
@@ -129,7 +115,8 @@
         <div class="w-container">
           <nav class="w-nav-menu nav-menu" role="navigation">
             <div class="nav-menu-header">
-              
+              <div class="logo"><img src="images/logo.png"></div>
+              <div class="slogan"></div>
             </div>
             <a class="w-clearfix w-inline-block nav-menu-link" href="index.html" data-load="1">
               <div class="icon-list-menu">
@@ -202,7 +189,7 @@
               </div>
               <div class="nav-menu-titles" style="color:#6E2CC7;">Cerca de Mi</div>
             </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="loginadmin.php" data-load="1">
+            <a class="w-clearfix w-inline-block nav-menu-link" href="admin.html" data-load="1">
               <div class="icon-list-menu">
                 <div class="icon ion-ios-gear-outline"></div>
               </div>
@@ -236,127 +223,45 @@
         
     </div>
 
-<div class="navigation-icons" style="overflow: visible !important; margin-top:5px;">
-    <div class="carrousel">
-        <div class="wrap">
-    <div id="showcase" class="noselect">
-      <div class="card">
-        <a href="calendario.html"><img src="images/calendario.png"></a>
-      </div>
-      <div class="card">
-        <div>
-        	<a href="calculadoras.html"><img src="images/calculadoras.png"></a>
-        </div>
-      </div>
-      <div class="card">
-        <a href="cursos.html"><img src="images/cursos.png"></a> 
-      </div>
-      <div class="card">
-        <a href="articulos.html"><img src="images/articulos.png"></a>
-        
-      </div>
-      <div class="card">
-        <a href="albumfotos.html"><img src="images/albumfotos.png"></a>
-        
-      </div>
-      <div class="card">
-        <a href="videos.html"><img src="images/videos.png"></a>
-        
-      </div>
-      <div class="card">
-        <a href="#"><img src="images/pauta1.png"></a>
-      </div>
-      <div class="card">
-        <a href="#"><img src="images/pauta2.png"></a>
-      </div>
-    </div>
-    </div>
-</div>
+    <div class="navigation-icons" style="overflow: visible !important;height:520px;">   
+            <center><h2>Ingrese su usuario y contraseña </h2> </center>
+            <form action="autenticarse.php" method="POST">
+              <label for="usr">Usuario:</label><input type="text" name="usr"/><br/>
+              <label for="pwd">Password:</label><input type="password" name="pwd"/><br/>
+              <input type="submit" value="Iniciar Sesion"/>
+            </form>
     
-    <div class="navigation-icons" style="overflow: visible !important;">
-            <button class="nav noselect left">
-            &lt;
-            </button>
-            <button class="nav noselect right">
-            &gt;
-            </button>
+
+
     </div>
-    	<center><div class="user-info">
-            <img src="images/user-circle.png">
-            <div class="nombre-usuario">Hola Maria Perez</div>
-            <div class="semana-usuario">Estas en el Trimestre X Semana X</div>
-            <div class="tip-usuario">Recuerda tomar acido fólico</div>
-        </div></center>
+    	
 
     
     
     <div class="small-navigation-icons">
-        <a href="index.html" class="small-nav-icon button-nav1"><img style="height:24px; width:24px; left: 19%; top: 19%;"src="images/icons/nav-button1.png"></a>
+      <a href="index.html" class="small-nav-icon button-nav1"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/icons/nav-button1.png"></a>
     	<a href="registro.html" class="small-nav-icon button-nav2"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/icons/nav-button2.png"></a>
-       <a href="mapa.html" class="small-nav-icon button-nav3"><img style="height:24px; width:24px; left: 19%; top: 19%;"src="images/icons/nav-button3.png"></a>
-        <a href="chat.html" class="small-nav-icon button-nav4"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/icons/nav-button4.png"></a>
+      <a href="ubicacion.html" class="small-nav-icon button-nav3"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/icons/nav-button3.png"></a>
+      <a href="chat.html" class="small-nav-icon button-nav4"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/icons/nav-button4.png"></a>
         <div class="clear"></div>
     </div>
     
     <p class="landing-copyright copyright"></p>
-    
-    
+
 
 </div>
 
 
   <script src="jquery.js"></script>
-  <script src="jquery.cloud9carousel.js"></script>
-  <script>
-    $(function() {
-      var showcase = $("#showcase")
-
-      showcase.Cloud9Carousel( {
-      	xRadius: 100,
-        yOrigin: 42,
-        yRadius: -20,
-        itemClass: "card",
-        buttonLeft: $(".nav.left"),
-        buttonRight: $(".nav.right"),
-        bringToFront: true,
-        onLoaded: function() {
-          showcase.css( 'visibility', 'visible' )
-          showcase.css( 'display', 'none' )
-          showcase.fadeIn( 1500 )
-        }
-      } )
-
-      //
-      // Simulate physical button click effect
-      //
-      $('.nav').click( function( e ) {
-        var b = $(e.target).addClass( 'down' )
-        setTimeout( function() { b.removeClass( 'down' ) }, 80 )
-      } )
-
-      $(document).keydown( function( e ) {
-        //
-        // More codes: http://www.javascripter.net/faq/keycodes.htm
-        //
-        switch( e.keyCode ) {
-          /* left arrow */
-          case 37:
-            $('.nav.left').click()
-            break
-
-          /* right arrow */
-          case 39:
-            $('.nav.right').click()
-        }
-      } )
-    })
-  </script>
-  <!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
+ 
   <script type="text/javascript" src="js/framework.js"></script>
 </body>
 </html>
 
 
+<?php   
+}
+?>
 
 
 
