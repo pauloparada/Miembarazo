@@ -1,9 +1,7 @@
 <?php   
 session_start();
-require('admin/conexionadministrador.php');
-$conexion = conectarse();
 if($_SESSION['logueado']){
-  header('Location: admin/admin.php');
+  header('Location: admin.php');
 }
 else {
 ?>
