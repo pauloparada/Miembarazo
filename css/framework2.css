@@ -1485,6 +1485,7 @@ textarea.w-select {
   text-align: center;
   overflow: visible;
   min-width: 200px;
+  min-height: 586px;
 }
 .w--nav-link-open {
   display: block;
@@ -1498,6 +1499,7 @@ textarea.w-select {
   left: 0;
   right: 0;
   width: 100%;
+  min-height: 586px;
 }
 .w-nav-overlay .w--nav-menu-open {
   top: 0;
