@@ -1,5 +1,11 @@
-<!DOCTYPE html><head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mi Embarazo</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!--Declare page as mobile friendly --> 
 <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0"/>
 <!-- Declare page as iDevice WebApp friendly -->
@@ -10,11 +16,11 @@
 <!-- Android -->
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="res/icon/ios/icon.png"> 
 <!-- iPhone 3, 3Gs -->
-<link rel="apple-touch-startup-image" href="res/screen/ios/screen-iphone-portrait.png" 			media="screen and (max-device-width: 320px)" /> 
+<link rel="apple-touch-startup-image" href="res/screen/ios/screen-iphone-portrait.png"      media="screen and (max-device-width: 320px)" /> 
 <!-- Android -->
 <link rel="apple-touch-startup-image" href="res/screen/ios/screen-iphone-portrait.png"           media="screen and (max-device-width: 320px)" /> 
 <!-- iPhone 4 -->
-<link rel="apple-touch-startup-image" href="res/screen/ios/screen-iphone-portrait.png" 		media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" /> 
+<link rel="apple-touch-startup-image" href="res/screen/ios/screen-iphone-portrait.png"    media="(max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2)" /> 
 <!-- iPhone 5 -->
 <link rel="apple-touch-startup-image" sizes="640x1096" href="res/screen/ios/screen-iphone-portrait-2x.png" />
 
@@ -48,314 +54,222 @@
     <gap:splash src="res/screen/ios/screen-ipad-portrait.png"           gap:platform="ios"     width="768" height="1024" />
     <gap:splash src="res/screen/ios/screen-ipad-landscape.png"          gap:platform="ios"     width="1024" height="768" />
     <gap:splash src="images/screen-portrait.jpg"      gap:platform="winphone" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/font-awesome.css">
+    <link rel="stylesheet" href="dist/css/miembarazo.css">
+    <link rel="stylesheet" href="dist/css/AdminLTE.css">
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+   
+    <script type="text/javascript" charset="utf-8" src="scripts/phonegap.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/cordova.js"></script>
 
-
-
-<!-- Page Title -->
-<title>Mi Embarazo App</title>
-
-<!-- Stylesheet Load -->
-<link href="styles/style.css"				rel="stylesheet" type="text/css">
-<link href="styles/framework-style.css" 	rel="stylesheet" type="text/css">
-<link href="styles/framework.css" 			rel="stylesheet" type="text/css">
-<link href="styles/bxslider.css"			rel="stylesheet" type="text/css">
-<link href="styles/swipebox.css"			rel="stylesheet" type="text/css">
-<link href="styles/icons.css"				rel="stylesheet" type="text/css">
-<link href="styles/retina.css" 				rel="stylesheet" type="text/css" media="only screen and (-webkit-min-device-pixel-ratio: 2)" />
-<link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" type="text/css" href="css/washington.css">
-<link rel="stylesheet" type="text/css" href="css/framework2.css">
-<link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
-
-
-
-<!--Page Scripts Load -->
-<script src="scripts/jquery.min.js"		type="text/javascript"></script>	
-<script src="scripts/hammer.js"			type="text/javascript"></script>	
-<script src="scripts/jquery-ui-min.js"  type="text/javascript"></script>
-<script src="scripts/subscribe.js"		type="text/javascript"></script>
-<script src="scripts/contact.js"		type="text/javascript"></script>
-<script src="scripts/jquery.swipebox.js" type="text/javascript"></script>
-<script src="scripts/bxslider.js"		type="text/javascript"></script>
-<script src="scripts/colorbox.js"		type="text/javascript"></script>
-<script src="scripts/retina.js"			type="text/javascript"></script>
-<script src="scripts/custom.js"			type="text/javascript"></script>
-<script src="scripts/framework.js"		type="text/javascript"></script>
-<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-        
-
-
-</head>
-<body>
-
-<div id="preloader">
-	<div id="status">
-    	<p class="center-text">
-			Cargando el Contenido...
-            <em>La carga del contenido depende de su velocidad de conexion!</em>
-        </p>
-    </div>
-</div>
-
-<div class="content">
-
-	<!--<div class="landing-logo">
-    	<img class="replace-2x" src="images/logo-miembarazomid.png" alt="img"></div>
-    </div>-->
-    
-<div class="w-nav navbar" data-collapse="all" data-animation="over-right" data-duration="400" >
-        <div class="w-container">
-          <nav class="w-nav-menu nav-menu" role="navigation">
-            <div class="nav-menu-header">
-              
-            </div>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="index.html" >
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-home-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Inicio</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="login.html" >
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-download-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Login</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="signup.html" >
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-cloud-upload-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Inscribase</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="calendario.html" >
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-list-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">calendario</div>
-              
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="videos.html" >
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-albums-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Videos</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="chat.html" >
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-chatboxes-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Chat</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="articulos.html" >
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-keypad-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Articulos</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="registro.html" >
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-paper-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Registro</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="perfil.html" >
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-compose-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">perfil</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="cursos.html">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-person-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Cursos</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="mapa.html" >
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-location-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Cerca de Mi</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="loginadmin.html">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-gear-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Admin</div>
-            </a>
-            <a class="w-clearfix w-inline-block nav-menu-link" href="terminos.html">
-              <div class="icon-list-menu">
-                <div class="icon ion-ios-bookmarks-outline"></div>
-              </div>
-              <div class="nav-menu-titles" style="color:#6E2CC7;">Terminos y Condiciones</div>
-            </a>
-            <div class="separator-bottom"></div>
-            <div class="separator-bottom"></div>
-            <div class="separator-bottom"></div>
-          </nav>
-    
-          <div class="w-nav-button navbar-button left" id="menu-button" data-ix="hide-navbar-icons">
-            <div class="navbar-button-icon home-icon">
-              <div class="bar-home-icon"></div>
-              <div class="bar-home-icon"></div>
-              <div class="bar-home-icon"></div>
+  </head>
+  </style>
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper fonwraper">
+      <header class="main-header">
+        <nav class="navbar navbar-static-top" role="navigation">
+          <img class="logg" src="dist/img/logo-miembarazo.png" alt="">
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#" data-toggle="control-sidebar">
+                  <i class="fa fa-bars fa-lg"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <div class="content-wrapper">
+        <div class="row">
+          <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1"></div>
+          <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10 sliderr">
+                  <div class="carrousel">
+                        <div class="wrap">
+                            <div id="showcase" class="noselect" style="overflow: visible !important;">
+                                <div class="card">
+                                  <a href="calendario.html"><img src="images/calendario.png"></a>
+                                </div>
+                                <div class="card">
+                                  <div>
+                                    <a href="calculadoras.html"><img src="images/calculadoras.png"></a>
+                                  </div>
+                                </div>
+                                <div class="card">
+                                  <a href="cursos.html"><img src="images/cursos.png"></a> 
+                                </div>
+                                <div class="card">
+                                  <a href="articulos.html"><img src="images/articulos.png"></a>
+                                  
+                                </div>
+                                <div class="card">
+                                  <a href="albumfotos.html"><img src="images/albumfotos.png"></a>
+                                  
+                                </div>
+                                <div class="card">
+                                  <a href="videos.html"><img src="images/videos.png"></a>
+                                  
+                                </div>
+                                <div class="card">
+                                  <a href="#"><img src="images/pauta1.png"></a>
+                                </div>
+                                <div class="card">
+                                  <a href="#"><img src="images/pauta2.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                  </div>
             </div>
           </div>
-          
+
+          <div class="separadoruno"></div>
+          <div class="clear"></div>
+
+          <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1"></div>
+            <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10 perfil">
+              <div class="perfilAvatar"> </div>
+              <div class="titP">
+                <h3>Hola Maria Perez</h3>
+              </div>
+              <div class="textP">
+                Estas en el Trimestre 10 Semana 9<br>
+                Recuerda tomar acido folico
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-    <div class="welcome-text">
-        <center><img src="images/logo-miembarazosmall.png"  style="margin-top:-60px;z-index: 1000;"alt="logo"></center>
-    	<h3></h3>
-        
-    </div>
+      <div class="clear"></div>
+      <div class="separadordos"></div>    
 
-<div class="navigation-icons" style="overflow: visible !important; margin-top:5px;">
-    <div class="carrousel">
-        <div class="wrap">
-    <div id="showcase" class="noselect">
-      <div class="card">
-        <a href="calendario.html"><img src="images/calendario.png"></a>
-      </div>
-      <div class="card">
-        <div>
-        	<a href="calculadoras.html"><img src="images/calculadoras.png"></a>
+      <!--footer-->
+      <footer class="main-footer footerPo">
+       <div class="cont_bt"> 
+          <div class="butFooter">
+            <i class="fa fa-home fa-2x"></i>
+          </div>  
+          <div class="butFooter">
+            <i class="fa fa-pencil fa-2x"></i>
+          </div> 
+          <div class="butFooter">
+            <i class="fa fa-map-marker fa-2x"></i>
+          </div> 
+          <div class="butFooter">
+            <i class="fa fa-comment fa-2x"></i>
+          </div> 
+       </div>
+      </footer>
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-home fa-lg"></i> Inicio</a>
         </div>
-      </div>
-      <div class="card">
-        <a href="cursos.html"><img src="images/cursos.png"></a> 
-      </div>
-      <div class="card">
-        <a href="articulos.html"><img src="images/articulos.png"></a>
-        
-      </div>
-      <div class="card">
-        <a href="albumfotos.html"><img src="images/albumfotos.png"></a>
-        
-      </div>
-      <div class="card">
-        <a href="videos.html"><img src="images/videos.png"></a>
-        
-      </div>
-      <div class="card">
-        <a href="#"><img src="images/pauta1.png"></a>
-      </div>
-      <div class="card">
-        <a href="#"><img src="images/pauta2.png"></a>
-      </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-sign-in fa-lg"></i> Login</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-pencil fa-lg"></i> Inscribase</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-calendar fa-lg"></i> Calendario</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-youtube-play fa-lg"></i> Videos</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-comments fa-lg"></i> Chat</a></div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-file-text fa-lg"></i> Artículos</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-edit fa-lg"></i> Registro</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-user fa-lg"></i> Perfil</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-users fa-lg"></i> Clases</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-map-marker fa-lg"></i> Cerca de Mi</a>
+        </div>
+      </aside>
     </div>
-    </div>
-</div>
-    
-    <div class="navigation-icons" style="overflow: visible !important;">
-            <button class="nav noselect left">
-            &lt;
-            </button>
-            <button class="nav noselect right">
-            &gt;
-            </button>
-    </div>
-    	<center><div class="user-info">
-            <img src="images/user-circle.png">
-            <div class="nombre-usuario">Hola Maria Perez</div>
-            <div class="semana-usuario">Estas en el Trimestre X Semana X</div>
-            <div class="tip-usuario">Recuerda tomar acido fólico</div>
-        </div></center>
+    <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="dist/js/app.min.js"></script>
+    <script src="scripts/jquery.cloud9carousel.js"></script>
+    <script>
+      $(function() {
+        var showcase = $("#showcase")
 
-    
-    
-    <div class="small-navigation-icons">
-        <a href="index.html" class="small-nav-icon button-nav1"><img style="height:24px; width:24px; left: 19%; top: 19%;"src="images/icons/nav-button1.png"></a>
-    	<a href="registro.html" class="small-nav-icon button-nav2"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/icons/nav-button2.png"></a>
-       <a href="mapa.html" class="small-nav-icon button-nav3"><img style="height:24px; width:24px; left: 19%; top: 19%;"src="images/icons/nav-button3.png"></a>
-        <a href="chat.html" class="small-nav-icon button-nav4"><img style="height:24px; width:24px; left:19%; top:19%;"src="images/icons/nav-button4.png"></a>
-        <div class="clear"></div>
-    </div>
-    
-    <p class="landing-copyright copyright"></p>
-    
-    
+        showcase.Cloud9Carousel( {
+          xRadius: 100,
+          yOrigin: 42,
+          yRadius: -20,
+          itemClass: "card",
+          buttonLeft: $(".nav.left"),
+          buttonRight: $(".nav.right"),
+          bringToFront: true,
+          onLoaded: function() {
+            showcase.css( 'visibility', 'visible' )
+            showcase.css( 'display', 'none' )
+            showcase.fadeIn( 1500 )
+          }
+        } )
 
-</div>
-
-
-  <script src="jquery.js"></script>
-  <script src="jquery.cloud9carousel.js"></script>
-  <script>
-    $(function() {
-      var showcase = $("#showcase")
-
-      showcase.Cloud9Carousel( {
-      	xRadius: 100,
-        yOrigin: 42,
-        yRadius: -20,
-        itemClass: "card",
-        buttonLeft: $(".nav.left"),
-        buttonRight: $(".nav.right"),
-        bringToFront: true,
-        onLoaded: function() {
-          showcase.css( 'visibility', 'visible' )
-          showcase.css( 'display', 'none' )
-          showcase.fadeIn( 1500 )
-        }
-      } )
-
-      //
-      // Simulate physical button click effect
-      //
-      $('.nav').click( function( e ) {
-        var b = $(e.target).addClass( 'down' )
-        setTimeout( function() { b.removeClass( 'down' ) }, 80 )
-      } )
-
-      $(document).keydown( function( e ) {
         //
-        // More codes: http://www.javascripter.net/faq/keycodes.htm
+        // Simulate physical button click effect
         //
-        switch( e.keyCode ) {
-          /* left arrow */
-          case 37:
-            $('.nav.left').click()
-            break
+        $('.nav').click( function( e ) {
+          var b = $(e.target).addClass( 'down' )
+          setTimeout( function() { b.removeClass( 'down' ) }, 80 )
+        } )
 
-          /* right arrow */
-          case 39:
-            $('.nav.right').click()
-        }
-      } )
-    })
-  </script>
-  <!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
-  <script type="text/javascript" src="js/framework.js"></script>
-</body>
+        $(document).keydown( function( e ) {
+          //
+          // More codes: http://www.javascripter.net/faq/keycodes.htm
+          //
+          switch( e.keyCode ) {
+            /* left arrow */
+            case 37:
+              $('.nav.left').click()
+              break
+
+            /* right arrow */
+            case 39:
+              $('.nav.right').click()
+          }
+        } )
+      })
+    </script>
+    <!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/framework.js"></script>
+  </body>
 </html>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+  
+  

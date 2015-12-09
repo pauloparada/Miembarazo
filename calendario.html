@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mi Embarazo</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/font-awesome.css">
+<link rel="stylesheet" href="dist/css/miembarazo.css">
+<link rel="stylesheet" href="dist/css/AdminLTE.css">
+<link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+<link href='assets/css/fullcalendar.css' rel='stylesheet' />
+<link href='assets/css/fullcalendar.print.css' rel='stylesheet' media='print' />
+</head>
+
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+      <header class="main-header">
+        <nav class="navbar navbar-static-top" role="navigation">
+          <img class="logg" src="dist/img/logo-miembarazo.png" alt="">
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <li>
+                <a href="#" data-toggle="control-sidebar">
+                  <i class="fa fa-bars fa-lg"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+ 
+
+
+<div class="row" style="background-color: #fff;">
+	<div class="col-xs-2 col-sm-2 col-md-1 col-lg-1"></div>
+	<div class="col-xs-8 col-sm-8 col-md-10 col-lg-10" id='calendar'>
+		
+
+
+	</div>
+
+
+
+
+
+
+		<div id='external-events' style="position:relative; left:40%;">
+			<div class='fc-event'>Adicionar Nota</div>
+			<i class="fa fa-trash fa-2x" id="trash" style="float:right;"></i>		
+		</div>
+
+</div>
+
+
+
+
+
+
+
+      </div>
+      <!--footer-->
+      <footer class="main-footer">
+       <div class="cont_bt"> 
+          <div class="butFooter">
+            <i class="fa fa-home fa-2x"></i>
+          </div>  
+          <div class="butFooter">
+            <i class="fa fa-pencil fa-2x"></i>
+          </div> 
+          <div class="butFooter">
+            <i class="fa fa-map-marker fa-2x"></i>
+          </div> 
+          <div class="butFooter">
+            <i class="fa fa-comment fa-2x"></i>
+          </div> 
+       </div>
+      </footer>
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-home fa-lg"></i> Inicio</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-sign-in fa-lg"></i> Login</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-pencil fa-lg"></i> Inscribase</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-calendar fa-lg"></i> Calendario</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-youtube-play fa-lg"></i> Videos</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-comments fa-lg"></i> Chat</a></div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-file-text fa-lg"></i> Artículos</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-edit fa-lg"></i> Registro</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-user fa-lg"></i> Perfil</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-users fa-lg"></i> Clases</a>
+        </div>
+        <div class="item">
+          <a class="alink" href="#" data-toggle="control-sidebar">
+            <i class="fa fa-map-marker fa-lg"></i> Cerca de Mi</a>
+        </div>
+      </aside>
+    </div>
+  </body>
+</html>
+
+<script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="dist/js/app.min.js"></script>
+<script src='assets/js/moment.min.js'></script>
+<script src='assets/js/jquery.min.js'></script>
+<script src='assets/js/jquery-ui.min.js'></script>
+<script src='assets/js/fullcalendar.min.js'></script>
+<script>
+
+	$(document).ready(function() {
+
+		var zone = "05:30";  //Change this to your timezone
+
+	$.ajax({
+		url: 'process.php',
+        type: 'POST', // Send post data
+        data: 'type=fetch',
+        async: false,
+        success: function(s){
+        	json_events = s;
+        }
+	});
+
+
+	var currentMousePos = {
+	    x: -1,
+	    y: -1
+	};
+		jQuery(document).on("mousemove", function (event) {
+        currentMousePos.x = event.pageX;
+        currentMousePos.y = event.pageY;
+    });
+
+		/* initialize the external events
+		-----------------------------------------------------------------*/
+
+		$('#external-events .fc-event').each(function() {
+
+			// store data so the calendar knows to render an event upon drop
+			$(this).data('event', {
+				title: $.trim($(this).text()), // use the element's text as the event title
+				stick: true // maintain when user navigates (see docs on the renderEvent method)
+			});
+
+			// make the event draggable using jQuery UI
+			$(this).draggable({
+				zIndex: 999,
+				revert: true,      // will cause the event to go back to its
+				revertDuration: 0  //  original position after the drag
+			});
+
+		});
+
+
+		/* initialize the calendar
+		-----------------------------------------------------------------*/
+
+		$('#calendar').fullCalendar({
+			events: JSON.parse(json_events),
+			//events: [{"id":"14","title":"New Event","start":"2015-01-24T16:00:00+04:00","allDay":false}],
+			utc: true,
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,agendaWeek,agendaDay'
+			},
+			editable: true,
+			droppable: true, 
+			slotDuration: '00:30:00',
+			eventReceive: function(event){
+				var title = event.title;
+				var start = event.start.format("YYYY-MM-DD[T]HH:MM:SS");
+				$.ajax({
+		    		url: 'process.php',
+		    		data: 'type=new&title='+title+'&startdate='+start+'&zone='+zone,
+		    		type: 'POST',
+		    		dataType: 'json',
+		    		success: function(response){
+		    			event.id = response.eventid;
+		    			$('#calendar').fullCalendar('updateEvent',event);
+		    		},
+		    		error: function(e){
+		    			console.log(e.responseText);
+
+		    		}
+		    	});
+				$('#calendar').fullCalendar('updateEvent',event);
+				console.log(event);
+			},
+			eventDrop: function(event, delta, revertFunc) {
+		        var title = event.title;
+		        var start = event.start.format();
+		        var end = (event.end == null) ? start : event.end.format();
+		        $.ajax({
+					url: 'process.php',
+					data: 'type=resetdate&title='+title+'&start='+start+'&end='+end+'&eventid='+event.id,
+					type: 'POST',
+					dataType: 'json',
+					success: function(response){
+						if(response.status != 'success')		    				
+						revertFunc();
+					},
+					error: function(e){		    			
+						revertFunc();
+						alert('Error processing your request: '+e.responseText);
+					}
+				});
+		    },
+		    eventClick: function(event, jsEvent, view) {
+		    	console.log(event.id);
+		          var title = prompt('Event Title:', event.title, { buttons: { Ok: true, Cancel: false} });
+		          if (title){
+		              event.title = title;
+		              console.log('type=changetitle&title='+title+'&eventid='+event.id);
+		              $.ajax({
+				    		url: 'process.php',
+				    		data: 'type=changetitle&title='+title+'&eventid='+event.id,
+				    		type: 'POST',
+				    		dataType: 'json',
+				    		success: function(response){	
+				    			if(response.status == 'success')			    			
+		              				$('#calendar').fullCalendar('updateEvent',event);
+				    		},
+				    		error: function(e){
+				    			alert('Error processing your request: '+e.responseText);
+				    		}
+				    	});
+		          }
+			},
+			eventResize: function(event, delta, revertFunc) {
+				console.log(event);
+				var title = event.title;
+				var end = event.end.format();
+				var start = event.start.format();
+		        update(title,start,end,event.id);
+		    },
+			eventDragStop: function (event, jsEvent, ui, view) {
+			    if (isElemOverDiv()) {
+			    	var con = confirm('Are you sure to delete this event permanently?');
+			    	if(con == true) {
+						$.ajax({
+				    		url: 'process.php',
+				    		data: 'type=remove&eventid='+event.id,
+				    		type: 'POST',
+				    		dataType: 'json',
+				    		success: function(response){
+				    			console.log(response);
+				    			if(response.status == 'success'){
+				    				$('#calendar').fullCalendar('removeEvents');
+            						getFreshEvents();
+            					}
+				    		},
+				    		error: function(e){	
+				    			alert('Error processing your request: '+e.responseText);
+				    		}
+			    		});
+					}   
+				}
+			}
+		});
+
+	function getFreshEvents(){
+		$.ajax({
+			url: 'process.php',
+	        type: 'POST', // Send post data
+	        data: 'type=fetch',
+	        async: false,
+	        success: function(s){
+	        	freshevents = s;
+	        }
+		});
+		$('#calendar').fullCalendar('addEventSource', JSON.parse(freshevents));
+	}
+
+
+	function isElemOverDiv() {
+        var trashEl = jQuery('#trash');
+
+        var ofs = trashEl.offset();
+
+        var x1 = ofs.left;
+        var x2 = ofs.left + trashEl.outerWidth(true);
+        var y1 = ofs.top;
+        var y2 = ofs.top + trashEl.outerHeight(true);
+
+        if (currentMousePos.x >= x1 && currentMousePos.x <= x2 &&
+            currentMousePos.y >= y1 && currentMousePos.y <= y2) {
+            return true;
+        }
+        return false;
+    }
+
+	});
+
+</script>
+

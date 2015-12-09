@@ -1,323 +1,222 @@
-# Cloud 9 Carousel
+Introduction
+============
 
-A 3D perspective carousel using jQuery/Zepto focused on performance, based on the [original Cloud Carousel](https://github.com/specious/cloud9carousel/blob/32df63d07096911e3e48b5a721c4c46c1c6f74e8/jquery.cloud9carousel.js) by [Professor Cloud](#authors).
+**AdminLTE** -- is a fully responsive admin template. Based on **[Bootstrap 3](https://github.com/twbs/bootstrap)** framework. Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops. Check out the live preview now and see for yourself.
 
-## Features
+**Download & Preview on [Almsaeed Studio](https://almsaeedstudio.com)**
 
-- Just one JavaScript file
-- Works with [jQuery](http://jquery.com/) **or** [Zepto](http://zeptojs.com/)
-- Fast
-- [Easy to use](#basic-usage)
-- *(optional)* Reflections (via [reflection.js](http://www.digitalia.be/software/reflectionjs-for-jquery))
-- *(optional)* Mouse wheel support (via [mousewheel plugin](http://plugins.jquery.com/mousewheel/)) [see: [note](#known-issues)]
-- *(optional)* Rotate clicked item to front
-- *(optional)* Auto-play
-- Smooth animation via [requestAnimationFrame](http://ie.microsoft.com/testdrive/Graphics/RequestAnimationFrame/) with fixed-FPS fallback mode
-- Harness the power of the GPU with CSS transforms (detects [support](http://caniuse.com/transforms) automatically)
-- Create multiple instances
-- Handy [callback events](#event-callbacks)
-- Works with any HTML element!
+Looking for Premium Templates?
+------------------------------
+**Almsaeed studio just opened a new premium templates page. Hand picked to insure the best quality and the most affordable prices. Visit https://almsaeedstudio.com/premium for more information.**
 
-## Demos
 
-<a href="http://specious.github.io/cloud9carousel/species.html">![Endangered species](http://specious.github.io/cloud9carousel/images/screenshots/demo-species.png "Demo: Endangered species")</a>
-<a href="http://specious.github.io/cloud9carousel/">![Web browsers](http://specious.github.io/cloud9carousel/images/screenshots/demo-browsers.png "Demo: Web browsers")</a>
-<a href="http://specious.github.io/portfolio/demos/julemagne/">![Julemagne.com](http://specious.github.io/cloud9carousel/images/screenshots/julemagne.png "Fine art by Julie David")</a>
+!["AdminLTE Presentation"] (https://almsaeedstudio.com/AdminLTE2.png "AdminLTE Presentation")
 
-## Dependencies
+**AdminLTE** has been carefully coded with clear comments in all of its JS, LESS and HTML files. LESS has been used to increase code customizability.
 
-- [jQuery](https://github.com/jquery/jquery) 1.3.0 or later **or** [Zepto](https://github.com/madrobby/zepto) 1.1.1 or later
-- Optional mirror effect using the [reflection.js plugin](http://www.digitalia.be/software/reflectionjs-for-jquery) by Christophe Beyls (jQuery only)
-- Optional mouse wheel support via the [mousewheel plugin](http://plugins.jquery.com/mousewheel/) (jQuery only)
+Installation
+------------
+There are multiple ways to install AdminLTE.
 
-## Documentation
+####Download:
 
-### Basic usage
+Download from Github or [visit Almsaeed Studio](https://almsaeedstudio.com) and download the latest release.
 
-HTML:
-```html
-<div id="carousel">
-  <img class="cloud9-item" src="images/1.png" alt="Item #1">
-  <img class="cloud9-item" src="images/2.png" alt="Item #2">
-  <img class="cloud9-item" src="images/3.png" alt="Item #3">
-  <img class="cloud9-item" src="images/4.png" alt="Item #4">
-  <img class="cloud9-item" src="images/5.png" alt="Item #5">
-  <img class="cloud9-item" src="images/6.png" alt="Item #6">
-</div>
+####Using The Command Line:
 
-<div id="buttons">
-  <button class="left">
-    ←
-  </button>
-  <button class="right">
-    →
-  </button>
-</div>
+**Github**
+
+- Fork the repository ([here is the guide](https://help.github.com/articles/fork-a-repo/)).
+- Clone to your machine
+```
+git clone https://github.com/YOUR_USERNAME/AdminLTE.git
 ```
 
-CSS:
-```css
-#carousel .cloud9-item, #buttons button {
-  cursor: pointer;
-}
+**Bower**
+
+```
+bower install admin-lte
 ```
 
-JavaScript:
-```js
-$("#carousel").Cloud9Carousel( {
-  buttonLeft: $("#buttons > .left"),
-  buttonRight: $("#buttons > .right"),
-  autoPlay: 1,
-  bringToFront: true
-} );
+**Composer**
+
+```
+composer require "almasaeed2010/adminlte=~2.0"
 ```
 
-### Advanced usage
+Documentation
+-------------
+Visit the [online documentation](https://almsaeedstudio.com/themes/AdminLTE/documentation/index.html) for the most
+updated guide. Information will be added on a weekly basis.
 
-See the [example code](https://github.com/specious/cloud9carousel/tree/gh-pages)
+Browser Support
+---------------
+- IE 9+
+- Firefox (latest)
+- Chrome (latest)
+- Safari (latest)
+- Opera (latest)
 
-### Carousel options
+Contribution
+------------
+Contribution are always **welcome and recommended**! Here is how:
 
-You may pass these options to the carousel constructor.  Some of these properties may be changed during runtime via the data handle.
+- Fork the repository ([here is the guide](https://help.github.com/articles/fork-a-repo/)).
+- Clone to your machine ```git clone https://github.com/YOUR_USERNAME/AdminLTE.git```
+- Make your changes
+- Create a pull request
 
-<table>
-  <tr>
-    <th>Option</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td>xOrigin</td>
-    <td>Center of the carousel (x coordinate)</td>
-    <td>(container width / 2)</td>
-  </tr>
-  <tr>
-    <td>yOrigin</td>
-    <td>Center of the carousel (y coordinate)</td>
-    <td>(container height / 10)</td>
-  </tr>
-  <tr>
-    <td>xRadius</td>
-    <td>Half the width of the carousel</td>
-    <td>(container width / 2.3)</td>
-  </tr>
-  <tr>
-    <td>yRadius</td>
-    <td>Half the height of the carousel</td>
-    <td>(container height / 6)</td>
-  </tr>
-  <tr>
-    <td>farScale</td>
-    <td>Scale of an item at its farthest point (range: 0 to 1)</td>
-    <td>0.5</td>
-  </tr>
-  <tr>
-    <td>mirror</td>
-    <td>See: <a href="#reflection-options">Reflection options</a></td>
-    <td>none</td>
-  </tr>
-  <tr>
-    <td>transforms</td>
-    <td>Use <a href="http://learn.shayhowe.com/advanced-html-css/css-transforms">native CSS transforms</a> if <a href="http://caniuse.com/transforms">support for them is detected</a></td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>smooth</td>
-    <td>Use maximum effective frame rate via the <a href="https://developer.mozilla.org/docs/Web/API/window.requestAnimationFrame">requestAnimationFrame</a> API if <a href="http://caniuse.com/requestanimationframe">support is detected</a></td>
-    <td>true</td>
-  </tr>
-  <tr>
-    <td>fps</td>
-    <td>Frames per second (if smooth animation is turned off)</td>
-    <td>30</td>
-  </tr>
-  <tr>
-    <td>speed</td>
-    <td>Relative speed factor of the carousel.  Any positive number: <b>1</b> is slow, <b>4</b> is medium, <b>10</b> is fast.  Adjust to your liking</td>
-    <td>4</td>
-  </tr>
-  <tr>
-    <td>autoPlay</td>
-    <td>Automatically rotate the carousel by this many items periodically (positive number is clockwise).  Auto-play is not performed while the mouse hovers over the carousel container.  A value of <b>0</b> means auto-play is turned off.  See: <b>autoPlayDelay</b></td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td>autoPlayDelay</td>
-    <td>Delay, in milliseconds, between auto-play spins</td>
-    <td>4000</td>
-  </tr>
-  <tr>
-    <td>mouseWheel</td>
-    <td>Spin the carousel using the mouse wheel.  Requires a <code>"mousewheel"</code> event, provided by <a href="http://plugins.jquery.com/mousewheel/">this mousewheel plugin</a>.  However, see: <a href="#known-issues">known issues</a></td>
-    <td>false</td>
-  </tr>
-  <tr>
-    <td>bringToFront</td>
-    <td>Clicking an item will rotate it to the front</td>
-    <td>false</td>
-  </tr>
-  <tr>
-    <td>buttonLeft</td>
-    <td>jQuery collection of element(s) intended to spin the carousel so as to bring the item to the left of the frontmost item to the front, i.e., spin it counterclockwise, when clicked.  E.g., <code>$("#button-left")</code></td>
-    <td>none</td>
-  </tr>
-  <tr>
-    <td>buttonRight</td>
-    <td>jQuery collection of element(s) intended to spin the carousel so as to bring the item to the right of the frontmost item to the front, i.e., spin it clockwise, when clicked.  E.g., <code>$("#button-right")</code></td>
-    <td>none</td>
-  </tr>
-  <tr>
-    <td>itemClass</td>
-    <td>Class attribute of the item elements inside the carousel container</td>
-    <td>"cloud9-item"</td>
-  </tr>
-  <tr>
-    <td>handle</td>
-    <td>The string handle you can use to interact with the carousel.  E.g., <code>$("#carousel").data("carousel").go(1)</code></td>
-    <td>"carousel"</td>
-  </tr>
-</table>
+#### Contribution Requirements:
 
-### Reflection options
+- When you contribute, you agree to give a non-exclusive license to Almsaeed Studio to use that contribution in any context as we (Almsaeed Studio) see appropriate.
+- If you use content provided by another party, it must be appropriately licensed using an [open source](http://opensource.org/licenses) license.
+- Contributions are only accepted through Github pull requests.
+- Finally, contributed code must work in all supported browsers (see above for browser support).
 
-After including [reflection.js](http://www.digitalia.be/software/reflectionjs-for-jquery) in your page, you may pass in options to configure the item reflections.  For example:
+License
+-------
+AdminLTE is an open source project by [Almsaeed Studio](https://almsaeedstudio.com) that is licensed under [MIT](http://opensource.org/licenses/MIT). Almsaeed Studio
+reserves the right to change the license of future releases.
 
-```js
-mirror: {
-  gap: 12,     /* 12 pixel gap between item and reflection */
-  height: 0.2, /* 20% of item height */
-  opacity: 0.4 /* 40% opacity at the top */
-}
-```
+Todo List
+---------
+- ~~Light sidebar colors~~ (Done v2.1.0)
+- ~~Right sidebar~~ (Done v2.1.0)
+- ~~Minified main-sidebar~~ (Done v2.1.0)
+- Right to left support
+- Custom pace style
 
-*Note:* The **reflection.js** plugin does not work with **Zepto**, but [this unofficial fork](https://gist.github.com/specious/8912678) does!
+Legacy Realeases
+----------------
+AdminLTE 1.x can be easily upgraded to 2.x using [this guide](https://almsaeedstudio.com/themes/AdminLTE/documentation/index.html#upgrade), but if you intend to keep using AdminLTE 1.x, you can download the latest release from the [releases](https://github.com/almasaeed2010/AdminLTE/releases) section above.
 
-<table>
-  <tr>
-    <th>Option</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td>gap</td>
-    <td>Vertical gap in pixels between the bottom of the item (at full size) and the top of its reflection</td>
-    <td>2</td>
-  </tr>
-  <tr>
-    <td>height</td>
-    <td>The height of the reflection relative to the height of the item (range: 0 to 1)</td>
-    <td>1/3</td>
-  </tr>
-  <tr>
-    <td>opacity</td>
-    <td>Opacity of the reflection at its top (most visible part) (range: 0 to 1)</td>
-    <td>0.5</td>
-  </tr>
-</table>
+Change log
+----------
+**v2.3.0:**
+- Added social widgets (found in the widgets page)
+- Added profile page
+- Fix issue #430 (requires ```.hold-transition``` to be added to ```<body>```)
+- Fix issue #578
+- Fix issue #579
 
-### Carousel methods
+**v2.2.1:**
+- Bug Fixes
+- Removed many ```!important``` statements in css
+- Activate boxWidget automatically when created after the page has loaded
+- Activate sidebar menu treeview links automatically when created after the page has loaded
+- Updated Font Awesome thanks to @Dennis14e
+- Added JSHint to Grunt tasks (Find JS errors)
+- Added CSSLint to Grunt tasks (Find CSS errors)
+- Added Image to Grunt tasks (compress images)
+- Added Clean to Grunt tasks (remove unwanted files like uncompressed images)
+- Updated Bootstrap to 3.3.5
 
-The following methods can be called on the carousel object after initialisation.  For example:
+**v2.2.0:**
+- Bug fixes
+- Added support for [Select2](https://select2.github.io/)
+- Updated ChartJS
 
-```js
-// Spin three items clockwise
-$("#carousel").data("carousel").go( 3 );
-```
+**v2.1.2:**
+- Added explicit BoxWidget activation function issue #450
+- Crushed some bugs
 
-Basic methods:
+**v2.1.1:**
+- Fix version error
 
-<table>
-  <tr>
-    <th>Method</th>
-    <th>Description</th>
-    <th>Arguments</th>
-  </tr>
-  <tr>
-    <td>go( count )</td>
-    <td>Spin the carousel</td>
-    <td><b>count</b>: Number of carousel items to rotate (<b>+</b> is clockwise, <b>-</b> is counterclockwise)</td>
-  </tr>
-  <tr>
-    <td>nearestIndex()</td>
-    <td>Returns the 0-based index of the item nearest to the front <b>(integer)</b></td>
-    <td>none</td>
-  </tr>
-  <tr>
-    <td>nearestItem()</td>
-    <td>Returns a reference to the item object of the item that is nearest to the front <b>(Item object)</b></td>
-    <td>none</td>
-  </tr>
-  <tr>
-    <td>deactivate()</td>
-    <td>Disable the carousel (currently irreversible).  You can use that in order to halt the carousel mechanism and free the carousel's elements from it.  Then the elements can be manipulated without interference from the carousel plugin.  See for <a href="http://www.julemagne.com/">example</a>, when you click to expand the gallery.</td>
-    <td>none</td>
-  </tr>
-</table>
+**v2.1.0:**
+- Update Ion Icons
+- Added right sidebar ```.control-sidebar```
+- Control sidebar has 2 open effects: slide over content and push content
+- Control sidebar converts to always slide over content on small screens
+- Added 6 new light sidebar skins
+- Updated demo menu
+- Added ChartJS preview page
+- Fixed some minor bugs
+- Added light control sidebar skin
+- Added expand on hover option for sidebar mini
+- Added fixed control sidebar layout
 
-Advanced methods:
+**v2.0.5:**
+- Fixed issue #288
 
-<table>
-  <tr>
-    <th>Method</th>
-    <th>Description</th>
-    <th>Arguments</th>
-  </tr>
-  <tr>
-    <td>itemsRotated()</td>
-    <td>Returns the interpolated number of items rotated from the initial zero position.  In a carousel with 5 items that made three clockwise revolutions, the value will be <code>-15</code>.  If the carousel then further spins half-way to the next item, then the value would be <code>-15.5</code> <b>(float)</b> </td>
-    <td>none</td>
-  </tr>
-  <tr>
-    <td>floatIndex()</td>
-    <td>Returns an interpolated value of the item "index" at the front of the carousel.  If, for example, the carousel was 20% past item 2 toward the next item, then floatIndex() would return <code>2.2</code> <b>(float)</b></td>
-    <td>none</td>
-  </tr>
-</table>
+**v2.0.4:**
+- Fixed bower.json to pick up newest release.
 
-### Event callbacks
+**v2.0.3**
+- Bug fixes
+- Fixed extra page when printing issue #264
+- Updated documentation and fixed links scrolling issue
+- Created print.less file (this makes it easier if you want to create a seperate CSS file for printing)
+- Fixed sidebar stretching issue #275
+- Fixed checkbox out of bounds issue in WYSIHTML5 editor.
 
-Callback functions may be passed to the carousel constructor along with the options.  For example:
+**v2.0.2:**
+- Solved issue with hidden arrow in select inputs.
 
-```js
-// Hide carousel while items are loading
-$("#carousel").css( 'visibility', 'hidden' ).Cloud9Carousel( {
-  bringToFront: true,
-  onLoaded: function( carousel ) {
-    // Show carousel
-    $(carousel).css( 'visibility', 'visible' );
-    alert( 'Carousel is ready!' );
-  },
-  onRendered: function( carousel ) {
-    var item = $(carousel).data("carousel").nearestItem();
-    console.log( "Item closest to the front: " + $(item).attr("alt") );
-  }
-} );
-```
+**v2.0.1:**
+- Updated README.md
+- Fixed versioning issue in CSS, LESS, and JS
+- Updated box-shadow for boxes
+- Updated docs
 
-<table>
-  <tr>
-    <th>Callback</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>onLoaded</td>
-    <td>Fires once when the carousel has completely initialised</td>
-  </tr>
-  <tr>
-    <td>onRendered</td>
-    <td>Fires each time after a frame has finished calculating</td>
-  </tr>
-</table>
+**v2.0.0:**
 
-## Authors
+- Major layout bug fixes
+- Change in layout mark up
+- Added transitions to the sidebar
+- New skins and modified previous skins
+- Change in color scheme to a more complementing scheme
+- Added footer support
+- Removed pace.js from the main app.js
+- Added support for collapsed sidebar as an initial state (add .sidebar-collapse to the body tag)
+- Added boxed layout (.layout-boxed)
+- Enhanced consistency in padding and margining
+- Updated Bootstrap to 3.3.2
+- Fixed navbar dropdown menu on small screens positioning issues.
+- Updated Ion Icons to 2.0.0
+- Updated FontAwesome to 4.3.0
+- Added ChartJS 1.0.1
+- Removed iCheck dependency
+- Created Dashboard 2.0
+- Created new Chat widget (DirectChat)
+- Added transitions to DirectChat
+- Added contacts pane to DirectChat
+- Changed .right-side to .content-wrapper
+- Changed .navbar-right to .navbar-custom-menu
+- Removed unused files
+- Updated lockscreen style (HTML markup changed!)
+- Updated Login & Registration pages (HTML markup changed!)
+- Updated buttons style.
+- Enhanced border-radius consistency
+- Added mailbox: inbox, read, and compose pages
+- Bootstrap & jQuery are now hosted locally
+- Created documentation.
 
-- Upgrades by [Ildar Sagdejev](http://twitter.com/tknomad)
-- Forked from CloudCarousel v1.0.5 by [Professor Cloud](http://www.professorcloud.com/) (R. Cecco)
+**ver 1.2.0:**
 
-## Known issues
+- Fixed the sidebar scroll issue when using the fixed layout.
+- Added [Bootstrap Social Buttons](http://lipis.github.io/bootstrap-social/ "Bootstrap Social") plugin.
+- Fixed RequireJS bug. Thanks to [StaticSphere](https://github.com/StaticSphere "github user").
 
-- Due to lack of standartisation, "mousewheel" scrolling is ridiculously sensitive and unmanageable when using some track pads (such as on the MacBook Pro).  Unfortunately, since there appears to be no way to know directly what type of device is triggering the mousewheel events, it is not trivial to somehow normalise or "tame" the input from the track pad without also affecting the "1 tick per click" behaviour of the standard mouse wheel.  **darsain** has described the same phenomenon in [this discussion](https://github.com/darsain/sly/issues/67) at the sly.js project.  Ideas are [appreciated](https://github.com/specious/cloud9carousel/issues/1).
+**ver 1.1.0:**
 
-## License
+- Added new skin. class: .skin-black
+- Added [pace](http://github.hubspot.com/pace/docs/welcome/ "pace") plugin.
 
-Licensed under the [MIT License](http://en.wikipedia.org/wiki/MIT_License)
+Image Credits
+-------------
+[Pixeden](http://www.pixeden.com/psd-web-elements/flat-responsive-showcase-psd)
+
+[Graphicsfuel](http://www.graphicsfuel.com/2013/02/13-high-resolution-blur-backgrounds/)
+
+[Pickaface](http://pickaface.net/)
+
+[Unsplash](https://unsplash.com/)
+
+[Uifaces](http://uifaces.com/)
+
+Donations
+---------
+Donations are **greatly appreciated!**
+
+[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif "AdminLTE Presentation")](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=629XCUSXBHCBC "Donate")
