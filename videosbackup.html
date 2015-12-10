@@ -71,17 +71,27 @@
     <script type="text/javascript" charset="utf-8" src="scripts/phonegap.js"></script>
 
     <!--<script type="text/javascript" charset="utf-8" src="scripts/cordova.js"></script>-->
-<script type="text/javascript">
 
-var selectmenu=document.getElementById("selectmenu")
-selectmenu.onchange=function(){ //run some code when "onchange" event fires
- var chosenoption=this.options[this.selectedIndex] //this refers to "selectmenu"
- if (chosenoption.value!="nothing"){
-  window.open(chosenoption.value, "_self", "") //open target site (based on option's value attr) in new window
- }
-}
+    <script>
+    $(document).ready(function(){
+        $("#selectmenu").change(function(){
+            
+            $("#div1").html('<object data="videosparto.html">');
+        });
+    });
+    </script>
 
-</script>
+    <script>
+    $(document).ready(function(){
+        $("#selectmenu").change(function(){
+            
+            $("#div1").html('<object data="videoslactancia.html">');
+        });
+    });
+    </script>
+
+
+    
 
 
 
@@ -110,44 +120,18 @@ selectmenu.onchange=function(){ //run some code when "onchange" event fires
            <div class="navigation-icons" style="overflow: visible !important;min-height:610px;">       
            <center><div style="margin-top:20px; margin-bottom:20px;">
                 <center><div>
-                      <form id="aform">
-                      <select class="minimal" id="mymenu" size="1">
-                      <option value="nothing" selected="selected">Seleccione una galeria</option>
-                      <option value="videosparto.html">Parto</option>
-                      <option value="videosembarazo.html">Embarazo</option>
-                      <option value="videospartohumanizado.html">Parto Humanizado</option>
-                      <option value="videosposparto.html">Posparto</option>
-                      <option value="videoslactancia.html">Lactancia</option>
-                      <option value="videosejercicioembarazo.html">Ejercicios durante el embarazo</option>
+                      <select class="minimal" id="selectmenu">
+                       <option id="1" value="1">Parto</option>
+                       <option id="2" value="2">Embarazo</option>
+                       <option value="3">Parto humanizado</option>
+                       <option value="4">Posparto</option>
+                       <option id="cinco" >videoslactancia.html</option>
+                       <option value="seis"><a href="videosejercicios.html">Ejercicios durante el Embarazo</a></option>
                       </select>
-                      </form>
                     </div></center>
 
-
               
-              <center><div class="videobox">
-                <div class="separator-fields"></div>
-                  <h2 class="title-new">Papel de la matrona en el parto humanizado</h2>
-                  <div class="separator-fields"></div>
-                    <iframe width="270" height="200" src="https://www.youtube.com/embed/-mpCXQ6PaDU" frameborder="0" allowfullscreen></iframe>
-                  <div class="separator-fields"></div>
-              </div></center>
-
-              <center><div class="videobox">
-                <div class="separator-fields"></div>
-                  <h2 class="title-new">Posparto: Volviendo a la rutina</h2>
-                  <div class="separator-fields"></div>
-                    <iframe width="270" height="200" src="https://www.youtube.com/embed/mgHTxpO4I90" frameborder="0" allowfullscreen></iframe>
-                  <div class="separator-fields"></div>
-              </div></center>
-
-              <center><div class="videobox">
-                <div class="separator-fields"></div>
-                  <h2 class="title-new">Impacto emocional del parto y su medicalización</h2>
-                  <div class="separator-fields"></div>
-                    <iframe width="270" height="200" src="https://www.youtube.com/embed/TLvAdz87cls" frameborder="0" allowfullscreen></iframe>
-                  <div class="separator-fields"></div>
-              </div></center>
+              <div id="div1" style="height:710px;"></div>
              
                         
                     </div></center>
@@ -278,18 +262,6 @@ selectmenu.onchange=function(){ //run some code when "onchange" event fires
         } )
       })
     </script>
-
-    <script type="text/javascript">
-
-var selectmenu=document.getElementById("mymenu")
-selectmenu.onchange=function(){ //run some code when "onchange" event fires
- var chosenoption=this.options[this.selectedIndex] //this refers to "selectmenu"
- if (chosenoption.value!="nothing"){
-  window.open(chosenoption.value, "_self", "") //open target site (based on option's value attr) in new window
- }
-}
-
-</script>
     <!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
     <script type="text/javascript" src="js/framework.js"></script>
   </body>
