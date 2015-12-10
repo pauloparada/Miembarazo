@@ -71,6 +71,8 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
   background-image: url('../img/mujer_avatar.jpg');
   border-radius: 50%;
   margin: auto;
+  margin-top: 40px;
+  margin-bottom: -20px;
 }
 .butFooter {
   width: 41px;
@@ -164,8 +166,7 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
   text-align: center;
   font-size: 13px;
   color: #444;
-  border-top: 1px solid #ddd;
-  padding-top: 2%;
+  margin-top: -8px;
 }
 .skin-blue .main-header .navbar {
     background-color: #AF9CBD !important;
