@@ -104,10 +104,10 @@ body {
   padding: 9px;
   color: #444;
   border-top: 1px solid #A594B3;
-
+  position: absolute;
   text-align: center;
   margin: auto;
-  width: 100%;
+  width: 110%;
 
 }
 /* Fixed layout */
