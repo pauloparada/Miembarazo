@@ -60,6 +60,9 @@
     <link rel="stylesheet" href="dist/css/AdminLTE.css">
     <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" href="dist/css/swiper.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="css/normalize.css">-->
+  <link rel="stylesheet" type="text/css" href="css/framework.css">
+  <link rel="stylesheet" type="text/css" href="css/washington.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -70,20 +73,6 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="scripts/phonegap.js"></script>
 
- <script src="http://maps.googleapis.com/maps/api/js"></script>
-<script>
-function initialize() {
-  var mapProp = {
-    center:new google.maps.LatLng(4.697999, -74.058454),
-    zoom:13,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
-
   </head>
   </style>
   <body class="hold-transition skin-blue sidebar-mini">
@@ -91,6 +80,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <header class="main-header">
         <nav class="navbar navbar-static-top" role="navigation">
           <img class="logg" src="dist/img/logo-miembarazo.png" alt="">
+          <div class="navbar-button-icon home-icon"></div>
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
               <li>
@@ -105,8 +95,39 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <div class="content-wrapper">
         <div class="row">
                
-          
-             <div id="googleMap" style="width:100%;min-height:500px;"></div>
+          <div class="news-container item-new">
+          <div>
+            <div class="w-slider hero-slider" data-animation="slide" data-duration="500" data-infinite="1" data-nav-spacing="5" data-delay="4000" data-autoplay="1">
+              <div class="w-slider-mask">
+                <div class="w-slide slide"></div>
+                <div class="w-slide slide bg2"></div>
+                <div class="w-slide slide bg3"></div>
+              </div>
+              <div class="w-slider-arrow-left arrow-icon">
+                <div class="w-icon-slider-left"></div>
+              </div>
+              <div class="w-slider-arrow-right arrow-icon">
+                <div class="w-icon-slider-right"></div>
+              </div>
+              <div class="w-slider-nav w-round slider-bullets"></div>
+            </div>
+            <div class="text-new">
+              <div class="separator-fields"></div>
+              <h2 class="title-new">Articulo 1</h2>
+              <div class="separator-fields"></div>
+              <p class="description-new">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolistique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam erat.
+                <br>
+                <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.
+                <br>
+                <br>Eros dolistique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam erat,&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolistique. Duis cursus, mi quis viverra ornare, eros dolor interdum nuna.
+                <br>Eros dolistique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam erat,&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolistique. Duis cursus, mi quis viverra ornare, eros dolor interdum nuna.
+                <br>Eros dolistique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam erat,&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolistique. Duis cursus, mi quis viverra ornare, eros dolor interdum nuna.</p>
+              <div class="separator-button"></div>
+             </div> 
+          </div>
+        </div>
+        
+        </div>
                         
            </div>
                    

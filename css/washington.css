@@ -16,6 +16,13 @@
   font-style: normal;
 }
 
+body {
+  background-color: white;
+  font-family: CenturyGothic-Bold, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
 h1 {
   margin-top: 20px;
   margin-bottom: 10px;
@@ -79,22 +86,17 @@ a {
 }
 .perfil{
   float:left; 
-  padding-left: 50px; 
-  padding-top: 6px;
-}
-.home{
-  float:left; 
-  padding-left: 30px; 
+  padding-left: 40px; 
   padding-top: 6px;
 }
 .mapa{
   float:left; 
-  padding-left: 50px; 
+  padding-left: 70px; 
   padding-top: 6px;
 }
 .chat{
   float:left; 
-  padding-left: 40px; 
+  padding-left: 70px; 
   padding-top: 6px;
 }
 
@@ -233,12 +235,7 @@ a {
 }
 .list {
   padding-left: 0px;
-  background-color: transparent;
-  list-style-type: none;
-}
-.list2 {
-  padding-left: 0px;
-  background-color: transparent;
+  background-color: #E3F4FF;
   list-style-type: none;
 }
 .list.list-messages {
@@ -255,15 +252,7 @@ a {
   height: 60px;
   border-bottom: 1px solid #e7e7e9;
   border-left: 3px solid transparent;
-  background-color: transparent;
-}
-.list-item2 {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  height: 60px;
-  border-bottom: 1px solid #e7e7e9;
-  border-left: 3px solid transparent;
-  background-color: transparent;
+  background-color: white;
 }
 .list-item:active {
   background-color: #f7f7f7;
@@ -305,7 +294,7 @@ a {
   background-color: white;
 }
 .nav-menu-header {
-  height: 107px;
+  height: 137px;
 
 }
 .menu-botones{
@@ -318,7 +307,6 @@ a {
   border-bottom: 2px solid #fafafa;
   font-size: 13px;
   text-decoration: none;
-  margin-top: -20px;
 }
 .nav-menu-link:active {
   color: #4fd2c2;
@@ -341,7 +329,7 @@ a {
   color: #6E2CC7;;
   font-size: 25px;
   line-height: 48px;
-
+  text-align: left;
 }
 .nav-menu-text-right {
   display: inline-block;
@@ -363,8 +351,8 @@ a {
   float: left;
   z-index: 6;
   position: fixed;
-  padding-top: 29px;
-  padding-left: 19px;
+  padding-top: 20px;
+  padding-left: 15px;
 }
 .boton1{
   width: 98px;
@@ -557,7 +545,7 @@ a {
   position: relative;
   float: left;
   margin-left: 15%;
-  margin-top: 10%;
+  margin-top: 40%;
 }
 .boton-documentos{
   width: 102px;
@@ -566,7 +554,7 @@ a {
   position: absolute;
   float: left;
   margin-left: 55%;
-  margin-top: 10%;
+  margin-top: 40%;
 }
 
 .logoredcord{
@@ -598,7 +586,7 @@ a {
   float: left;
 }
 .banner{
-  width: 140px;
+  width: 160px;
   height: 60px;
   float: left;
   background-image: url('../images/banner.png');
@@ -1205,7 +1193,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1dbff', end
 }
 .square-map {
   height: 330px;
-  margin-top: 80px;
+  margin-top: -8px;
 }
 .hero-map {
   height: 280px;
@@ -1306,7 +1294,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1dbff', end
   float: right;
   border-top-left-radius: 12px;
   border-top-right-radius: 0px;
-  background-color: #874FD2;
+  background-color: #4fd2c2;
   color: white;
 }
 .arrow-globe {
@@ -1322,7 +1310,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1dbff', end
   top: 0px;
   right: 9px;
   border-right: 0px none transparent;
-  border-left: 12px solid #A04FD2;
+  border-left: 12px solid #4fd2c2;
 }
 .chat-time {
   display: block;
@@ -1371,7 +1359,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1dbff', end
   padding: 9px 0px 9px 7px;
   float: right;
   background-color: transparent;
-  color: #A04FD2;
+  color: #4fd2c2;
   font-size: 12px;
 }
 .slider-element-test {
@@ -1389,7 +1377,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1dbff', end
   width: 100%;
   height: 2px;
   margin-bottom: 7px;
-  background-color: #6217C9;
+  background-color: #AD89DE;
 }
 .shadow-layer {
   position: fixed;

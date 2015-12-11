@@ -107,7 +107,7 @@ body {
   position: absolute;
   text-align: center;
   margin: auto;
-  width: 110%;
+  width: 100%;
 
 }
 /* Fixed layout */
@@ -701,7 +701,7 @@ a:focus {
 }
 .control-sidebar {
   position: absolute;
-  padding-top: 50px;
+  padding-top: 100px;
   z-index: 1010;
 }
 @media (max-width: 768px) {
