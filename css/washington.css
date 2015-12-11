@@ -653,6 +653,7 @@ a {
   padding-left: 28px;
   background-color: white;
   opacity: 1;
+  height: 420px;
 }
 .padding.smaller {
   padding-right: 16px;
@@ -710,6 +711,7 @@ a {
   font-size: 9px;
   line-height: 11px;
   letter-spacing: 1px;
+    margin-top: 50px;
 }
 .label-form.middle {
   display: inline-block;
