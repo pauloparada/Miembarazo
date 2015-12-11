@@ -255,7 +255,7 @@
       clearInterval( this.autoPlayTimer );
       if( options.buttonLeft ) options.buttonLeft.unbind( 'dragging' );
       if( options.buttonRight ) options.buttonRight.unbind( 'dragging' );
-      $container.bind( 'touchmove.cloud9' );
+      $container.unbind( 'touchmove.cloud9.cloud9' );
     }
 
     this.autoPlay = function() {
@@ -375,8 +375,8 @@
         transforms: true,     // enable CSS transforms
         smooth: true,         // enable smooth animation via requestAnimationFrame()
         fps: 30,              // fixed frames per second (if smooth animation is off)
-        speed: 5,             // positive number
-        autoPlay: 1,          // [ 0: off | number of items (integer recommended, positive is clockwise) ]
+        speed: 4,             // positive number
+        autoPlay: 0,          // [ 0: off | number of items (integer recommended, positive is clockwise) ]
         autoPlayDelay: 4000,
         bringToFront: false,
         itemClass: 'cloud9-item',
