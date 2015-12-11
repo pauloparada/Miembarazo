@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Simple Events Calendar</title>
+<link href="../css/reset.css" type="text/css" rel="stylesheet" />
+<link href="../css/dp_calendar.css" type="text/css" rel="stylesheet" />
+<link href="../css/demo.css" type="text/css" rel="stylesheet" />
+<link href="../themes/base/jquery.ui.all.css" type="text/css" rel="stylesheet" />
+
+<script type='text/javascript' src='../js/jquery-1.5.2.min.js'></script> 
+<script type="text/javascript" src="../ui/jquery.ui.core.js"></script> 
+<script type="text/javascript" src="../ui/jquery.ui.position.js"></script>
+<script type="text/javascript" src="../ui/jquery.ui.datepicker.js"></script> 
+<script type="text/javascript" src="../js/date.js"></script>
+<script type="text/javascript" src="../js/jquery.dp_calendar.min.js"></script>
+<script type="text/javascript" src="../js/jquery.dp_calendar-es.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){    
+	var events_array = new Array(
+		
+		{
+			startDate: new Date(2014,00, 07, 06, 05),
+			endDate: new Date(2014,00, 07, 06, 30),
+			title: "Coronilla de la Divina Misericordia",
+			description: "Descripción del programa",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 06, 30),
+			endDate: new Date(2014,00, 07, 07, 00),
+			title: "Llena tu Día de Dios",
+			description: "Descripción del programa",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 07, 00),
+			endDate: new Date(2014,00, 07, 07, 30),
+			title: "Ponte al Día",
+			description: "Descripción del programa",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 07, 30),
+			endDate: new Date(2014,00, 07, 08, 30),
+			title: "Taller de Oracion, Cuando vayas a Orar",
+			description: "Descripción del programa",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 08, 30),
+			endDate: new Date(2014,00, 07, 09, 00),
+			title: "Sagrada Eucaristia",
+			description: "Descripción del programa",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 09, 30),
+			endDate: new Date(2014,00, 07, 12, 00),
+			title: "Entre Amigos",
+			description: "Descripción del programa",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 12, 00),
+			endDate: new Date(2014,00, 07, 12, 05),
+			title: "Angelus",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 12, 05),
+			endDate: new Date(2014,00, 07, 13, 00),
+			title: "Sagrada Eucaristía",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 13, 00),
+			endDate: new Date(2014,00, 07, 13, 30),
+			title: "Nuestro pan de cada Día",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 13, 30),
+			endDate: new Date(2014,00, 07, 14, 00),
+			title: "Si Quiero",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 14, 00),
+			endDate: new Date(2014,00, 07, 15, 00),
+			title: "Punto, Cadeneta y Cruz",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 15, 05),
+			endDate: new Date(2014,00, 07, 15, 30),
+			title: "Coronilla de la Dvini Misericordia",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 15, 30),
+			endDate: new Date(2014,00, 07, 16, 00),
+			title: "Nuestro pan de Cada Día",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 16, 00),
+			endDate: new Date(2014,00, 07, 17, 00),
+			title: "Serie SIPCA - Tercera Temporada",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 17, 00),
+			endDate: new Date(2014,00, 07, 17, 30),
+			title: "La mano de Dios, La mano del hombre",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 17, 30),
+			endDate: new Date(2014,00, 07, 18, 00),
+			title: "Santo Rosario",
+			description: "Descripción del programa",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 18, 30),
+			endDate: new Date(2014,00, 07, 19, 00),
+			title: "Caminante",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 19, 00),
+			endDate: new Date(2014,00, 07, 19, 05),
+			title: "Mensaje Minuto de Dios",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 19, 05),
+			endDate: new Date(2014,00, 07, 20, 00),
+			title: "Sagrada Eucaristía",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 20, 00),
+			endDate: new Date(2014,00, 07, 20, 30),
+			title: "Yo Creo",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 20, 30),
+			endDate: new Date(2014,00, 07, 21, 00),
+			title: "Jovenes del Cenaculo",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 21, 00),
+			endDate: new Date(2014,00, 07, 21, 30),
+			title: "Una ventana a la Fe",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 21, 30),
+			endDate: new Date(2014,00, 07, 22, 00),
+			title: "Predicación Triduo - Dia 3",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 22, 00),
+			endDate: new Date(2014,00, 07, 22, 05),
+			title: "Bendición Solemne",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 07, 22, 05),
+			endDate: new Date(2014,00, 08, 01, 30),
+			title: "Entre Amigos",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 1, 30),
+			endDate: new Date(2014,00, 08, 2, 00),
+			title: "Historias y testimonios - Sipca TV",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 2, 00),
+			endDate: new Date(2014,00, 08, 3, 00),
+			title: "Punto, Cadeneta y Cruz",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 3, 00),
+			endDate: new Date(2014,00, 08, 3, 30),
+			title: "Si Quiero",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 3, 35),
+			endDate: new Date(2014,00, 08, 4, 30),
+			title: "Cantando y orando con el padre Aicardo",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 4, 30),
+			endDate: new Date(2014,00, 08, 5, 00),
+			title: "Predicación Tri duo - Dia 3",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 5, 05),
+			endDate: new Date(2014,00, 08, 5, 30),
+			title: "Santo Rosario",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,00, 08, 5, 30),
+			endDate: new Date(2014,00, 08, 6, 00),
+			title: "Nuestro Pan",
+			description: "Descripción del programa",
+			priority: 3,
+			frecuency:1
+		}
+	);	
+	
+	$("#calendar").dp_calendar({
+		events_array: events_array,
+		format_ampm: true
+	
+	}); 
+	
+	$.fn.dp_calendar.setDate(date)
+	$.fn.dp_calendar.setDay(14)
+	$.fn.dp_calendar.setMonth(1)
+	$.fn.dp_calendar.setYear(2014)
+});  
+</script>
+</head>
+
+<body>
+	
+	<div id="content">
+    	
+		<div id="calendar"></div>
+       
+    </div>
+</body>
+</html>

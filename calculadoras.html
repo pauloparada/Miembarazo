@@ -67,188 +67,20 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
    
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="scripts/phonegap.js"></script>
-
     <!--<script type="text/javascript" charset="utf-8" src="scripts/cordova.js"></script>-->
-<script type="text/javascript">
 
-var selectmenu=document.getElementById("selectmenu")
-selectmenu.onchange=function(){ //run some code when "onchange" event fires
- var chosenoption=this.options[this.selectedIndex] //this refers to "selectmenu"
- if (chosenoption.value!="nothing"){
-  window.open(chosenoption.value, "_self", "") //open target site (based on option's value attr) in new window
- }
-}
-
-</script>
-
-  <link href='assets/css/fullcalendar.css' rel='stylesheet' />
-  <link href='assets/css/fullcalendar.print.css' rel='stylesheet' media='print' />
-  
-  <!--jQuery-->
-  <script src='assets/js/jquery-1.9.1.min.js'></script>
-  <script src='assets/js/jquery-ui-1.10.2.custom.min.js'></script>
-  
-  <!--FullCalendar-->
-  <script src='assets/js/fullcalendar.min.js'></script>
-  <script type="text/javascript">
+    <script type="text/javascript">
+        // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+    // device APIs are available
+    //
     
-    /*
-      jQuery document ready
-    */
-    
-    $(document).ready(function()
-    {
-      /*
-        date store today date.
-        d store today date.
-        m store current month.
-        y store current year.
-      */
-      var date = new Date();
-      var d = date.getDate();
-      var m = date.getMonth();
-      var y = date.getFullYear();
-      
-      /*
-        Initialize fullCalendar and store into variable.
-        Why in variable?
-        Because doing so we can use it inside other function.
-        In order to modify its option later.
-      */
-      
-      var calendar = $('#calendar').fullCalendar(
-      {
-        /*
-          header option will define our calendar header.
-          left define what will be at left position in calendar
-          center define what will be at center position in calendar
-          right define what will be at right position in calendar
-        */
-        header:
-        {
-          left: 'prev,next Hoy',
-          center: 'title',
-          right: 'month,agendaWeek,agendaDay'
-        },
-        /*
-          defaultView option used to define which view to show by default,
-          for example we have used agendaWeek.
-        */
-        defaultView: 'agendaWeek',
-        /*
-          selectable:true will enable user to select datetime slot
-          selectHelper will add helpers for selectable.
-        */
-        selectable: true,
-        selectHelper: true,
-        /*
-          when user select timeslot this option code will execute.
-          It has three arguments. Start,end and allDay.
-          Start means starting time of event.
-          End means ending time of event.
-          allDay means if events is for entire day or not.
-        */
-        select: function(start, end, allDay)
-        {
-          /*
-            after selection user will be promted for enter title for event.
-          */
-          var title = prompt('Titulo del evento:');
-          /*
-            if title is enterd calendar will add title and event into fullCalendar.
-          */
-          if (title)
-          {
-            calendar.fullCalendar('renderEvent',
-              {
-                title: title,
-                start: start,
-                end: end,
-                allDay: allDay
-              },
-              true // make the event "stick"
-            );
-          }
-          calendar.fullCalendar('unselect');
-        },
-        /*
-          editable: true allow user to edit events.
-        */
-        editable: true,
-        /*
-          events is the main option for calendar.
-          for demo we have added predefined events in json object.
-        */
-        events: [
-          {
-            title: 'Evento de todo el dia',
-            start: new Date(y, m, 1)
-          },
-          {
-            title: 'Evento',
-            start: new Date(y, m, d-5),
-            end: new Date(y, m, d-2)
-          },
-          {
-            id: 999,
-            title: 'Repeating Event',
-            start: new Date(y, m, d-3, 16, 0),
-            allDay: false
-          },
-          {
-            id: 999,
-            title: 'Repetir Evento',
-            start: new Date(y, m, d+4, 16, 0),
-            allDay: false
-          },
-          {
-            title: 'Reunion',
-            start: new Date(y, m, d, 10, 30),
-            allDay: false
-          },
-          {
-            title: 'Cita',
-            start: new Date(y, m, d, 12, 0),
-            end: new Date(y, m, d, 14, 0),
-            allDay: false
-          },
-          {
-            title: 'Celebracion',
-            start: new Date(y, m, d+1, 19, 0),
-            end: new Date(y, m, d+1, 22, 30),
-            allDay: false
-          },
-          {
-            title: 'Click Google',
-            start: new Date(y, m, 28),
-            end: new Date(y, m, 29),
-            url: 'http://google.com/'
-          }
-        ]
-      });
-      
-    });
-
-  </script>
-
-<style type="text/css">
-    body
-    {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 14px;
-      font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+    function openBrowser(){
+            window.open('http://comprandoofertas.com/chatembarazo/', '_blank', 'location=yes');
     }
-    #calendar
-    {
-      width: 340px;
-      margin: 0 auto;
-    }
-  </style>
-
-
+    </script>
 
   </head>
   </style>
@@ -270,26 +102,40 @@ selectmenu.onchange=function(){ //run some code when "onchange" event fires
       </header>
       <div class="content-wrapper">
         <div class="row">
-           
-           <iframe src="indexcalendar.html" width="340" height="340"></iframe>
-        <div id='calendar'></div>
-  <form name="caldlgfrm" id="caldlgfrm" action="newschecule.html" method="POST">
+          <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1"></div>
+          <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10 ">
+                  <div class="carrousel" style="margin-left: 10px; margin-top:50%;">
+                        <div class="wrap">
+                            <div id="showcase" class="noselect" style="overflow: visible !important;">
+                                <div class="card">
+                                  <a href="ovulacion.html"><img src="images/boton-ovulacion2.png"></a>
+                                </div>
+                                <div class="card">
+                                  <div>
+                                    <a href="pesoideal.html"><img src="images/boton-pesoideal2.png"></a>
+                                  </div>
+                                </div>
+                                <div class="card">
+                                  <a href="fechadeparto.html"><img src="images/boton-fechadeparto2.png"></a> 
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                  </div>
+            </div>
+          </div>
 
+          <div class="separadoruno"></div>
+          <div class="clear"></div>
 
-
-
-</form>
-
-                        
-                    </div>
-                    </div>
-
-      
+        
+        </div>
 
       <div class="clear"></div>
       <div class="separadordos"></div>    
 
-      <!--footer-->
+       <!--footer-->
       <footer class="main-footer footerPo" >
        <div class="cont_bt"> 
           <a href="index.html">
@@ -307,7 +153,7 @@ selectmenu.onchange=function(){ //run some code when "onchange" event fires
             <i class="fa fa-map-marker fa-2x"></i>
           </div> 
           </a>
-          <a href="chat.html">
+          <a onclick='openBrowser("http://comprandoofertas.com/chatembarazo/");'>
           <div class="butFooter">
             <i class="fa fa-comment fa-2x"></i>
           </div> 
@@ -315,7 +161,7 @@ selectmenu.onchange=function(){ //run some code when "onchange" event fires
        </div>
       </footer>
       <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
+      <aside class="control-sidebar control-sidebar-dark">
         <div class="item">
           <a class="alink" href="index.html">
             <i class="fa fa-home fa-lg"></i> Inicio</a>
@@ -337,7 +183,7 @@ selectmenu.onchange=function(){ //run some code when "onchange" event fires
             <i class="fa fa-youtube-play fa-lg"></i> Videos</a>
         </div>
         <div class="item">
-          <a class="alink" href="chat.html">
+          <a class="alink" onclick='openBrowser("http://comprandoofertas.com/chatembarazo/");'>
             <i class="fa fa-comments fa-lg"></i> Chat</a></div>
         <div class="item">
           <a class="alink" href="articulos.html">
@@ -409,18 +255,6 @@ selectmenu.onchange=function(){ //run some code when "onchange" event fires
         } )
       })
     </script>
-
-    <script type="text/javascript">
-
-var selectmenu=document.getElementById("mymenu")
-selectmenu.onchange=function(){ //run some code when "onchange" event fires
- var chosenoption=this.options[this.selectedIndex] //this refers to "selectmenu"
- if (chosenoption.value!="nothing"){
-  window.open(chosenoption.value, "_self", "") //open target site (based on option's value attr) in new window
- }
-}
-
-</script>
     <!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
     <script type="text/javascript" src="js/framework.js"></script>
   </body>

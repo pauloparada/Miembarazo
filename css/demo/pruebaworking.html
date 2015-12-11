@@ -1,0 +1,1949 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link href="../css/reset.css" type="text/css" rel="stylesheet" />
+<link href="../css/dp_calendar.css" type="text/css" rel="stylesheet" />
+<link href="../css/demo.css" type="text/css" rel="stylesheet" />
+<link href="../themes/base/jquery.ui.all.css" type="text/css" rel="stylesheet" />
+
+<script type='text/javascript' src='../js/jquery-1.5.2.min.js'></script> 
+<script type="text/javascript" src="../ui/jquery.ui.core.js"></script> 
+<script type="text/javascript" src="../ui/jquery.ui.position.js"></script>
+<script type="text/javascript" src="../ui/jquery.ui.datepicker.js"></script> 
+<script type="text/javascript" src="../js/date.js"></script>
+<script type="text/javascript" src="../js/jquery.dp_calendar.min.js"></script>
+<script type="text/javascript" src="../js/jquery.dp_calendar-es.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){    
+		var events_array = new Array(
+
+		{
+			startDate: new Date(2014,03, 10, 00, 00),
+			endDate: new Date(2014,03, 10, 01, 30),
+			title: "Magazín Entre Amigos",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 10, 01, 30),
+			endDate: new Date(2014,03, 10, 02, 00),
+			title: "Caminante",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 02, 00),
+			endDate: new Date(2014,03, 10, 03, 30),
+			title: "Talk Show - Buscando Respuestas",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 03, 30),
+			endDate: new Date(2014,03, 10, 04, 30),
+			title: "Curso de Evangelizacion",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 04, 30),
+			endDate: new Date(2014,03, 10, 05, 00),
+			title: "Historias y testimonios SIPCA TV",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 05, 00),
+			endDate: new Date(2014,03, 10, 05, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 05, 30),
+			endDate: new Date(2014,03, 10, 05, 50),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 05, 50),
+			endDate: new Date(2014,03, 10, 05, 55),
+			title: "Bendición Solemne",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 05, 55),
+			endDate: new Date(2014,03, 10, 06, 00),
+			title: "Ángelus",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 10, 06, 05),
+			endDate: new Date(2014,03, 10, 06, 30),
+			title: "Coronilla de la Divina Misericordia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 10, 06, 30),
+			endDate: new Date(2014,03, 10, 07, 00),
+			title: "Llena tu Día de Dios",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 10, 07, 00),
+			endDate: new Date(2014,03, 10, 07, 30),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 07, 30),
+			endDate: new Date(2014,03, 10, 08, 30),
+			title: "Taller de Oracion Cuando vayas a Orar",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 08, 30),
+			endDate: new Date(2014,03, 10, 09, 00),
+			title: "Sagrada Eucaristia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 09, 00),
+			endDate: new Date(2014,03, 10, 09, 30),
+			title: "Nuestro Pan de cada dia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 09, 30),
+			endDate: new Date(2014,03, 10, 12, 00),
+			title: "Entre Amigos",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 12, 00),
+			endDate: new Date(2014,03, 10, 12, 05),
+			title: "Angelus",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 12, 05),
+			endDate: new Date(2014,03, 10, 12, 30),
+			title: "Sagrada Eucaristía",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 12, 30),
+			endDate: new Date(2014,03, 10, 13, 00),
+			title: "Nuestro pan de cada Día",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 13, 00),
+			endDate: new Date(2014,03, 10, 13, 30),
+			title: "Primeros Cristianos",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 13, 30),
+			endDate: new Date(2014,03, 10, 15, 00),
+			title: "Talk Show - Buscando Respuestas",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 15, 05),
+			endDate: new Date(2014,03, 10, 15, 30),
+			title: "Coronilla de la Divina Misericordia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 15, 30),
+			endDate: new Date(2014,03, 10, 16, 00),
+			title: "Nuestro pan de Cada Día",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 16, 00),
+			endDate: new Date(2014,03, 10, 17, 00),
+			title: "Documentales SIPCA TV",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+
+		{
+			startDate: new Date(2014,03, 10, 17, 00),
+			endDate: new Date(2014,03, 10, 17, 30),
+			title: "Una ventana a la fe",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		
+		
+		{
+			startDate: new Date(2014,03, 10, 17, 30),
+			endDate: new Date(2014,03, 10, 18, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 18, 30),
+			endDate: new Date(2014,03, 10, 19, 00),
+			title: "Caminante",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 19, 00),
+			endDate: new Date(2014,03, 10, 19, 05),
+			title: "Mensaje Minuto de Dios",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 19, 05),
+			endDate: new Date(2014,03, 10, 19, 30),
+			title: "Sagrada Eucaristía",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 19, 30),
+			endDate: new Date(2014,03, 10, 20, 00),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 20, 00),
+			endDate: new Date(2014,03, 10, 20, 30),
+			title: "primeros Cristianos",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 20, 30),
+			endDate: new Date(2014,03, 10, 22, 00),
+			title: "Gózate la fe",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 10, 22, 00),
+			endDate: new Date(2014,03, 10, 22, 05),
+			title: "Bendición Solemne",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 22, 05),
+			endDate: new Date(2014,03, 10, 23, 00),
+			title: "Taller de Oración cuando vayas a orar",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 10, 23, 00),
+			endDate: new Date(2014,03, 10, 23, 59),
+			title: "Entre amigos - Repeticion",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 4, 00, 00),
+			endDate: new Date(2014,03, 4, 1, 30),
+			title: "Magazin entre Amigos - Repeticion",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 01, 30),
+			endDate: new Date(2014,03, 4, 2, 00),
+			title: "Caminante",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 02, 00),
+			endDate: new Date(2014,03, 4, 3, 30),
+			title: "Talk Show - Buscando Respuestas",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 03, 30),
+			endDate: new Date(2014,03, 4, 4, 30),
+			title: "Cantando y Orando",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 04, 30),
+			endDate: new Date(2014,03, 4, 5, 00),
+			title: "Evangelio y Vida",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 05, 00),
+			endDate: new Date(2014,03, 4, 5, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 05, 30),
+			endDate: new Date(2014,03, 4, 5, 50),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 05, 50),
+			endDate: new Date(2014,03, 4, 5, 55),
+			title: "Bendicion Solemne",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 05, 55),
+			endDate: new Date(2014,03, 4, 6, 00),
+			title: "Angelus",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 06, 00),
+			endDate: new Date(2014,03, 4, 6, 30),
+			title: "Coronilla de la Divina Misericordia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 06, 30),
+			endDate: new Date(2014,03, 4, 7, 00),
+			title: "Llena tu día de Dios",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 07, 00),
+			endDate: new Date(2014,03, 4, 8, 00),
+			title: "Santa Misa",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 08, 00),
+			endDate: new Date(2014,03, 4, 09, 00),
+			title: "Hora Santa",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 4, 09, 00),
+			endDate: new Date(2014,03, 4, 09, 30),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 09, 30),
+			endDate: new Date(2014,03, 4, 12, 00),
+			title: "Magazín Entre Amigos",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 4, 12, 00),
+			endDate: new Date(2014,03, 4, 13, 00),
+			title: "Sagrada Eucaristia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 13, 00),
+			endDate: new Date(2014,03, 4, 13, 30),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 13, 30),
+			endDate: new Date(2014,03, 4, 15, 00),
+			title: "Talk Show - Buscando Respuestas",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 4, 15, 00),
+			endDate: new Date(2014,03, 4, 15, 30),
+			title: "Coronilla de la Divina Misericordia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 15, 30),
+			endDate: new Date(2014,03, 4, 16, 00),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 16, 00),
+			endDate: new Date(2014,03, 4, 17, 00),
+			title: "Especiales Cristovisión: Entrevista con Eliecer Salesman",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 17, 00),
+			endDate: new Date(2014,03, 4, 17, 30),
+			title: "Historias y testimonio",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 17, 30),
+			endDate: new Date(2014,03, 4, 18, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 18, 30),
+			endDate: new Date(2014,03, 4, 19, 00),
+			title: "Caminante",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 4, 19, 00),
+			endDate: new Date(2014,03, 4, 20, 00),
+			title: "Santa Misa",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 20, 00),
+			endDate: new Date(2014,03, 4, 20, 30),
+			title: "Al tablero con Fray Nelson",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 20, 30),
+			endDate: new Date(2014,03, 4, 21, 00),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 21, 00),
+			endDate: new Date(2014,03, 4, 22, 00),
+			title: "Documental - Pasión en Belstran",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 21, 30),
+			endDate: new Date(2014,03, 4, 22, 00),
+			title: "Una ventana a la fe",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 4, 22, 00),
+			endDate: new Date(2014,03, 4, 22, 05),
+			title: "Bendicion Solemne",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 22, 05),
+			endDate: new Date(2014,03, 4, 23, 00),
+			title: "Hora Santa",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 4, 23, 00),
+			endDate: new Date(2014,03, 4, 23, 59),
+			title: "Magazín Entre Amigos",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 5, 00, 00),
+			endDate: new Date(2014,03, 5, 01, 30),
+			title: "Magazín Entre Amigos",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 01, 30),
+			endDate: new Date(2014,03, 5, 03, 00),
+			title: "Linea Directa",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 03, 00),
+			endDate: new Date(2014,03, 5, 03, 30),
+			title: "Caminante",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 03, 30),
+			endDate: new Date(2014,03, 5, 04, 30),
+			title: "Cristianos en la sociedad",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 04, 30),
+			endDate: new Date(2014,03, 5, 05, 00),
+			title: "Los primeros Cristianos",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 05, 00),
+			endDate: new Date(2014,03, 5, 05, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 05, 30),
+			endDate: new Date(2014,03, 5, 05, 50),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 05, 50),
+			endDate: new Date(2014,03, 5, 05, 55),
+			title: "Bendición Solemne",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 05, 55),
+			endDate: new Date(2014,03, 5, 06, 00),
+			title: "Ángelus",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 5, 06, 00),
+			endDate: new Date(2014,03, 5, 06, 30),
+			title: "Coronilla de la divina Misericordia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 5, 06, 30),
+			endDate: new Date(2014,03, 5, 07, 00),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 07, 00),
+			endDate: new Date(2014,03, 5, 08, 00),
+			title: "Sagrada Eucaristia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 08, 00),
+			endDate: new Date(2014,03, 5, 08, 30),
+			title: "Historias y Testimonios",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 08, 30),
+			endDate: new Date(2014,03, 5, 09, 00),
+			title: "La historia de David",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 09, 00),
+			endDate: new Date(2014,03, 5, 11, 00),
+			title: "Rap - C",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 11, 00),
+			endDate: new Date(2014,03, 5, 11, 30),
+			title: "Click - click ",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 11, 30),
+			endDate: new Date(2014,03, 5, 12, 00),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+	
+		{
+			startDate: new Date(2014,03, 5, 12, 00),
+			endDate: new Date(2014,03, 5, 13, 00),
+			title: "Sagrada Eucaristia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 5, 13, 00),
+			endDate: new Date(2014,03, 5, 14, 00),
+			title: "La voz del Papa",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 14, 00),
+			endDate: new Date(2014,03, 5, 15, 00),
+			title: "Especiales Cristovisión: Entrevista con Eliecer Salesman",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 15, 00),
+			endDate: new Date(2014,03, 5, 15, 30),
+			title: "Coronilla de la divina Misericordia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+
+		{
+			startDate: new Date(2014,03, 5, 15, 30),
+			endDate: new Date(2014,03, 5, 16, 00),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 16, 00),
+			endDate: new Date(2014,03, 5, 16, 30),
+			title: "El esta pasando por tu vida",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 16, 00),
+			endDate: new Date(2014,03, 5, 16, 30),
+			title: "Al tablero con Fray Nelson",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 5, 17, 00),
+			endDate: new Date(2014,03, 5, 17, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 17, 30),
+			endDate: new Date(2014,03, 5, 18, 00),
+			title: "Caminante",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 18, 00),
+			endDate: new Date(2014,03, 5, 19, 00),
+			title: "Especiales Cristovisión: Entrevista con Eliecer Salesman",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 19, 00),
+			endDate: new Date(2014,03, 5, 20, 00),
+			title: "Sagrada Eucaristia",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 20, 00),
+			endDate: new Date(2014,03, 5, 21, 00),
+			title: "Cantando y Orando",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 21, 00),
+			endDate: new Date(2014,03, 5, 21, 30),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+
+		{
+			startDate: new Date(2014,03, 5, 21, 30),
+			endDate: new Date(2014,03, 5, 22, 00),
+			title: "Documental pio XII y el Holocausto",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+	
+		{
+			startDate: new Date(2014,03, 5, 22, 00),
+			endDate: new Date(2014,03, 5, 22, 30),
+			title: "En clave de Dios",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 5, 22, 30),
+			endDate: new Date(2014,03, 5, 23, 59),
+			title: "Gózate la Fe",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 00, 00),
+			endDate: new Date(2014,03, 6, 1, 30),
+			title: "Documental Dios en China: La lucha por la libertad religiosa",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 6, 1, 30),
+			endDate: new Date(2014,03, 6, 2, 00),
+			title: "Caminante",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 2, 00),
+			endDate: new Date(2014,03, 6, 3, 30),
+			title: "Talk Show - Buscando Respuestas",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 3, 30),
+			endDate: new Date(2014,03, 6, 5, 00),
+			title: "Gózate la Fe",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+	
+		{
+			startDate: new Date(2014,03, 6, 5, 00),
+			endDate: new Date(2014,03, 6, 5, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 5, 30),
+			endDate: new Date(2014,03, 6, 5, 50),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+
+		{
+			startDate: new Date(2014,03, 6, 5, 50),
+			endDate: new Date(2014,03, 6, 5, 55),
+			title: "Bendicion Solemne",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 5, 55),
+			endDate: new Date(2014,03, 6, 6, 00),
+			title: "Ángelus",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 6, 00),
+			endDate: new Date(2014,03, 6, 6, 30),
+			title: "Coronilla de la divina misericordia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 6, 30),
+			endDate: new Date(2014,03, 6, 6, 55),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 6, 55),
+			endDate: new Date(2014,03, 6, 7, 00),
+			title: "Dejad que los niños vengan a mi",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 7, 00),
+			endDate: new Date(2014,03, 6, 8, 00),
+			title: "Sagrada Eucaristia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 8, 00),
+			endDate: new Date(2014,03, 6, 8, 30),
+			title: "hora Santa",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 8, 30),
+			endDate: new Date(2014,03, 6, 9, 00),
+			title: "Click - Click",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 9, 00),
+			endDate: new Date(2014,03, 6, 11, 00),
+			title: "Rap - C",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 11, 00),
+			endDate: new Date(2014,03, 6, 11, 30),
+			title: "Jóvenes del Cenáculo",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 11, 30),
+			endDate: new Date(2014,03, 6, 12, 00),
+			title: "Ángelus",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 12, 00),
+			endDate: new Date(2014,03, 6, 13, 00),
+			title: "Santa Misa - Basílica de Nuestra señora de Chiquinquirá",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 13, 00),
+			endDate: new Date(2014,03, 6, 13, 20),
+			title: "Dejad que los Niños vengan a mí",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 13, 20),
+			endDate: new Date(2014,03, 6, 13, 30),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 13, 30),
+			endDate: new Date(2014,03, 6, 15, 00),
+			title: "Talk Show - Buscando Respuestas",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 15, 00),
+			endDate: new Date(2014,03, 6, 15, 30),
+			title: "Coronilla de la divina Misericordia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 15, 30),
+			endDate: new Date(2014,03, 6, 16, 00),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 16, 00),
+			endDate: new Date(2014,03, 6, 16, 30),
+			title: "En clave de Dios",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 16, 30),
+			endDate: new Date(2014,03, 6, 17, 00),
+			title: "Al tablero con Fray Nelson",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 17, 00),
+			endDate: new Date(2014,03, 6, 17, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 17, 30),
+			endDate: new Date(2014,03, 6, 18, 00),
+			title: "Caminante",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 18, 00),
+			endDate: new Date(2014,03, 6, 19, 00),
+			title: "Especiales Cristovisión: Entrevista con Eliecer Salesman",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 19, 00),
+			endDate: new Date(2014,03, 6, 20, 00),
+			title: "Santa Misa - Arquidiócesis de Cali",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 20, 00),
+			endDate: new Date(2014,03, 6, 20, 30),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 20, 30),
+			endDate: new Date(2014,03, 6, 21, 00),
+			title: "Documental Pio XII y el Holocausto",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 21, 00),
+			endDate: new Date(2014,03, 6, 21, 30),
+			title: "Él esta pasando por tu vida",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 21, 30),
+			endDate: new Date(2014,03, 6, 22, 00),
+			title: "Una ventana a la fe",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 21, 30),
+			endDate: new Date(2014,03, 6, 22, 00),
+			title: "Bendición Solemne",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+	
+		{
+			startDate: new Date(2014,03, 6, 22, 00),
+			endDate: new Date(2014,03, 6, 22, 30),
+			title: "primeros Cristianos - El escandalo de la cruz",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 6, 22, 30),
+			endDate: new Date(2014,03, 6, 23, 59),
+			title: "En Linea Directa",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 00, 00),
+			endDate: new Date(2014,03, 7, 01, 00),
+			title: "Documentales SIPCA TV",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+
+		{
+			startDate: new Date(2014,03, 7, 1, 00),
+			endDate: new Date(2014,03, 7, 1, 30),
+			title: "La mano de Dios la mano del hombre",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 1, 30),
+			endDate: new Date(2014,03, 7, 2, 00),
+			title: "Caminante",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 2, 00),
+			endDate: new Date(2014,03, 7, 3, 30),
+			title: "Talk Show - Buscando Respuestas",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 3, 30),
+			endDate: new Date(2014,03, 7, 4, 30),
+			title: "Curso de Evangelización",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 4, 30),
+			endDate: new Date(2014,03, 7, 5, 00),
+			title: "Historias y testimonios - SIPCA TV",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 5, 00),
+			endDate: new Date(2014,03, 7, 5, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 5, 30),
+			endDate: new Date(2014,03, 7, 5, 50),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 5, 50),
+			endDate: new Date(2014,03, 7, 5, 55),
+			title: "Bendicion Solemne",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 5, 55),
+			endDate: new Date(2014,03, 7, 6, 00),
+			title: "Angelus",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 6, 00),
+			endDate: new Date(2014,03, 7, 6, 30),
+			title: "Coronilla de la divina misericordia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 6, 30),
+			endDate: new Date(2014,03, 7, 7, 00),
+			title: "Llena tu dia de Dios",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 7, 00),
+			endDate: new Date(2014,03, 7, 7, 30),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 7, 30),
+			endDate: new Date(2014,03, 7, 8, 30),
+			title: "Taller de oracion cuando vayas a orar",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 8, 30),
+			endDate: new Date(2014,03, 7, 9, 30),
+			title: "Santa Misa",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 9, 30),
+			endDate: new Date(2014,03, 7, 12, 00),
+			title: "Magazín Entre amigos",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 12, 00),
+			endDate: new Date(2014,03, 7, 13, 00),
+			title: "Sagrada Eucaristía",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+
+		{
+			startDate: new Date(2014,03, 7, 13, 00),
+			endDate: new Date(2014,03, 7, 13, 30),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 7, 13, 30),
+			endDate: new Date(2014,03, 7, 15, 00),
+			title: "Talk Show - Buscando Respuestas",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 15, 00),
+			endDate: new Date(2014,03, 7, 15, 30),
+			title: "Coronilla de la divina Misericordia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 15, 30),
+			endDate: new Date(2014,03, 7, 16, 00),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 16, 00),
+			endDate: new Date(2014,03, 7, 16, 30),
+			title: "Curso de Evangelización",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 16, 30),
+			endDate: new Date(2014,03, 7, 17, 00),
+			title: "Historias y testimonios",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 17, 00),
+			endDate: new Date(2014,03, 7, 17, 30),
+			title: "El esta pasando por tu vida",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		
+		
+		{
+			startDate: new Date(2014,03, 7, 17, 30),
+			endDate: new Date(2014,03, 7, 18, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 7, 18, 30),
+			endDate: new Date(2014,03, 7, 19, 00),
+			title: "Caminante",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 19, 00),
+			endDate: new Date(2014,03, 7, 20, 00),
+			title: "Sagrada Eucaristia",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 20, 00),
+			endDate: new Date(2014,03, 7, 21, 00),
+			title: "Cantando y Orando",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 21, 00),
+			endDate: new Date(2014,03, 7, 21, 30),
+			title: "En clave de Dios",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 21, 30),
+			endDate: new Date(2014,03, 7, 22, 00),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 22, 00),
+			endDate: new Date(2014,03, 7, 23, 00),
+			title: "Taller de Oracion cuando vayas a orar",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 7, 23, 00),
+			endDate: new Date(2014,03, 7, 23, 59),
+			title: "Magazín Entre amigos",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		
+		{
+			startDate: new Date(2014,03, 8, 00, 00),
+			endDate: new Date(2014,03, 8, 1, 30),
+			title: "Magazín Entre amigos",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+
+		{
+			startDate: new Date(2014,03, 8, 01, 30),
+			endDate: new Date(2014,03, 8, 2, 00),
+			title: "Caminante",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+
+		{
+			startDate: new Date(2014,03, 8, 2, 00),
+			endDate: new Date(2014,03, 8, 3, 30),
+			title: "Buscando respuestas",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 3, 30),
+			endDate: new Date(2014,03, 8, 4, 30),
+			title: "La mano de Dios la mano del hombre",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 4, 30),
+			endDate: new Date(2014,03, 8, 5, 00),
+			title: "Los primeros Cristanos",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+
+		{
+			startDate: new Date(2014,03, 8, 5, 00),
+			endDate: new Date(2014,03, 8, 5, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 8, 5, 30),
+			endDate: new Date(2014,03, 8, 5, 50),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 5, 50),
+			endDate: new Date(2014,03, 8, 5, 55),
+			title: "Bendicion solemne",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 5, 55),
+			endDate: new Date(2014,03, 8, 6, 00),
+			title: "Angelus",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 6, 00),
+			endDate: new Date(2014,03, 8, 6, 30),
+			title: "Coronilla de la divina Misericordia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 6, 30),
+			endDate: new Date(2014,03, 8, 7, 00),
+			title: "Llena tu dia de Dios",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 7, 00),
+			endDate: new Date(2014,03, 8, 7, 30),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 7, 30),
+			endDate: new Date(2014,03, 8, 8, 30),
+			title: "Taller de oracion cuando vayas a orar",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 8, 30),
+			endDate: new Date(2014,03, 8, 9, 30),
+			title: "Sagrada Eucaristía",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 8, 9, 30),
+			endDate: new Date(2014,03, 8, 12, 00),
+			title: "Magazín Entre amigos",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 12, 00),
+			endDate: new Date(2014,03, 8, 13, 00),
+			title: "Santa Misa - Diócesis de Pasto",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 13, 00),
+			endDate: new Date(2014,03, 8, 13, 30),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 13, 30),
+			endDate: new Date(2014,03, 8, 15, 00),
+			title: "Talk Show - Buscando Respuestas",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 15, 00),
+			endDate: new Date(2014,03, 8, 15, 30),
+			title: "Coronilla de la divina Misericordia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 15, 30),
+			endDate: new Date(2014,03, 8, 16, 00),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 16, 00),
+			endDate: new Date(2014,03, 8, 16, 30),
+			title: "Una ventana a la fe",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 16, 30),
+			endDate: new Date(2014,03, 8, 17, 30),
+			title: "Documentales SIPCA TV",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		
+		
+		
+		{
+			startDate: new Date(2014,03, 8, 17, 30),
+			endDate: new Date(2014,03, 8, 18, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 18, 30),
+			endDate: new Date(2014,03, 8, 19, 00),
+			title: "Caminante",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 19, 00),
+			endDate: new Date(2014,03, 8, 20, 00),
+			title: "Santa Misa - Diócesis de Pasto",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 20, 00),
+			endDate: new Date(2014,03, 8, 20, 30),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 20, 30),
+			endDate: new Date(2014,03, 8, 21, 00),
+			title: "Jóvenes del cenacúlo",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 21, 00),
+			endDate: new Date(2014,03, 8, 22, 00),
+			title: "Especiales Cristovisión: Entrevista con Eliecer Salesman",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 8, 22, 00),
+			endDate: new Date(2014,03, 8, 23, 00),
+			title: "Taller de Oración cuando vayas a orar",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 8, 23, 00),
+			endDate: new Date(2014,03, 8, 23, 59),
+			title: "Magazín Entre Amigos",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 9, 00, 00),
+			endDate: new Date(2014,03, 9, 01, 30),
+			title: "Magazín Entre Amigos",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+
+
+		{
+			startDate: new Date(2014,03, 9, 01, 30),
+			endDate: new Date(2014,03, 9, 2, 00),
+			title: "Caminante",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+
+		{
+			startDate: new Date(2014,03, 9, 2, 00),
+			endDate: new Date(2014,03, 9, 3, 30),
+			title: "Talk Show- Buscando Respuestas",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 3, 30),
+			endDate: new Date(2014,03, 9, 4, 30),
+			title: "Cantando y Orando",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 4, 30),
+			endDate: new Date(2014,03, 9, 5, 00),
+			title: "La mano de Dios, la mano del hombre",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 5, 00),
+			endDate: new Date(2014,03, 9, 5, 30),
+			title: "Santo Rosario",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 5, 30),
+			endDate: new Date(2014,03, 9, 5, 50),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 5, 50),
+			endDate: new Date(2014,03, 9, 5, 55),
+			title: "Bendicion solemne",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 5, 55),
+			endDate: new Date(2014,03, 9, 6, 00),
+			title: "Angelus",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 6, 00),
+			endDate: new Date(2014,03, 9, 6, 30),
+			title: "Coronilla de la divina Misericordia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 6, 30),
+			endDate: new Date(2014,03, 9, 7, 00),
+			title: "Llena tu dia de Dios",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 7, 00),
+			endDate: new Date(2014,03, 9, 7, 30),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 9, 7, 30),
+			endDate: new Date(2014,03, 9, 8, 30),
+			title: "Taller de oracion cuando vayas a orar",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 8, 30),
+			endDate: new Date(2014,03, 9, 9, 20),
+			title: "Sagrada Eucaristía",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 9, 20),
+			endDate: new Date(2014,03, 9, 9, 30),
+			title: "El esta pasando por tu vida",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 9, 9, 30),
+			endDate: new Date(2014,03, 9, 10, 00),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 10, 00),
+			endDate: new Date(2014,03, 9, 11, 20),
+			title: "La voz del Papa",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 11, 20),
+			endDate: new Date(2014,03, 9, 12, 00),
+			title: "Magazín Entre Amigos",
+			description: "",
+			priority: 1,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 9, 12, 00),
+			endDate: new Date(2014,03, 9, 13, 00),
+			title: "Sagrada Eucaristia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 9, 13, 00),
+			endDate: new Date(2014,03, 9, 13, 30),
+			title: "Nuestro pan de cada dia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 13, 30),
+			endDate: new Date(2014,03, 9, 15, 00),
+			title: "Talk Show - Buscando Respuestas",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 15, 00),
+			endDate: new Date(2014,03, 9, 15, 30),
+			title: "Coronilla de la divina Misericordia",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 15, 30),
+			endDate: new Date(2014,03, 9, 16, 00),
+			title: "Nuestro pan de cada día",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 16, 00),
+			endDate: new Date(2014,03, 9, 17, 00),
+			title: "Especiales Cristovisión: Entrevista con Eliecer Salesman",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 17, 00),
+			endDate: new Date(2014,03, 9, 17, 30),
+			title: "Documental Pio XII y el Holocausto",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 17, 30),
+			endDate: new Date(2014,03, 9, 18, 30),
+			title: "Sanro Rosario",
+			description: "",
+			priority: 2,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 18, 30),
+			endDate: new Date(2014,03, 9, 19, 00),
+			title: "Caminante",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 19, 00),
+			endDate: new Date(2014,03, 9, 20, 00),
+			title: "Sagrada Eucaristia",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 9, 20, 00),
+			endDate: new Date(2014,03, 9, 20, 30),
+			title: "Gente Solidaria",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 20, 30),
+			endDate: new Date(2014,03, 9, 22, 00),
+			title: "Linea Directa",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 22, 00),
+			endDate: new Date(2014,03, 9, 22, 05),
+			title: "Bendición Solemne",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		{
+			startDate: new Date(2014,03, 9, 22, 05),
+			endDate: new Date(2014,03, 9, 23, 00),
+			title: "Taller de oración cuando vayas a orar",
+			description: "",
+			priority: 3,
+			frecuency:1
+		},
+		
+		{
+			startDate: new Date(2014,03, 9, 23, 00),
+			endDate: new Date(2014,03, 9, 23, 59),
+			title: "La Voz del Papa",
+			description: "",
+			priority: 3,
+			frecuency:1
+	}
+	);	
+	
+	$("#calendar").dp_calendar({
+		events_array: events_array,
+		format_ampm: true
+	
+	}); 
+	
+	$.fn.dp_calendar.setDate(date)
+	$.fn.dp_calendar.setDay(14)
+	$.fn.dp_calendar.setMonth(1)
+	$.fn.dp_calendar.setYear(2014)
+});  
+</script>
+</head>
+
+<body>
+	
+	<div id="content">
+    	
+		<div id="calendar"></div>
+       
+    </div>
+</body>
+</html>

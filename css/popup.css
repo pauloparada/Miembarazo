@@ -1,0 +1,27 @@
+#pop {
+   z-index:999;
+   height: 80% !important;
+   width: 70% !important;
+   position:fixed;
+   border: 1px solid #333333;
+   text-align:center;
+   background:#000000;
+   left:15% !important;
+   right:50% !important;
+   margin-top: -3210px !important;
+}
+
+#cerrar {
+   float:right;
+   margin-right:5px;
+   cursor:pointer;
+   font:Verdana, Arial, Helvetica, sans-serif;
+   font-size:14px;
+   font-weight:bold;
+   color:#FFFFFF;
+   background-color:#666666;
+   width:62px;
+   position:relative;
+   margin-top:-1px;
+   text-align:center;
+}
