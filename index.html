@@ -70,6 +70,18 @@
     <script type="text/javascript" charset="utf-8" src="scripts/phonegap.js"></script>
     <!--<script type="text/javascript" charset="utf-8" src="scripts/cordova.js"></script>-->
 
+    <script type="text/javascript">
+        // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+    // device APIs are available
+    //
+    
+    function openBrowser(){
+            window.open('http://comprandoofertas.com/chatembarazo/', '_blank', 'location=yes');
+    }
+    </script>
+
   </head>
   </style>
   <body class="hold-transition skin-blue sidebar-mini">
@@ -169,7 +181,7 @@
             <i class="fa fa-map-marker fa-2x"></i>
           </div> 
           </a>
-          <a href="chat.html">
+          <a onclick='openBrowser("http://comprandoofertas.com/chatembarazo/");'>
           <div class="butFooter">
             <i class="fa fa-comment fa-2x"></i>
           </div> 
@@ -199,7 +211,7 @@
             <i class="fa fa-youtube-play fa-lg"></i> Videos</a>
         </div>
         <div class="item">
-          <a class="alink" href="chat.html">
+          <a class="alink" onclick='openBrowser("http://comprandoofertas.com/chatembarazo/");'>
             <i class="fa fa-comments fa-lg"></i> Chat</a></div>
         <div class="item">
           <a class="alink" href="articulos.html">
