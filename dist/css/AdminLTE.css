@@ -105,6 +105,14 @@ body {
   background-color: #FFF;
   z-index: 800;
 }
+.content-wrapper3{
+  position:relative; /* needed for footer positioning*/
+    margin:0 auto; /* center, not in IE5 */
+    background:#B9A6C9;
+    height:auto !important; /* real browsers */
+    height:100%; /* IE6: treaded as min-height*/
+}
+
 .main-footer {
   background: #AF9CBD;
   padding: 9px;
@@ -114,6 +122,8 @@ body {
   text-align: center;
   margin: auto;
   width: 100%;
+  position: absolute;
+  bottom: 0;
 
 }
 /* Fixed layout */

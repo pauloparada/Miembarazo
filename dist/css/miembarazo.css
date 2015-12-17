@@ -73,8 +73,8 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
   background-image: url('../img/mujer_avatar.jpg');
   border-radius: 50%;
   margin: auto;
-  margin-top: 40px;
   margin-bottom: -20px;
+  margin-top: 90%;
 }
 .butFooter {
   width: 41px;
@@ -100,9 +100,10 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
 
 }
 .cont_bt{
-  width: 228px;
-  height: 50px;
-  margin: auto;
+    width: 228px;
+    height: 50px;
+    margin: auto;
+    margin-top: -10px;
 }
 .imgIcoon {
   width: 60%;
@@ -134,8 +135,12 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
   color: #453951;
 }
 .content-wrapper {
+  position:absolute;              
+  min-height:100% !important;
+  height:auto; 
+  width:100%;
   overflow: scroll;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
 
 }
 .fa {
@@ -143,17 +148,39 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
 }
 
     /* Extra Small Devices, Phones */ 
-    @media only screen and (max-width : 480px) {
+    @media screen and (max-height : 480px) {
 .logg {
   margin-left: 39%;
 }
 .perfil {
   margin-left:17%;
 }
+
+.perfilAvatar {
+
+  margin-top: 90%;
+}
+
+.carrousel{
+  margin-top: -70px;
+}
     }
 
     /* Extra Small Devices, Phones */ 
-    @media only screen and (max-width : 768px) {
+    @media screen and (min-height : 566px) {
+
+.perfilAvatar {
+margin-top: 80%;
+
+}
+
+.carrousel{
+margin-top: 0px;
+}
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media screen and (max-height : 768px) {
 .logg {
   margin-left: 38%;
 }
