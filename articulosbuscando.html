@@ -67,23 +67,25 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
    
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="scripts/phonegap.js"></script>
-    <!--<script type="text/javascript" charset="utf-8" src="scripts/cordova.js"></script>-->
 
-    <script type="text/javascript">
-        // Wait for device API libraries to load
-    //
-    document.addEventListener("deviceready", onDeviceReady, false);
-    // device APIs are available
-    //
-    
-    function openBrowser(){
-            window.open('http://comprandoofertas.com/chatembarazo/', '_blank', 'location=yes');
-    }
-    function openBrowser2(){
-            window.open('http://www.comprandoofertas.com/miembarazo/', '_blank', 'location=yes');
-    }
-    </script>
+    <!--<script type="text/javascript" charset="utf-8" src="scripts/cordova.js"></script>-->
+<script type="text/javascript">
+
+var selectmenu=document.getElementById("selectmenu")
+selectmenu.onchange=function(){ //run some code when "onchange" event fires
+ var chosenoption=this.options[this.selectedIndex] //this refers to "selectmenu"
+ if (chosenoption.value!="nothing"){
+  window.open(chosenoption.value, "_self", "") //open target site (based on option's value attr) in new window
+ }
+}
+
+</script>
+
+
+
+
 
   </head>
   </style>
@@ -91,7 +93,8 @@
     <div class="wrapper fonwraper">
       <header class="main-header">
         <nav class="navbar navbar-static-top" role="navigation">
-          <a href="index.html"><img class="logg" src="dist/img/logo-miembarazo.png" alt=""></a>
+        <div class="botonregistro" style="float:left; margin-top:10px; margin-left:5px;"><a href="articulos.html"><img src="images/boton-back.png"></a></div>
+          <img class="logg" src="dist/img/logo-miembarazo.png" alt="">
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
               <li>
@@ -105,73 +108,98 @@
       </header>
       <div class="content-wrapper">
         <div class="row">
-          <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1"></div>
-          <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10 ">
-                  <div class="carrousel" style="margin-left: 10px;">
-                        <div class="wrap">
-                            <div id="showcase" class="noselect" style="overflow: visible !important;">
-                                <div class="card">
-                                  <a href="calendario.html"><img src="images/semanaasemana.jpg"></a>
-                                </div>
-                                <div class="card">
-                                  <div>
-                                    <a href="calculadoras.html"><img src="images/calculadoras.jpg"></a>
-                                  </div>
-                                </div>
-                                <div class="card">
-                                  <a href="cursos.html"><img src="images/cursos.jpg"></a> 
-                                </div>
-                                <div class="card">
-                                  <a href="#"><img src="images/pauta2.jpg"></a>
-                                </div>
-                                <div class="card">
-                                  <a href="articulos.html"><img src="images/articulos.jpg"></a>
-                                  
-                                </div>
-                                <div class="card">
-                                  <a href="albumfotos.html"><img src="images/misfotos.jpg"></a>
-                                  
-                                </div>
-                                <div class="card">
-                                  <a href="videos.html"><img src="images/videos.jpg"></a>
-                                  
-                                </div>
-                                <div class="card">
-                                  <a href="diario.html"><img src="images/midiario.jpg"></a>
-                                  
-                                </div>
-                                <div class="card">
-                                  <a href="#"><img src="images/pauta1.jpg"></a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                  </div>
-            </div>
-          </div>
+           <div class="navigation-icons" style="overflow: visible !important;min-height:610px;">       
+           <center><div style="margin-top:20px; margin-bottom:20px;">
+                <center><div>
+                      <form id="aform">
+                      <select class="minimal" id="mymenu" size="1">
+                      <option value="nothing" >Seleccione una Sección</option>
+                      <option value="articulosbuscando.html" selected="selected">Buscando quedar embarazada</option>
+                      <option value="articulosembarazo.html">Embarazo</option>
+                      <option value="articulosprotegiendo.html">Protegiendo al bebe</option>
+                      <option value="articulosparto.html">El Parto</option>
+                      <option value="articulosmaternidad.html">Maternidad</option>
+                      </select>
+                      </form>
+                    </div></center>
 
-          <div class="separadoruno"></div>
-          <div class="clear"></div>
+                      <center><h2>Buscando Quedar Embarazada</h2></center>
+              
+          <div class="space-articles" style="height:30px;"></div>
+          <ul class="list list-messages" style="margin-bottom:100px; list-style:none;">
+          <li class="list-message" data-ix="list-item">
+            <a class="w-clearfix w-inline-block" href="articulo-highlight.html" data-load="1">
+              <div class="w-clearfix column-left">
+                <div class="image-message"><img src="images/pregnant-icon1.png">
+                </div>
+              </div>
+              <div class="column-right">
+                <div class="message-title2" style="color:#2F0D45;">¿Qué deben hacer?</div>
+                <div class="message-text2" style="color:#2F0D45;">Por esta razón es esencial tener una dieta balanceada durante los 9 meses para que coma los nutrientes necesarios</div>
+              </div>
+            </a>
+          </li>
+          <li class="list-message" data-ix="list-item">
+            <a class="w-clearfix w-inline-block" href="articulo-highlight.html" data-load="1">
+              <div class="w-clearfix column-left">
+                <div class="image-message"><img src="images/pregnant-icon1.png">
+                </div>
+              </div>
+              <div class="column-right">
+                <div class="message-title2" style="color:#2F0D45;">¿Qué deben hacer?</div>
+                <div class="message-text2" style="color:#2F0D45;">Por esta razón es esencial tener una dieta balanceada durante los 9 meses para que coma los nutrientes necesarios</div>
+              </div>
+            </a>
+          </li>
+          <li class="list-message" data-ix="list-item">
+            <a class="w-clearfix w-inline-block" href="articulo-highlight.html" data-load="1">
+              <div class="w-clearfix column-left">
+                <div class="image-message"><img src="images/pregnant-icon2.png">
+                </div>
+              </div>
+              <div class="column-right">
+                <div class="message-title2" style="color:#2F0D45;">¿Cómo quedar embarazada?</div>
+                <div class="message-text2" style="color:#2F0D45;">Por esta razón es esencial tener una dieta balanceada durante los 9 meses para que coma los nutrientes necesarios</div>
+              </div>
+            </a>
+          </li>
+          <li class="list-message" data-ix="list-item">
+            <a class="w-clearfix w-inline-block" href="articulo-highlight.html" data-load="1">
+              <div class="w-clearfix column-left">
+                <div class="image-message"><img src="images/pregnant-icon3.png">
+                </div>
+              </div>
+              <div class="column-right">
+                <div class="message-title2" style="color:#2F0D45;">¿Cuánto tiempo lo intentaron?</div>
+                <div class="message-text2" style="color:#2F0D45;">Por esta razón es esencial tener una dieta balanceada durante los 9 meses para que coma los nutrientes necesarios</div>
+              </div>
+            </a>
+          </li>
+          
+          <li class="list-message" data-ix="list-item">
+            <a class="w-clearfix w-inline-block" href="articulo-highlight.html" data-load="1">
+              <div class="w-clearfix column-left">
+                <div class="image-message"><img src="images/pregnant-icon2.png">
+                </div>
+              </div>
+              <div class="column-right">
+                <div class="message-title2" style="color:#2F0D45;">¿Cómo quedar embarazada?</div>
+                <div class="message-text2" style="color:#2F0D45;">Por esta razón es esencial tener una dieta balanceada durante los 9 meses para que coma los nutrientes necesarios</div>
+              </div>
+            </a>
+          </li>
+          </ul>
+          <div class="space-articles" style="height:50px;"></div>
+                        
+                    </div></center>
+                    </div>
 
-          <div class="row">
-            <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1"></div>
-            <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10 perfil" style="margin-top: 75%;">
-              <div class="perfilAvatar"> </div>
-              <div class="titP">
-                <h3 style="color: #0B0215; padding-bottom: 0px; font-size: 24px; font-family: 'Helvetica';">Hola Maria Perez</h3>
-              </div>
-              <div class="textP" style="font-size: 12px; font-family: 'helvetica'; color:#161032; font-weight: 500;">
-                Estas en el Trimestre 10 Semana 9<br>
-                Recuerda tomar acido folico
-              </div>
-            </div>
-          </div>
-        </div>
+      
 
       <div class="clear"></div>
       <div class="separadordos"></div>    
 
-       <!--footer-->
+      <!--footer-->
       <footer class="main-footer footerPo" >
        <div class="cont_bt"> 
           <a href="index.html">
@@ -226,20 +254,16 @@
             <i class="fa fa-file-text fa-lg"></i> Artículos</a>
         </div>
         <div class="item">
-          <a class="alink" href="misfotos.html">
-            <i class="fa fa-edit fa-lg"></i> Mis Fotos</a>
+          <a class="alink" href="registro.html">
+            <i class="fa fa-edit fa-lg"></i> Registro</a>
         </div>
         <div class="item">
           <a class="alink" href="#">
             <i class="fa fa-user fa-lg"></i> Perfil</a>
         </div>
         <div class="item">
-          <a class="alink" href="calculadoras.html">
-            <i class="fa fa-users fa-lg"></i> Calculadoras</a>
-        </div>
-        <div class="item">
           <a class="alink" href="cursos.html">
-            <i class="fa fa-users fa-lg"></i> Cursos</a>
+            <i class="fa fa-users fa-lg"></i> Clases</a>
         </div>
         <div class="item">
           <a class="alink" href="mapa.html">
@@ -303,6 +327,18 @@
         } )
       })
     </script>
+
+    <script type="text/javascript">
+
+var selectmenu=document.getElementById("mymenu")
+selectmenu.onchange=function(){ //run some code when "onchange" event fires
+ var chosenoption=this.options[this.selectedIndex] //this refers to "selectmenu"
+ if (chosenoption.value!="nothing"){
+  window.open(chosenoption.value, "_self", "") //open target site (based on option's value attr) in new window
+ }
+}
+
+</script>
     <!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
     <script type="text/javascript" src="js/framework.js"></script>
   </body>

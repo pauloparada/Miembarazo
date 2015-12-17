@@ -51,6 +51,8 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
   width: 80px;
   float:left;
   margin-left: 35%;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 .sliderr {
 

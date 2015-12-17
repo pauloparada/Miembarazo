@@ -377,7 +377,7 @@
         fps: 30,              // fixed frames per second (if smooth animation is off)
         speed: 5,             // positive number
         autoPlay: 1,          // [ 0: off | number of items (integer recommended, positive is clockwise) ]
-        autoPlayDelay: 4000,
+        autoPlayDelay: 5000,
         bringToFront: false,
         itemClass: 'cloud9-item',
         handle: 'carousel'

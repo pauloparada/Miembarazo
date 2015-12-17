@@ -99,6 +99,12 @@ body {
   background-color: #B9A6C9;
   z-index: 800;
 }
+.content-wrapper2,
+.right-side2 {
+ 
+  background-color: #FFF;
+  z-index: 800;
+}
 .main-footer {
   background: #AF9CBD;
   padding: 9px;

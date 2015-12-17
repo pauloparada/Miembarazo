@@ -108,7 +108,7 @@ selectmenu.onchange=function(){ //run some code when "onchange" event fires
           </div>
         </nav>
       </header>
-      <div class="content-wrapper">
+      <div class="content-wrapper2">
         <div class="row">
                   
            
@@ -120,70 +120,72 @@ selectmenu.onchange=function(){ //run some code when "onchange" event fires
           <div class="w-form">
             <form id="submit-form" name="email-form" data-name="Email Form" data-redirect="settings.html" action="#">
               <div>
-                <label class="label-form" for="email-field" style="margin-top:-200px;">NOMBRES</label>
-                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <label class="label-form" for="email-field" style="margin-top:-200px;">NOMBRE</label>
+                <input class="w-input input-form" id="text-field" type="text" name="nombre" data-name="nombre" required="required">
                 <div class="separator-fields"></div>
               </div>
               <div>
                 <label class="label-form" for="email-field">APELLIDOS</label>
-                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <input class="w-input input-form" id="text-field" type="text" name="apellidos" data-name="apellidos" required="required">
                 <div class="separator-fields"></div>
               </div>
               <div>
                 <label class="label-form" for="email-field">FOTO DE PERFIL</label>
-                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <input class="w-input input-form" id="data-field" type="file" name="foto" data-name="foto" >
                 <div class="separator-fields"></div>
               </div>
               <div>
                 <label class="label-form" for="email-field">EMAIL</label>
-                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <input class="w-input input-form" id="text-field" type="email" name="email" data-name="email" required="required">
                 <div class="separator-fields"></div>
               </div>
               <div>
-                <label class="label-form" for="email-field">SEMANA DE EMBARAZO</label>
-                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <label class="label-form" for="email-field">FECHA ULTIMO PERIODO</label>
+                <input class="w-input input-form" id="date-field" type="date" name="periodo" data-name="periodo" required="required">
                 <div class="separator-fields"></div>
               </div>
               <div>
                 <label class="label-form" for="email-field">PREPAGADA</label>
-                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <p>Si</p><input class="w-input input-form" id="radio-field" type="radio" value="si" name="prepagada" data-name="prepagada" checked="true" >
+                <br>
+                <p>No</p><input class="w-input input-form" id="radio-field" type="radio" value="no" name="prepagada" data-name="prepagada" >
                 <div class="separator-fields"></div>
               </div>
               <div>
                 <label class="label-form" for="email-field">EDAD</label>
-                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <input class="w-input input-form" id="text-field" type="text" name="edad" data-name="edad" >
                 <div class="separator-fields"></div>
               </div>
               <div>
-                <label class="label-form" for="email-field">PESO</label>
-                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <label class="label-form" for="email-field">PESO INICIAL</label>
+                <input class="w-input input-form" id="text-field" type="text" name="peso" data-name="peso" required="required">
                 <div class="separator-fields"></div>
               </div>
               <div>
                 <label class="label-form" for="email-field">CELULAR</label>
-                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <input class="w-input input-form" id="text-field" type="text" name="celular" data-name="celular" required="required">
                 <div class="separator-fields"></div>
               </div>
               <div>
                 <label class="label-form" for="email-field">CIUDAD</label>
-                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <input class="w-input input-form" id="text-field" type="text" name="ciudad" data-name="ciudad" >
                 <div class="separator-fields"></div>
               </div>
 
               <div>
                 <label class="label-form" for="email-field">NOMBRE DE USUARIO</label>
-                <input class="w-input input-form" id="email-field" type="email" name="email" data-name="email" required="required">
+                <input class="w-input input-form" id="text-field" type="text" name="usuario" data-name="usuario" required="required">
                 <div class="separator-fields"></div>
               </div>
               <div>
                 <label class="label-form" for="email">CONTRASEÑA</label>
                 <div class="w-clearfix block-input-combined">
-                  <input class="w-input input-form left" id="password-field" type="password" name="password" data-name="password" required="required"><a class="right-input-link" href="forgot.html" data-load="1">Olvido su Contraseña</a>
+                  <input class="w-input input-form left" id="password-field" type="password" name="password" data-name="password" required="required">
                 </div>
                 <div class="separator-button-input"></div>
               </div>
-              <input class="w-button action-button" type="submit" value="Registrarse" data-wait="Please wait...">
-              <div class="separator-button"></div><a class="link-upper" href="signup.html" data-load="1">No tiene Cuenta? <strong class="b-link">Registrese</strong></a>
+              <input class="w-button action-button" type="submit" value="Inscribirse" data-wait="Por favor espere...">
+              <div class="separator-button"></div>
             </form>
             <div class="w-form-done">
               <p>Gracias! Tu aplicacion fue recibida con exito!!</p>
@@ -201,11 +203,6 @@ selectmenu.onchange=function(){ //run some code when "onchange" event fires
            
         </div>
       </div>
-
-      
-
-      <div class="clear"></div>
-      <div class="separadordos"></div>    
 
            <!-- Control Sidebar -->
        <aside class="control-sidebar control-sidebar-dark">

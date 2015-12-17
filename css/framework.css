@@ -134,6 +134,7 @@ input[type="submit"] {
 }
 .w-form {
   margin: 0 0 15px;
+  margin-top: 150px;
 }
 .w-form-done {
   display: none;
