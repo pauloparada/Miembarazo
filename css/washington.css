@@ -642,18 +642,20 @@ a {
   height: 304px;
 }
 .bottom-section {
-  position: absolute;
+  position: relative;
   left: 0px;
   right: 0px;
   bottom: 0px;
   padding-bottom: 5px;
 }
 .padding {
-  padding-right: 28px;
-  padding-left: 28px;
-  background-color: white;
-  opacity: 1;
-  height: 420px;
+    padding-right: 38px;
+    padding-left: 38px;
+    background-color: white;
+    opacity: 1;
+    height: 100%;
+    margin-top: 20px;
+}
 }
 .padding.smaller {
   padding-right: 16px;
