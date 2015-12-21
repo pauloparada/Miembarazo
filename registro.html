@@ -63,7 +63,7 @@
 
 
 
-        <script type="text/javascript">
+    <script type="text/javascript">
         // Wait for device API libraries to load
     //
     document.addEventListener("deviceready", onDeviceReady, false);
@@ -75,52 +75,20 @@
     }
     </script>
 
+    <script type="text/javascript">
+        // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+    // device APIs are available
+    //
+    
+    function openBrowser2(){
+      window.open('http://www.comprandoofertas.com/miembarazo/', '_blank', 'location=yes');
+    }
+    </script>
+
     <script src="plugins/jQuery/jQuery-2.1.4.min.js"></script>
-    <script src="scripts/jquery.cloud9carousel.js"></script>
-    <script>
-    $(function() {
-      var showcase = $("#showcase")
 
-      showcase.Cloud9Carousel( {
-        xRadius: 100,
-        yOrigin: 42,
-        yRadius: -20,
-        itemClass: "card",
-        buttonLeft: $(".nav.left"),
-        buttonRight: $(".nav.right"),
-        bringToFront: true,
-        onLoaded: function() {
-          showcase.css( 'visibility', 'visible' )
-          showcase.css( 'display', 'none' )
-          showcase.fadeIn( 1500 )
-        }
-      } )
-
-        //
-        // Simulate physical button click effect
-        //
-        $('.nav').click( function( e ) {
-          var b = $(e.target).addClass( 'down' )
-          setTimeout( function() { b.removeClass( 'down' ) }, 80 )
-        } )
-
-        $(document).keydown( function( e ) {
-          //
-          // More codes: http://www.javascripter.net/faq/keycodes.htm
-          //
-          switch( e.keyCode ) {
-            /* left arrow */
-            case 37:
-            $('.nav.left').click()
-            break
-
-            /* right arrow */
-            case 39:
-            $('.nav.right').click()
-          }
-        } )
-      })
-</script>
 
 
 <!-- CSS -->
