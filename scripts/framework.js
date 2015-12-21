@@ -167,7 +167,7 @@ $(document).ready(function(){
 	$('.subscribe').click(function(){
 		$('#modal-hider').fadeIn();
 		$('#modal-body').fadeIn();	
-		document.click = function(event){ event.preventDefault();}
+		document.ontouchmove = function(event){ event.preventDefault();}
 		$('body,html').animate({scrollTop:0},500);
 		return false;		
 	});
@@ -178,17 +178,7 @@ $(document).ready(function(){
 	////////////////////////////////////////
 	////////////////////////////////////////	
 	
-	$('.enable-coach').click(function(){
-		$(this).addClass('active-nav');
-		$('.page-coach').fadeIn(200);
-		document.click = function(event){ event.preventDefault();}
-	});
-	
-	$('.page-coach').click(function(){
-		$('.enable-coach').removeClass('active-nav');
-		$('.page-coach').fadeOut(200);
-		document.click = function(event){ event.allowDefault();}
-	});
+
 
 	////////////////////////////////////////
 	////////////////////////////////////////
