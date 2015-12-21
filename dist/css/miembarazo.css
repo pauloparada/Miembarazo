@@ -76,6 +76,15 @@ div#carousel ~ span:hover { color: #888; cursor: pointer; }
   margin-bottom: -20px;
   margin-top: 90%;
 }
+.perfilAvatar2 {
+  width: 60px;
+  height: 60px;
+  background-image: url('../img/mujer_avatar.jpg');
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: -20px;
+  margin-top: 20%;
+}
 .butFooter {
   width: 41px;
   height: 41px;
