@@ -41,7 +41,7 @@ $(document).ready(function(){
     $(".swipe-tick-cross-left").hammer({ 
 		drag_max_touches:0,
 	})
-	/*.on("dragleft", function(ev){
+	.on("dragleft", function(ev){
 		var touches = ev.gesture.touches;
 		ev.gesture.preventDefault();
 		$(this).css("background-color", "#ffdcdd");
@@ -56,7 +56,7 @@ $(document).ready(function(){
 		$(this).find(".swipe-check-box").hide();
 		$(this).find(".swipe-tick-box").show();
 		$(this).find(".swipe-null-box").hide();		
-	})*/
+	})
 	.on("tap", function() {
 		$(this).css( "background-color", "#f1f1f1");
 		$(this).find(".swipe-check-box").hide();
@@ -70,7 +70,7 @@ $(document).ready(function(){
     $(".swipe-tick-cross-right").hammer({ 
 		drag_max_touches:0,
 	})
-	/*.on("dragright", function(ev){
+	.on("dragright", function(ev){
 		var touches = ev.gesture.touches;
 		ev.gesture.preventDefault();
 		$(this).css("background-color", "#ffdcdd");
@@ -85,7 +85,7 @@ $(document).ready(function(){
 		$(this).find(".swipe-check-box").hide();
 		$(this).find(".swipe-tick-box").show();
 		$(this).find(".swipe-null-box").hide();		
-	})*/
+	})
 	.on("tap", function() {
 		$(this).css( "background-color", "#f1f1f1");
 		$(this).find(".swipe-check-box").hide();
@@ -101,7 +101,7 @@ $(document).ready(function(){
     $(".swipe-left-notification").hammer({ 
 		drag_max_touches:0,
 	})
-	/*.on("dragleft", function(ev){
+	.on("dragleft", function(ev){
 		var touches = ev.gesture.touches;
 		ev.gesture.preventDefault();
 		$(this).find('.swipe-button').css( "width", "20%" ).css( "display", "block");
@@ -112,7 +112,7 @@ $(document).ready(function(){
 		ev.gesture.preventDefault();
 		$(this).find('.swipe-button').css( "width", "0%" ).css( "display", "none");
 		$(this).parent().find('.swipe-left-notification a').css( "width", "100%" );
-	})*/
+	})
 
 	.on("touch", function() {
 		$(this).css( "background-color", "#eaeaea");
@@ -167,7 +167,7 @@ $(document).ready(function(){
 	$('.subscribe').click(function(){
 		$('#modal-hider').fadeIn();
 		$('#modal-body').fadeIn();	
-		document.ontouchmove = function(event){ event.preventDefault();}
+		document.click = function(event){ event.preventDefault();}
 		$('body,html').animate({scrollTop:0},500);
 		return false;		
 	});
@@ -181,13 +181,13 @@ $(document).ready(function(){
 	$('.enable-coach').click(function(){
 		$(this).addClass('active-nav');
 		$('.page-coach').fadeIn(200);
-		document.ontouchmove = function(event){ event.preventDefault();}
+		document.click = function(event){ event.preventDefault();}
 	});
 	
 	$('.page-coach').click(function(){
 		$('.enable-coach').removeClass('active-nav');
 		$('.page-coach').fadeOut(200);
-		document.ontouchmove = function(event){ event.allowDefault();}
+		document.click = function(event){ event.allowDefault();}
 	});
 
 	////////////////////////////////////////
