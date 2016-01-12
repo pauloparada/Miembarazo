@@ -14,11 +14,11 @@ function validar_correo($email) {
 }
 
 
-require('http://www.comprandoofertas.com/miembarazo/conexion.php');
+require('conexion.php');
 if($_POST["nombre"] != "" && $_POST["apellidos"] != "" && $_POST["foto"] != "" && $_POST["email"] != "" && $_POST["periodo"] != "" && $_POST["prepagada"] != "" && $_POST["edad"] != "" && $_POST["peso"] != "" && $_POST["celular"] != "" && $_POST["ciudad"] != "" && $_POST["usuario"] != "" && $_POST["password"] != "" && $_POST["password2"] != "")
 {
 	$conexion = conectarse();
-	$sqlVal = 'SELECT usuario FROM usuario WHERE usuario="'.$_POST["usuario"].'"' ;
+	$sqlVal = 'SELECT usuario FROM usuarios WHERE usuario="'.$_POST["usuario"].'"' ;
 	$resultadoVal = mysqli_query($conexion,$sqlVal);
 	$num = mysqli_num_rows($resultadoVal);
 	if($num == 0)
@@ -26,16 +26,16 @@ if($_POST["nombre"] != "" && $_POST["apellidos"] != "" && $_POST["foto"] != "" &
 		if(validar_correo($_POST["email"]))
 		{
 			$conexion = conectarse();
-			$sqlVal1 = 'SELECT email FROM usuario WHERE email="'.$_POST["email"].'"' ;
+			$sqlVal1 = 'SELECT email FROM usuarios WHERE email="'.$_POST["email"].'"' ;
 			$resultadoVal1 = mysqli_query($conexion,$sqlVal1);
 			$num1 = mysqli_num_rows($resultadoVal1);
 			if($num1 == 0)
 			{
 				if($_POST["password"] == $_POST["password2"])
 				{
-					$sql = "INSERT INTO usuario (nombre, apellidos, foto, email, periodo, prepagada, edad, peso, celular, ciudad, usuario, password, fecha) VALUES('".$_POST["nombre"]."', '".$_POST["apellidos"]."', '".$_POST["foto"]."', '".$_POST["email"]."', '".$_POST["periodo"]."', '".$_POST["prepagada"]."', '".$_POST["edad"]."', '".$_POST["peso"]."', '".$_POST["celular"]."', '".$_POST["ciudad"]."', '".$_POST["usuario"]."', '".$_POST["password"]."', '".date("Y-m-d H:i:s")."')";
+					$sql = "INSERT INTO usuarios (nombre, apellidos, foto, email, periodo, prepagada, edad, peso, celular, ciudad, usuario, password, fecha) VALUES('".$_POST["nombre"]."', '".$_POST["apellidos"]."', '".$_POST["foto"]."', '".$_POST["email"]."', '".$_POST["periodo"]."', '".$_POST["prepagada"]."', '".$_POST["edad"]."', '".$_POST["peso"]."', '".$_POST["celular"]."', '".$_POST["ciudad"]."', '".$_POST["usuario"]."', '".$_POST["password"]."', '".date("Y-m-d H:i:s")."')";
 					if(mysqli_query($conexion,$sql)){
-						$sql = 'SELECT * FROM usuario WHERE usuario="'.$_POST["usuario"].'"';
+						$sql = 'SELECT * FROM usuarios WHERE usuario="'.$_POST["usuario"].'"';
 						$resultado = mysqli_query($conexion,$sql);
 						$datos = mysqli_fetch_assoc($resultado);
 						$_SESSION["usuario"] = new StdClass;
@@ -51,15 +51,15 @@ if($_POST["nombre"] != "" && $_POST["apellidos"] != "" && $_POST["foto"] != "" &
 						$message =  '
  Bienvenido '.$datos["nombre"] .'<br /><br />
   Gracias por registrarse! Ahora podra acceder a nuestro material y a todos los beneficios de ser usuario de Mi Embarazo<br /><br /><br />
-  Su nombre de usuario es: '.$datos["username"].'<br /><br />
-  Su contraseña es: '.$datos["psw"].'<br /><br /><br />
+  Su nombre de usuario es: '.$datos["nombre"].'<br /><br />
+  Su contraseña es: '.$datos["password"].'<br /><br /><br />
   Cordialmente<br /><br />
   Equipo de Mi Embarazo
   ';
 						
 						
 					
-						$from = "info@miembarazo.com";
+						$from = "paulodavidparada@gmail.com";
 						$headers = "From:" . $from . "\r\nContent-Type: text/html;\r\n";
 						mail($to,$subject,$message,$headers);
 						
@@ -74,7 +74,7 @@ if($_POST["nombre"] != "" && $_POST["apellidos"] != "" && $_POST["foto"] != "" &
                         
 						<script type="text/javascript">
 							alert("Bienvenido <?php	 	 echo $datos["nombre"] ?>");
-							window.location.href = 'login.php';
+							window.location.href = 'http://www.ecuation.com';
 						</script>
 						<?php	 	
 					}

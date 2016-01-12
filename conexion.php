@@ -1,6 +1,6 @@
 <?php	 	
 function conectarse() {
-$host = 'comprandoofertascom.fatcowmysql.com '; // Dirección del servidor de base de datos
+$host = 'comprandoofertascom.fatcowmysql.com'; // Dirección del servidor de base de datos
 $usr = 'miembarazofinal'; // Usuario para conectarse al servidor de bases de datos
 $passwd = 'miembarazofinal'; // Contraseña del servidor de base de datos
 $db = 'miembarazofinal'; // Base de datos a utilizar
@@ -12,3 +12,4 @@ return $link;
 }
 
 ?>
+
