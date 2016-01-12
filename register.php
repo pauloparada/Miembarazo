@@ -59,7 +59,7 @@ if($_POST["nombre"] != "" && $_POST["apellidos"] != "" && $_POST["foto"] != "" &
 						
 						
 					
-						$from = "paulodavidparada@gmail.com";
+						$from = "info@miembarazo.com.co";
 						$headers = "From:" . $from . "\r\nContent-Type: text/html;\r\n";
 						mail($to,$subject,$message,$headers);
 						
@@ -74,7 +74,7 @@ if($_POST["nombre"] != "" && $_POST["apellidos"] != "" && $_POST["foto"] != "" &
                         
 						<script type="text/javascript">
 							alert("Bienvenido <?php	 	 echo $datos["nombre"] ?>");
-							window.location.href = 'http://www.ecuation.com';
+							window.history.go(-2);
 						</script>
 						<?php	 	
 					}
