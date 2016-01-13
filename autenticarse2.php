@@ -7,6 +7,10 @@ $usr = mysqli_real_escape_string($cnx,$_POST['usuario']);
 $pwd = mysqli_real_escape_string($cnx,$_POST['password']);
 // Hago la consulta
 $sql = 'SELECT * FROM usuarios WHERE usuario = "'.$usr.'" AND password = "'.$pwd.'"';
+$uno = 'SELECT nombre FROM usuarios WHERE usuario = "'.$usr.'" AND password = "'.$pwd.'"';
+$dos = 'SELECT apellidos FROM usuarios WHERE usuario = "'.$usr.'" AND password = "'.$pwd.'"';
+$tres = 'SELECT foto FROM usuarios WHERE usuario = "'.$usr.'" AND password = "'.$pwd.'"';
+$cuatro = 'SELECT edad FROM usuarios WHERE usuario = "'.$usr.'" AND password = "'.$pwd.'"';
 // EJECUTO LA CONSULTA
 $consulta = mysqli_query($cnx,$sql);
 $cantidad_resultados = mysqli_num_rows($consulta);
@@ -16,9 +20,15 @@ if($cantidad_resultados == 1){
 	$datosUsuario = mysqli_fetch_assoc($consulta);
 	$_SESSION['usuario'] = $datosUsuario;
 
+	$_SESSION['nombre'] = $uno;
+	$_SESSION['apellidos'] = $dos;
+	$_SESSION['foto'] = $tres;
+	$_SESSION['edad'] = $cuatro;
+
+
 	?>
 	<script type="text/javascript">
-		window.history.go(-2);
+		header('Location: index.html');
 	</script>
 	
 	<?php	

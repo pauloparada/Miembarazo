@@ -209,7 +209,9 @@
           </div>
         </div>
       </div>
-      
+
+      <td><p>Hola <?php echo $_SESSION['usuario'] ;?></p></td>
+
       <!--End Carrousel -->
 
       <!--End Content -->
@@ -277,6 +279,15 @@
       
       </script>
 
+      <script>
+      function s($t){
+        if(isset($_SESSION['nombre'])){
+          return $_SESSION['nombre']->$t;
+        } else{
+            return "";
+        }
+      }
+      </script>
      
 
     </body>
