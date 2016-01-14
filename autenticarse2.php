@@ -19,14 +19,8 @@ if($cantidad_resultados == 1){
 	//$_SESSION['usuario'] = $datosUsuario;
 	//$_SESSION['user_test'] = 'userTest';
 	
-	/*header("location:index.html?id=".$result[0]."&nombre=".$result[1]."&apellidos=".$result[2]);*/
-	?>
-	<script type="text/javascript">
-		window.history.go(-2);
-		alert('Hubo un error en el logueo. las variables son: Id= '.$result[0].' Nombre='.$result[1].' Apellido='.$result[2].' ');
-	</script>
+	header("location:index.html?id=".$result[0]."&nombre=".$result[1]."&apellidos=".$result[2]);
 	
-	<?php		
 } else {
 	// LO MANDO A LOGUEARSE INFORMANDOLE DEL ERROR
 	?>
