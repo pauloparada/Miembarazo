@@ -128,26 +128,41 @@
                   
            
         
-      
+      <script>
+      function validarDatos(){
+        var user = document.getElementById('usuario').value;
+        var password = document.getElementById('password').value;
+        $.get('http://www.comprandoofertas.com/miembarazo/autenticarse2.php', {},
+          function(data){
+            alert(data);
+          });
+          //crear cookie
+          //inicio de app  
+      }
+      </script>
       <div class="body padding" >
         
         <div class="bottom-section padding">
           <div class="w-form" style="margin-top:80px;">
-            <form id="submit-form" name="email-form" data-name="Email Form" action="http://www.comprandoofertas.com/miembarazo/autenticarse2.php" method="POST">
+            <form id="submit-form" name="email-form" data-name="Email Form" action="" method="POST">
+            <!-- <form id="submit-form" name="email-form" data-name="Email Form" action="http://www.comprandoofertas.com/miembarazo/autenticarse.php" method="POST"> -->
               <div>
                 <label class="label-form" for="email-field">NOMBRE DE USUARIO</label>
-                <input class="w-input input-form" id="text-field" type="text" name="usuario" data-name="usuario" required="required">
+                <input class="w-input input-form" id="usuario" type="text" name="usuario" data-name="usuario" required="required">
+                <!-- <input class="w-input input-form" id="text-field" type="text" name="usuario" data-name="usuario" required="required"> -->
                 <div class="separator-fields"></div>
               </div>
               <div>
                 <label class="label-form" for="email">CONTRASEÑA</label>
                 <div class="w-clearfix block-input-combined">
-                  <input class="w-input input-form left" id="password-field" type="password" name="password" data-name="password" required="required">
+                <input class="w-input input-form left" id="password" type="password" name="password" data-name="password" required="required">
+                  <!-- <input class="w-input input-form left" id="password-field" type="password" name="password" data-name="password" required="required"> -->
                 </div>
          
                 <div class="separator-button-input"></div>
               </div>
-              <input class="w-button action-button" type="submit" value="Ingresar" data-wait="Please wait..." style="margin-bottom:20px;">
+              <!-- <input class="w-button action-button" type="submit" value="Ingresar" data-wait="Please wait..." style="margin-bottom:20px;"> -->
+              <button class="w-button action-button" type="button" style="margin-bottom:20px;" onclick="validarDatos()">Ingresar</button>
               <div class="separator-button"></div><a class="link-upper" href="registro.html" data-load="1">No tiene Cuenta? <strong class="b-link">Registrese</strong></a>
             </form>
         
