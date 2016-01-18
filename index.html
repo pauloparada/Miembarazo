@@ -56,7 +56,7 @@
         <gap:splash src="images/screen-portrait.jpg"      gap:platform="winphone" />
         
 
-        
+        <script type="text/javascript">document.getElementById("result").innerHTML = localStorage.getItem("lastname");</script>
 
         <script type="text/javascript" charset="utf-8" src="scripts/phonegap.js"></script>
         <!--<script type="text/javascript" charset="utf-8" src="scripts/cordova.js"></script>-->
@@ -210,7 +210,7 @@
         </div>
       </div>
 
-      <td><p>Hola <?php echo $_SESSION['usuario'] ;?></p></td>
+      <td><p>Hola <div id="result"></div></p></td>
 
       <!--End Carrousel -->
 
