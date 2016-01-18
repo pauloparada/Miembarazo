@@ -20,10 +20,11 @@ if($cantidad_resultados == 1){
 	//$_SESSION['user_test'] = 'userTest';
 	
 	/*header("location:index.html?id=".$result[0]."&nombre=".$result[1]."&apellidos=".$result[2]);*/
-
+	localStorage.setItem("lastname", $result);
+	localStorage.setItem("lastname2", '.$usr.');
 	?>
 	<script type="text/javascript">
-		localStorage.setItem("lastname", $result);
+		
 		window.history.go(-2);
 		alert('Funciona. las variables son: $result[0] $result ');
 
