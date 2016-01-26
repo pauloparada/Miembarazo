@@ -56,22 +56,6 @@
         <gap:splash src="images/screen-portrait.jpg"      gap:platform="winphone" />
         
 
-         <script type="text/javascript">
-         $(document).ready(function()
-         {
-         var url="http://comprandoofertas.com/miembarazo/json2.php";
-         $.getJSON(url,function(result){
-         console.log(result);
-         $.each(result, function(i, field){
-         var id=field.id;
-         var title=field.title;
-         var duration=field.duration;
-         var price=field.price;
-         $("#listview").append("<a class='item' href='form.html?id="+id+"&title="+title+"&duration="+duration+"&price="+price+"'><span class='item-note'>$"+price+"</span><h2>"+ title + " </h2><p>"+ duration +"</p></a>");
-         });
-         });
-         });
-         </script>
 
         <script type="text/javascript">document.getElementById("result").innerHTML = localStorage.getItem("lastname");</script>
 
@@ -151,7 +135,22 @@
       })
 </script>
 
-
+         <script type="text/javascript">
+         $(document).ready(function()
+         {
+         var url="http://www.comprandoofertas.com/miembarazo/json2.php";
+         $.getJSON(url,function(result){
+         console.log(result);
+         $.each(result, function(i, field){
+         var id=field.id;
+         var title=field.title;
+         var duration=field.duration;
+         var price=field.price;
+         $("#listview").append("<a class='item' href='form.html?id="+id+"&title="+title+"&duration="+duration+"&price="+price+"'><span class='item-note'>$"+price+"</span><h2>"+ title + " </h2><p>"+ duration +"</p></a>");
+         });
+         });
+         });
+         </script>
 <!-- CSS -->
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="bootstrap/css/font-awesome.css">
