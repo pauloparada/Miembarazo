@@ -12,6 +12,7 @@ $sql = 'SELECT * FROM usuarios WHERE usuario = "'.$usr.'" AND password = "'.$pwd
 $consulta = mysqli_query($cnx,$sql);
 $result = mysqli_fetch_array($consulta);
 $cantidad_resultados = mysqli_num_rows($consulta);
+$data[]=$result;
 if($cantidad_resultados == 1){
 	//LO MANDO A privado.php
 	//$_SESSION['logueado'] = true;
@@ -21,12 +22,11 @@ if($cantidad_resultados == 1){
 	
 	/*header("location:index.html?id=".$result[0]."&nombre=".$result[1]."&apellidos=".$result[2]);*/
 
-	localStorage.setItem("lastname2", '.$result.');
 	?>
-	<script type="text/javascript">
-		
+	<script type="text/javascript">	
 		window.history.go(-2);
-		alert('Funciona. las variables son: $result[0] $result ');
+		var mydata = $data;
+		alert(mydata + 'Funciona. las variables son: $result[0] $result ');
 
 	</script>
 	

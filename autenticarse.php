@@ -16,6 +16,7 @@ if($cantidad_resultados == 1){
 	$datosUsuario = mysqli_fetch_assoc($consulta);
 	$_SESSION['usuario'] = $datosUsuario;
 
+
 	?>
 	<script type="text/javascript">
 		window.history.go(-2);
