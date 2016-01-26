@@ -56,11 +56,25 @@
         <gap:splash src="images/screen-portrait.jpg"      gap:platform="winphone" />
         
 
-        <script type="text/javascript">document.getElementById("result").innerHTML = localStorage.getItem("lastname");</script>
-
         <script type="text/javascript" charset="utf-8" src="scripts/phonegap.js"></script>
-        <!--<script type="text/javascript" charset="utf-8" src="scripts/cordova.js"></script>-->
+        <script type="text/javascript" charset="utf-8" src="scripts/cordova.js"></script>
 
+       <script type="text/javascript">
+         $(document).ready(function()
+         {
+         var url="http://comprandoofertas.com/miembarazo/json.php";
+         $.getJSON(url,function(result){
+         console.log(result);
+         $.each(result, function(i, field){
+         var id=field.id;
+         var nombre=field.nombre;
+         var apellido=field.apellido;
+         var email=field.email;
+         $("#listview").append("<a class='item' href='form.html?id="+id+"&nombre="+nombre+"&apellido="+apellido+"&email="+email+"'><span class='item-note'>$"+email+"</span><h2>"+ nombre + " </h2><p>"+ apellido +"</p></a>");
+         });
+         });
+         });
+        </script>
 
 
     <script type="text/javascript">
@@ -209,6 +223,11 @@
           </div>
         </div>
       </div>
+
+       <h1 class="title">Read Database (JSON)</h1>
+         </div><br/><br/>
+         <ul class="list" id="listview">
+         </ul>
 
       <!--<td><p>Hola <div id="lastname"></div> <div id="lastname2"></div></p></td>-->
 
