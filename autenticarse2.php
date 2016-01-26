@@ -22,13 +22,13 @@ if($cantidad_resultados == 1){
 	
 	/*header("location:index.html?id=".$result[0]."&nombre=".$result[1]."&apellidos=".$result[2]);*/
 
+echo json_encode($data);
 	?>
-	<script type="text/javascript">	
+	<script type="text/javascript">
 		
-
-		var t = JSON.parse('{"name": "nombre", "skills": "apellidos", "jobtitel": "Entwickler", "res_linkedin": "GwebSearch"}');
-alert(t['name'])
 		window.history.go(-2);
+		alert('Funciona. las variables son: $result[0] $result ');
+
 	</script>
 	
 	<?php		

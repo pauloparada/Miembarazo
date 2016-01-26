@@ -236,7 +236,7 @@
 
 <script>
 var xmlhttp = new XMLHttpRequest();
-var url = "http://www.w3schools.com/website/Customers_MYSQL.php";
+var url = "http://www.comprandoofertas.com/miembarazo/autenticarse2.php";
 
 xmlhttp.onreadystatechange=function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -253,11 +253,11 @@ function myFunction(response) {
 
     for(i = 0; i < arr.length; i++) {
         out += "<tr><td>" + 
-        arr[i].Name +
+        arr[i].nombre +
         "</td><td>" +
-        arr[i].City +
+        arr[i].apellido+
         "</td><td>" +
-        arr[i].Country +
+        arr[i].email +
         "</td></tr>";
     }
     out += "</table>";
