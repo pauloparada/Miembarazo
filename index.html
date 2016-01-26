@@ -234,8 +234,15 @@
 
 
 
-     <!--<a href="perfil.html"> <div class="perfil">-->
-<div id="id01"></div>
+     <a href="perfil.html"> <div class="perfilAvatar2"> </div>
+<div class="titP">
+  <h3 style="color: #0B0215; padding-bottom: 0px; font-size: 24px; font-family: 'Helvetica';">Hola <div id="id01"></div></h3>
+  <div class="textP" style="font-size: 12px; font-family: 'helvetica'; color:#161032; font-weight: 500;">
+    Estas en el Trimestre 10 Semana 9<br>
+    Recuerda tomar acido folico
+  </div>
+</div>
+
 
 <script>
 var xmlhttp = new XMLHttpRequest();
@@ -259,8 +266,6 @@ function myFunction(response) {
         arr[i].nombre +
         "</td><td>" +
         arr[i].apellidos+
-        "</td><td>" +
-        arr[i].email +
         "</td></tr>";
     }
     out += "</table>";
