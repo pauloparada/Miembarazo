@@ -1,42 +1,22 @@
-<?php	 	
-session_start();
-require('conexion.php');
-$cnx = conectarse();
-//Sanitizo los campos
-$usr = mysqli_real_escape_string($cnx,$_POST['usuario']);
-$pwd = mysqli_real_escape_string($cnx,$_POST['password']);
-// Hago la consulta
-$sql = 'SELECT * FROM usuarios WHERE usuario = "'.$usr.'" AND password = "'.$pwd.'"';
 
-// EJECUTO LA CONSULTA
-$consulta = mysqli_query($cnx,$sql);
-$result = mysqli_fetch_array($consulta);
-$cantidad_resultados = mysqli_num_rows($consulta);
-$data[]=$result;
-if($cantidad_resultados == 1){
-	//LO MANDO A privado.php
-	//$_SESSION['logueado'] = true;
-	//$datosUsuario = mysqli_fetch_assoc($consulta);
-	//$_SESSION['usuario'] = $datosUsuario;
-	//$_SESSION['user_test'] = 'userTest';
-	
-	/*header("location:index.html?id=".$result[0]."&nombre=".$result[1]."&apellidos=".$result[2]);*/
+<?php
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
 
-echo json_encode($data);
-	?>
-	<script type="text/javascript">
-	
+$conn = new mysqli("comprandoofertascom.fatcowmysql.com", "miembarazofinal", "miembarazofinal", "miembarazofinal");
 
-	</script>
-	
-	<?php		
-} else {
-	// LO MANDO A LOGUEARSE INFORMANDOLE DEL ERROR
-	?>
-	<script type="text/javascript">
-		alert('Hubo un error en el logueo');
-		window.history.go(-1);
-	</script>
-	
-	<?php	 	
+$result = $conn->query('SELECT nombre, apellidos, email FROM usuarios');
+
+$outp = "[";
+while($rs = $result->fetch_array(MYSQLI_ASSOC)) {
+    if ($outp != "[") {$outp .= ",";}
+    $outp .= '{"nombre":"'  . $rs["nombre"] . '",';
+    $outp .= '"apellidos":"'   . $rs["apellidos"]        . '",';
+    $outp .= '"email":"'. $rs["email"]     . '"}'; 
 }
+$outp .="]";
+
+$conn->close();
+
+echo($outp);
+?>
