@@ -1,6 +1,6 @@
 
 <?php
-include "conexion.php";
+include "conexion2.php";
 $data=array();
 $q=mysql_query("select * from `course_details`");
 while ($row=mysql_fetch_object($q)){
