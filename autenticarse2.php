@@ -24,10 +24,11 @@ if($cantidad_resultados == 1){
 
 	?>
 	<script type="text/javascript">	
-		window.history.go(-2);
-		var mydata = $data;
-		alert(mydata + 'Funciona. las variables son: $result[0] $result ');
+		
 
+		var t = JSON.parse('{"name": "nombre", "skills": "apellidos", "jobtitel": "Entwickler", "res_linkedin": "GwebSearch"}');
+alert(t['name'])
+		window.history.go(-2);
 	</script>
 	
 	<?php		
